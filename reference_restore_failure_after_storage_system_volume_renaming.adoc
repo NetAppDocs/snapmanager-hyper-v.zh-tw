@@ -1,0 +1,30 @@
+---
+permalink: reference_restore_failure_after_storage_system_volume_renaming.html 
+sidebar: sidebar 
+keywords: restore, failure, storage, system, volume, renaming, rename 
+summary: 儲存系統磁碟區重新命名後還原失敗。 
+---
+= 儲存系統磁碟區重新命名後還原失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *訊息*
++
+還原VM所需的部分儲存系統快照遺失或不一致。
+
+* *說明*
++
+如果儲存系統磁碟區已重新命名、則無法從重新命名磁碟區之前所建立的備份還原虛擬機器（VM）。
+
+* *修正行動*
++
+如果儲存系統磁碟區已重新命名、而您需要從重新命名磁碟區之前所建立的備份還原VM、請完成下列步驟：
+
++
+** 從MMC還原VM時、請確定「還原精靈」的「**還原選項」頁面中未核取「啟用Snapshot驗證」選項。
+** 使用PowerShell還原VM時、請確定已指定-DisableVerifySnapshot參數。
+
+
+

@@ -1,0 +1,46 @@
+---
+permalink: concept_overview_of_vss_components.html 
+sidebar: sidebar 
+keywords: microsoft, windows, server, volume, shadow, copy, service, vss, coordinate, data, backup, application, storage, management, consisten, backup 
+summary: 您可以使用Microsoft Windows Server Volume陰影複製服務（VSS）來協調資料伺服器、備份應用程式和儲存管理軟體、以支援一致備份的建立和管理。 
+---
+= VSS元件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用Microsoft Windows Server Volume陰影複製服務（VSS）來協調資料伺服器、備份應用程式和儲存管理軟體、以支援一致備份的建立和管理。
+
+VSS可協調Snapshot複製型備份與還原作業、包括下列元件：
+
+* * VSS申請者*
++
+VSS申請者是一個備份應用程式、例如SnapManager 適用於Hyper-V或NTBackup的功能。它會啟動VSS備份與還原作業。申請者也會指定Snapshot複本屬性、以便進行所起始的備份。
+
+* * VSS寫入器*
++
+VSS寫入器擁有並管理要在Snapshot複本中擷取的資料。Microsoft Hyper-V VSS寫入器是VSS寫入器的範例。
+
+* * VSS提供者*
++
+VSS提供者負責建立及管理Snapshot複本。供應商可以是硬體供應商或軟體供應商：
+
++
+** 硬體供應商將儲存陣列特定的Snapshot複本與複製功能整合至VSS架構。
++
+此功能可將執行此功能的整套服務與儲存系統整合至VSS架構中。ONTAP SnapDrive Data ONTAP
+
++
+
+NOTE: 將會自動安裝「功能完整的VSS硬體供應商」、作為安裝此軟體的一部分。ONTAP SnapDrive
+
+** 軟體供應商在Windows系統上執行的軟體中實作Snapshot複本或複製功能。
++
+
+NOTE: 為確保ONTAP 無法正常運作、請勿在Data ONTAP 整個流程中使用VSS軟體供應商。如果您使用VSS軟體供應商在Data ONTAP 某個LUN上建立Snapshot複本、則無法使用VSS硬體供應商刪除該LUN。
+
+
+
+

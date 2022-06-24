@@ -1,0 +1,33 @@
+---
+permalink: task_installing_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: install, snapmanager, hyper-v, back, up, restore, data, snapdrive, windows 
+summary: 您可以安裝SnapManager 適用於Hyper-V的支援功能、以便備份及還原資料。在安裝適用於Hyper-V的功能前、您應該先安裝SnapDrive 適用於Windows的功能SnapManager 
+---
+= 安裝SnapManager 適用於Hyper-V的
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以安裝SnapManager 適用於Hyper-V的支援功能、以便備份及還原資料。在安裝適用於Hyper-V的功能前、您應該先安裝SnapDrive 適用於Windows的功能SnapManager
+
+您現有的資料必須備份、而且必須準備好下列資訊：
+
+* 授權金鑰
+* 登入認證資料
+* 連接埠編號（預設：808；必須符合SnapDrive Windows安裝連接埠編號的功能）
++
+.. 按兩下SnapManager 「適用於Hyper-V的解決方法」執行檔以啟動SnapManager 適用於Hyper-V安裝程式的功能。
+.. 選取安裝位置、然後按一下*下一步*。
+.. 完成SnapManager 「適用於Hyper-V的程式集」精靈中的步驟。
+.. 按一下「Ready to Install（準備安裝）」頁面上的「* Install*」。
+.. 檢閱您所選項目的摘要、然後按一下「*完成*」。
+
+
+
+
+*相關資訊*
+
+xref:reference_hotfix_requirements_for_windows_server_environments.adoc[Windows Server環境的修補程式需求]

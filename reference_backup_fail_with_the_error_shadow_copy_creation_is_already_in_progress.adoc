@@ -1,0 +1,30 @@
+---
+permalink: reference_backup_fail_with_the_error_shadow_copy_creation_is_already_in_progress.html 
+sidebar: sidebar 
+keywords: backup, failure, error, shadow, copy, creation 
+summary: 建立陰影複製時發生備份失敗錯誤 
+---
+= 備份失敗、出現「陰影複製建立已在進行中」錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *訊息*
++
+[listing]
+----
+SnapManager for Hyper-V backup failed to complete
+Backup of the Dataset Name: example
+Backup id: c1bb4b28-c76c-4001-85fd-ffdfdb5737c9 failed to execute
+Error: Vss Requestor - Backup Components failed. Failed to add volume \\CIFS_USER_SER\USER_SHARE2\ to snapshot set. Another shadow copy creation is already in progress. Wait a few moments and try again.
+----
+* *說明*
++
+發生此問題的原因是先前的備份未中止且仍處於作用中狀態。使用下列命令檢查是否有列出的任何項目：「CIFS共用show -ShadowCopy」
+
+* *修正行動*
++
+中止先前的備份工作、然後重試此作業。
+
+

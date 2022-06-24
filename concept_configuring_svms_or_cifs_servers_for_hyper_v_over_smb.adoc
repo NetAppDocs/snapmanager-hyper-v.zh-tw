@@ -1,0 +1,18 @@
+---
+permalink: concept_configuring_svms_or_cifs_servers_for_hyper_v_over_smb.html 
+sidebar: sidebar 
+keywords: configure, configuring, single, storage, virtual, machine, svm, cif, server, multiple, application, resource, sharing, share, issue, smb, hyper-v 
+summary: 為多個應用程式設定單一儲存虛擬機器（SVM）或CIFS伺服器、可能會導致資源共用問題、進而影響Hyper-V環境。 
+---
+= 在SMB上設定Hyper-V的SVM或CIFS伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+為多個應用程式設定單一儲存虛擬機器（SVM）或CIFS伺服器、可能會導致資源共用問題、進而影響Hyper-V環境。您應該根據需求、針對SMB上的Hyper-V設定專屬的SVM或CIFS伺服器。
+
+*相關資訊*
+
+https://kb.netapp.com/support/index?page=content&id=1015099["NetApp知識庫文件編號1015099：如何針對SMB上的Hyper-V設定SVM/CIFS"]

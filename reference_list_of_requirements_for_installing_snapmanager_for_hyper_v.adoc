@@ -1,0 +1,56 @@
+---
+permalink: reference_list_of_requirements_for_installing_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: environment, hardware, software, ontap, license, licensing, requirement, install, snapmanager, hyper-v, windows, .net, 4.5 
+summary: 您的環境必須符合所有的硬體、軟體、ONTAP 功能與授權要求、才能安裝SnapManager 適用於Hyper-V的功能 
+---
+= 安裝SnapManager Hyper-V的需求清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您的環境必須符合所有的硬體、軟體、ONTAP 功能與授權要求、才能安裝SnapManager 適用於Hyper-V的功能如果不符合最低Windows作業系統和.Net 4.5的需求、安裝程式就會停止。
+
+
+
+== Hyper-V父主機需求
+
+您必須讓Hyper-V父主機執行Windows Server 2008 R2或更新版本。您必須在父主機上啟用Hyper-V角色。您必須SnapDrive 在Hyper-V父主機上安裝適用於Windows或更新版本的支援。
+
+
+
+== 適用於Hyper-V下載的SnapManager
+
+您必須從SnapManager NetApp支援網站下載適用於Hyper-V的支援功能。
+
+
+
+== 儲存系統需求
+
+儲存系統必須執行ONTAP 適當版本的更新版的更新。您可以使用主機型或儲存系統授權來安裝SnapManager 適用於Hyper-V的功能
+
+
+
+== 授權
+
+您必須擁有適當的授權才能執行SnapManager 適用於Hyper-V的功能
+
+
+
+== 認證資料
+
+您必須擁有適當的認證資料、才能安裝及執行SnapManager 適用於Hyper-V的功能
+
+
+
+== 服務帳戶與驗證需求
+
+您必須擁有服務帳戶、而且必須符合驗證需求。您必須能夠使用服務帳戶登入主機、而且該帳戶必須具有管理權限。
+
+
+
+== Web服務連接埠號碼
+
+您必須有可用的Web服務Net.TCP連接埠號碼。預設連接埠號碼為808。在SnapManager 叢集上安裝適用於Hyper-V的功能時、您必須確定所有節點都使用相同的連接埠號碼。

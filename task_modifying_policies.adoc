@@ -1,0 +1,24 @@
+---
+permalink: task_modifying_policies.html 
+sidebar: sidebar 
+keywords: modify, policies, policy, protect, dataset, wizard 
+summary: 您可以使用「修改原則」精靈來修改保護資料集的原則。 
+---
+= 修改原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用「修改原則」精靈來修改保護資料集的原則。
+
+. 在導覽窗格中、按一下* Protection（保護）*>* Dataset *。
+. 選取包含您要修改之原則的資料集。
+. 選取您要修改的原則。
+. 在「動作」窗格中、按一下「*修改原則*」。
++
+此時將出現「修改原則」精靈。
+
+. 完成精靈中的步驟、以修改資料集的保護原則。
+

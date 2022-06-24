@@ -1,0 +1,22 @@
+---
+permalink: concept_performing_a_cluster_os_rolling_upgrade.html 
+sidebar: sidebar 
+keywords: cluster, operating, system, os, rolling, upgrade, snapmanager, perform, reducing, reduce, downtime 
+summary: 您可以執行叢集作業系統（OS）循環升級、以升級叢集節點的作業系統、而不需停止SnapManager 適用於Hyper-V的支援此功能可減少停機時間、以支援SLA法規遵循。 
+---
+= 執行叢集作業系統循環升級
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以執行叢集作業系統（OS）循環升級、以升級叢集節點的作業系統、而不需停止SnapManager 適用於Hyper-V的支援此功能可減少停機時間、以支援SLA法規遵循。
+
+執行SnapManager Hyper-V的容錯移轉叢集可從Windows Server 2012 R2升級至Windows Server 2016和Windows Server 2019、無需停機。
+
+如需叢集作業系統循環升級效益、安裝程序及限制的相關資訊、請參閱相關資訊。
+
+*相關資訊*
+
+https://docs.microsoft.com/en-us/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade["Microsoft TechNet：叢集作業系統循環升級"]

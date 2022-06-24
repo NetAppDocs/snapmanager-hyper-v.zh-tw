@@ -1,0 +1,32 @@
+---
+permalink: reference_datasets_are_not_automatically_replicated_to_new_nodes_in_a_windows_failover_cluster.html 
+sidebar: sidebar 
+keywords: dataset, automatic, replicated, node, windows, failover, cluster 
+summary: 資料集不會自動複寫至Windows容錯移轉叢集中的新節點。 
+---
+= 資料集不會自動複寫至Windows容錯移轉叢集中的新節點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+將新節點新增至Windows容錯移轉叢集之後、資料集不會自動傳輸至新節點。
+
+* *原因*
++
+將新節點新增至Windows容錯移轉叢集時、SnapManager 適用於Hyper-V的功能不自動將現有的資料集複寫至叢集中的新節點。
+
+* *修正行動*
++
+執行「修改資料集」精靈、然後按一下「基本詳細資料」頁面上的「將排程原則更新至所有資料集成員節點*」。
+
++
+此精靈必須針對擁有虛擬機器的每個資料集執行。
+
+
+
+*相關資訊*
+
+xref:task_modifying_a_dataset.adoc[修改資料集]

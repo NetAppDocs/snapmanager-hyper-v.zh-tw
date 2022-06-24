@@ -1,0 +1,33 @@
+---
+permalink: task_verifying_that_the_vss_hardware_provider_was_used_successfully.html 
+sidebar: sidebar 
+keywords: verify, data, ontap, vss, hardware, provider, successful, snapshot, copy 
+summary: 您可以驗證Data ONTAP 在製作Snapshot複本之後、是否成功使用了《不完整版VSS硬體供應商》。 
+---
+= 驗證VSS硬體供應商是否已成功使用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以驗證Data ONTAP 在製作Snapshot複本之後、是否成功使用了《不完整版VSS硬體供應商》。
+
+. 瀏覽至*系統工具*>*事件檢視器*>* MMC中的應用程式*、尋找具有下列值的事件：
++
+|===
+| 來源 | 事件ID | 說明 
+
+
+ a| 
+納維斯普夫
+ a| 
+4089
+ a| 
+VSS提供者已成功完成SnapshotSetId ID的CommitSnapshotSnapshot、只需n毫秒。
+
+|===
++
+*注意：* VSS要求供應商在10秒內提交Snapshot複本。如果超過此時間限制、Data ONTAP 則支援不支援的VSS硬體供應商會記錄事件ID 4364。由於暫時性問題、可能會超過此限制。如果記錄此事件以進行失敗的備份、請重試備份。
+
+

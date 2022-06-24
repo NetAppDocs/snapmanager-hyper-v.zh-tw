@@ -1,0 +1,22 @@
+---
+permalink: concept_configuring_snapinfo_directory_settings.html 
+sidebar: sidebar 
+keywords: configure, configuring, snapinfo, setting, host, virtual, machine, resource, dataset, action, directory 
+summary: 您必須先設定主機的SnapInfo設定、才能將該主機內的虛擬機器資源新增至資料集。 
+---
+= 設定SnapInfo目錄設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必須先設定主機的SnapInfo設定、才能將該主機內的虛擬機器資源新增至資料集。如果將Hyper-V主機新增SnapManager 至適用於Hyper-V的支援、但未設定SnapInfo設定、您可以稍後使用組態精靈或* SnapInfo設定*動作來設定這些設定。
+
+您也可以在將主機新增至SnapManager 適用於Hyper-V的支援後、變更SnapInfo設定不過、如果您變更SnapInfo設定、則必須手動將所有檔案移至新位置；SnapManager 適用於Hyper-V的版本不會自動更新。如果您不移動檔案、就無法從備份複本還原或管理備份複本、SnapManager 而適用於Hyper-V的還原功能則不會列出備份複本。
+
+從Hyper-V的支援功能開始SnapManager 、SnapInfo路徑可位於叢集共用磁碟區（CSV）上、也可位於Windows Server 2012的SMB共用區上。
+
+*相關資訊*
+
+http://technet.microsoft.com/library/jj612868.aspx["Microsoft TechNet：在容錯移轉叢集中使用叢集共用磁碟區"]

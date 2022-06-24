@@ -1,0 +1,28 @@
+---
+permalink: reference_snapmanager_for_hyper_v_is_not_licensed_on_the_host_or_in_the_storage_system.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, license, host, storage, system 
+summary: 針對Hyper-V的支援未在主機或儲存系統中獲得授權。SnapManager 
+---
+= 針對Hyper-V的支援未在主機或儲存系統中獲得授權SnapManager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *訊息*
++
+針對Hyper-V、主機或儲存系統未授權、備份會中止SnapManager
+
+* *說明*
++
+當您的系統未獲授權、或是列舉、虛擬機器快取或主開機記錄（MBbr）磁碟使用有問題時、就會出現此訊息。
+
+* *修正行動*
++
+.. 確保您的系統已獲得授權。
+.. 將SnapManager 任何不支援Hyper-V的MBR-磁碟移轉到GUID磁碟分割表（GPT）磁碟。
+.. 重新啟動SnapManager 適用於Hyper-V的功能如果這無法解決問題、您很可能遇到列舉問題、請聯絡技術支援部門。
+
+
+

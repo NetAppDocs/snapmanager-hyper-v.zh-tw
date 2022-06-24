@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="9bfd8a32b889847e7544ae67a481cb0d" category="summary">您的環境必須符合所有的硬體、軟體、ONTAP 功能與授權要求、才能安裝SnapManager 適用於Hyper-V的功能</block>
+  <block id="6d8dab0fd3c9ea56cfe745d20a01bd40" category="doc">安裝SnapManager Hyper-V的需求清單</block>
+  <block id="c943b0e1512420f89b9edf55a097a695" category="paragraph">您的環境必須符合所有的硬體、軟體、ONTAP 功能與授權要求、才能安裝SnapManager 適用於Hyper-V的功能如果不符合最低Windows作業系統和.Net 4.5的需求、安裝程式就會停止。</block>
+  <block id="5d722e584e1a97a5679db4ed5cb92204" category="section-title">Hyper-V父主機需求</block>
+  <block id="897063780c01dc20396e5da6c0282f4e" category="paragraph">您必須讓Hyper-V父主機執行Windows Server 2008 R2或更新版本。您必須在父主機上啟用Hyper-V角色。您必須SnapDrive 在Hyper-V父主機上安裝適用於Windows或更新版本的支援。</block>
+  <block id="7ec05202285461e981b02b5dcbc7656b" category="section-title">適用於Hyper-V下載的SnapManager</block>
+  <block id="ce6b9a3666fd94fd87405be77506f061" category="paragraph">您必須從SnapManager NetApp支援網站下載適用於Hyper-V的支援功能。</block>
+  <block id="d03162b43387c334a9a83cf598f2fd61" category="section-title">儲存系統需求</block>
+  <block id="be754fa0b9d0c138c623a151e60a595b" category="paragraph">儲存系統必須執行ONTAP 適當版本的更新版的更新。您可以使用主機型或儲存系統授權來安裝SnapManager 適用於Hyper-V的功能</block>
+  <block id="f6aca2dcfee051b254bbcb878dc70d09" category="section-title">授權</block>
+  <block id="70d0f7752ac42f36426dd9ceb4dc2f0f" category="paragraph">您必須擁有適當的授權才能執行SnapManager 適用於Hyper-V的功能</block>
+  <block id="2daf1cb573c2c61422faf64610cf9402" category="section-title">認證資料</block>
+  <block id="8063a20349c31818a0c04557e1d87cfa" category="paragraph">您必須擁有適當的認證資料、才能安裝及執行SnapManager 適用於Hyper-V的功能</block>
+  <block id="0c5b330a73e771f120210c435e04f071" category="section-title">服務帳戶與驗證需求</block>
+  <block id="80e68172a10ff6564b15dbb37db24374" category="paragraph">您必須擁有服務帳戶、而且必須符合驗證需求。您必須能夠使用服務帳戶登入主機、而且該帳戶必須具有管理權限。</block>
+  <block id="f39b6a9b25a6ed27972f8db96faa7a41" category="section-title">Web服務連接埠號碼</block>
+  <block id="fbceb177a4f4c3677a56c6edd3f42b34" category="paragraph">您必須有可用的Web服務Net.TCP連接埠號碼。預設連接埠號碼為808。在SnapManager 叢集上安裝適用於Hyper-V的功能時、您必須確定所有節點都使用相同的連接埠號碼。</block>
+  <block id="181a610b4d20942c5b822b18af229089" category="summary">您可以使用SnapManager 支援Hyper-V的功能、一次還原單一虛擬機器（VM）、從備份複本中恢復遺失或損壞的資料。</block>
+  <block id="b9ec9735f2fc80af25ba5efeb7b78413" category="doc">從備份複本還原虛擬機器</block>
+  <block id="adb73ebea301b91a34c36f4c1e602e23" category="paragraph">您必須提供下列資訊：</block>
+  <block id="ec8515af1b6337cfd04c9d14a72d8212" category="list-text">備份名稱</block>
+  <block id="8b9a96e40ebcda35ce12190b41789b64" category="list-text">組態資訊</block>
+  <block id="16a41b40c49bce3832efe8ede921db79" category="list-text">指令碼資訊</block>
+  <block id="fa110b4d619aaf7973eb98288cf66f1d" category="paragraph">還原到備用主機時、原始VM所在實體電腦上的CPU類型應與您要還原VM的實體電腦相容。或者、您也可以使用Hyper-V Manager來指定允許機器還原至具有不同CPU類型的機器。</block>
+  <block id="50596a99edaf07b5771150334053aca5" category="paragraph">儲存即時移轉之後、您無法從最新的備份還原。</block>
+  <block id="0d4ce72f93bf0413766597f883589015" category="paragraph">如果您啟動Hyper-V虛擬機器的還原作業、而且正在進行同一虛擬機器的其他備份或還原、則會失敗。</block>
+  <block id="71d6438b419ce103a51afbfd672aae2b" category="list-text">在導覽窗格中、按一下*恢復*。</block>
+  <block id="12f2961bc27e7d9e3b1b7271af5b45bd" category="list-text">選取您要還原的虛擬機器。</block>
+  <block id="a6d2207079011f9756823f288b80e01a" category="list-text">在備份窗格中、選取您要還原的備份複本名稱、然後按一下*還原*。</block>
+  <block id="d515b8e04bcfab548d8f1baab6a431e6" category="paragraph">此時會出現還原精靈。</block>
+  <block id="3159cd4bb0ddd7ee38e52445549eba6a" category="list-text">完成精靈中的步驟以還原虛擬機器備份複本。</block>
+  <block id="1966aa15da483387ba53e6ba8e5499ff" category="paragraph">關閉精靈不會取消還原作業。適用於Hyper-V的還原在開始還原作業之前、會驗證虛擬機器組態。SnapManager如果虛擬機器組態有任何變更、則會出現警告、讓您選擇繼續或取消作業。</block>
+  <block id="c7b1e280ade6237e8b59f4aef36828b1" category="paragraph">您可以在「工作管理」視窗中檢視還原作業的狀態、或是在「報告管理」視窗中檢視報告來檢查作業結果。</block>
+  <block id="d33f2a600ba4fe43084a26e95e4908c0" category="paragraph">*相關資訊*</block>
+  <block id="ec9387de061fdcb3776eaeb56e48bb80" category="inline-xref-macro">容錯回復後從備份還原</block>
+  <block id="6013efc1683d971230a863e5214ba856" category="paragraph"><block ref="6013efc1683d971230a863e5214ba856" category="inline-xref-macro-rx"></block></block>
+  <block id="3c5e1b6c5f4f2fdcbd144bc97871db3b" category="summary">VSS會在NAS備份期間針對Microsoft iSCSI Target VSS Hardware Provider傳回錯誤。</block>
+  <block id="670234aa29b1d4558a6a023d6141e755" category="doc">VSS會在NAS備份期間針對Microsoft iSCSI Target VSS Hardware Provider傳回錯誤</block>
+  <block id="9ff702207c5c34d0a659bd2093b21d08" category="list-text">*問題*</block>
+  <block id="abf74e69edb6ec9f21da76741d4507fa" category="paragraph">執行NAS備份時、可能會發生下列錯誤：</block>
+  <block id="3ce6a4932c3fbaf7cad27f10f4987aef" category="paragraph">VSS申請人-備份元件失敗。無法將Volume [範例]新增至快照集。陰影複製提供者在嘗試處理指定的作業時發生非預期的錯誤。</block>
+  <block id="54058ce4d3710059aa6cd67e7ed09b9a" category="paragraph">Volume陰影複製服務錯誤：使用CLSID[範例]建立陰影複製提供者COM類別時發生錯誤。存取遭拒。</block>
+  <block id="3bef6104c92bf17bdfdf66c9a257bbfc" category="list-text">*原因*</block>
+  <block id="cc38ee1b14932166dacc83761bc5b8ba" category="paragraph">這些錯誤會在NAS應用程式一致的備份期間發生。NAS備份不會失敗、但VSS會記錄與Microsoft iSCSI Target VSS Hardware Provider相關的一些錯誤。</block>
+  <block id="9bcbf7a68cf7f81d5bf448a2e12ab26a" category="list-text">*修正行動*</block>
+  <block id="6a377d56f9974cf1af73e482fa03ad6d" category="paragraph">備份未失敗、您可以放心忽略這些錯誤。</block>
+  <block id="ff4b2bdd0c2f262230f1c5f3b038c78a" category="summary">您必須先從非ONTAP主機匯出虛擬機器（VM）、才能將其匯入ONTAP 到該主機。</block>
+  <block id="cc8203bf76d5372bf616cb5bdf8365ae" category="doc">從非ONTAP主機匯出VM</block>
+  <block id="d83ef93fc96f4740e2fd1b5d36584bda" category="paragraph">您必須先從非ONTAP主機匯出虛擬機器（VM）、才能將其匯入ONTAP 到該主機。</block>
+  <block id="b121d022fb2f3bb7e8451fbadc298777" category="paragraph">您要移轉的VM必須關閉。</block>
+  <block id="93ce70605948b9f69c980a0ac9a50946" category="list-text">開啟應用程式伺服器管理員。</block>
+  <block id="8d1e6d98e3839f6b2671eaf41c3ee5a2" category="list-text">在左窗格中、按一下*角色*&gt;* Hyper-V *&gt;* Hyper-V Manager*。</block>
+  <block id="fe504689150e839fac7a749fb9f09892" category="list-text">選取您要移轉的VM目前所在的非ONTAP主機名稱。</block>
+  <block id="0b5ce316b9f199a9e5cb4bc986f76309" category="list-text">在「虛擬機器」窗格中、以滑鼠右鍵按一下您要移轉的虛擬機器名稱。</block>
+  <block id="fd69693d0742412c103070062d719603" category="list-text">按一下*匯出*。</block>
+  <block id="ba084e34315e08b7fbff1f32df7d07cc" category="image-alt">在伺服器管理程式中使用smhv匯出VM</block>
+  <block id="6efb225c6a467f12571966e97fa50dc1" category="paragraph">「匯出虛擬機器」視窗即會開啟。</block>
+  <block id="f1faf4507c984826f3e72000d81e1ede" category="list-text">按一下*瀏覽*。</block>
+  <block id="a903e3fe8a39ede0a3b25c9dba687732" category="paragraph">此時會開啟一個視窗、顯示可用的硬碟機。</block>
+  <block id="62b7ce616a5ff56a56d0e7c02e700925" category="list-text">按一ONTAP 下VM的「支援虛擬機器的主機目的地」。</block>
+  <block id="9991f8a2ce0aacbd556d6c0a273e288e" category="list-text">按一下*選取資料夾*。</block>
+  <block id="298642c906879fec1830d1f7a785b17e" category="paragraph">VM會匯出至Data ONTAP 您在步驟7中選擇的目的地。</block>
+  <block id="f4e1484ecefdd106574b107ed3fa0434" category="paragraph">接下來、將VM匯入Data ONTAP 您選擇的支援主機。</block>
+  <block id="80811f0cfad7be4f8a8fe255a44dfe05" category="summary">您可以在SnapManager 適用於Hyper-V的功能表中、建立及監控隨需備份或管理排程備份</block>
+  <block id="5425189468cabcf97238f146f46a82e4" category="doc">在SnapManager 支援Hyper-V的支援環境中建立及管理備份工作</block>
+  <block id="5f7f6c59275d2508b722bb7d7c47440f" category="paragraph">您可以在SnapManager 適用於Hyper-V的功能表中、建立及監控隨需備份或管理排程備份您也可以使用SnapManager 適用於Hyper-V的解決方法來執行兩種備份工作：應用程式一致且損毀一致。</block>
+  <block id="2f6395b7be292a20329791d34774e7ec" category="section-title">關於SnapManager 適用於Hyper-V備份的</block>
+  <block id="b5953a27b96d0c1bcf15c4ee0428dc16" category="paragraph">您可以建立隨需備份工作、並在需要時執行、也可以使用資料集附加的原則來建立排程的備份工作。隨需備份工作可包括保留與複寫原則、以及備份前後執行的指令碼。您可以建立、修改、檢視及刪除排程備份工作的原則。</block>
+  <block id="743f46f5672759d8ff0f2a51a71f8bf1" category="section-title">Hyper-V的備份工作SnapManager 類型可以執行</block>
+  <block id="77b111d8e22579078bd3a1b224232739" category="paragraph">您可以使用SnapManager 適用於Hyper-V的支援功能執行兩種備份工作：應用程式一致且損毀一致。</block>
+  <block id="b1e1d702d45b2fe56a635c1d9a086595" category="section-title">應用程式一致的備份工作</block>
+  <block id="86a576351a2514a29670b00507fcb5ae" category="paragraph">應用程式一致的備份工作需要徹底、可靠且資源密集。它們是與Microsoft Volume陰影複製服務（VSS）協調執行、以確保在建立Snapshot複本之前、VM上執行的每個應用程式都會靜止不動。此備份方法可確保應用程式資料一致性。您可以使用它來還原VM及其上執行的應用程式。然而、應用程式一致的備份工作相當耗時、而且可能相當複雜。</block>
+  <block id="aa61bce02174045e5bdaef86871fa67c" category="section-title">損毀一致的備份工作</block>
+  <block id="8116b9761ac61a18ef89d32ee3338130" category="paragraph">損毀一致的備份工作是資料集所涉及之VM所使用之所有LUN的快速Snapshot複本。產生的備份複本類似於當機或突然關機的VM資料擷取。當機一致的備份工作提供了一種快速的資料擷取方法、但VM必須存在、才能從損毀一致的備份中還原。當機一致的備份工作並非用來取代應用程式一致的備份工作。</block>
+  <block id="1de394836ecef8224e4b8254952e84bb" category="section-title">適用於Hyper-V備份需求與限制SnapManager</block>
+  <block id="067eba14c9f4607fcf90781d9a4c1665" category="paragraph">您應該瞭解SnapManager 到適用於Hyper-V備份的功能需求與限制：</block>
+  <block id="fc9931312928df647cf75c365b5cedea" category="list-text">如果您在MetroCluster 某個支援組態上執行切換或切換作業、則不支援備份與還原作業。如果備份與還原作業以及切換或切換作業同時執行、則在Windows Server 2012 R2系統中、VM的.vhd檔案格式可能會變更為.avhdx。VM不受此變更影響。</block>
+  <block id="ed0d328b7fb80959810b4fc480776152" category="list-text">分散式應用程式一致的備份選項可讓在合作夥伴叢集節點上執行的多個VM在從備份節點建立的單一硬體Snapshot複本中保持一致。此選項支援在CSV 2.0 Windows磁碟區上執行的所有VM、橫跨Windows容錯移轉叢集中的多個節點。</block>
+  <block id="686eb5e51905e84129f4a85c8d8608c5" category="list-text">在7-Mode中操作時、應用程式一致的備份工作會使用VSS硬體供應商來製作兩個Snapshot複本。Snapshot複本稱為snapshot名稱和snapshot名稱備份。這兩個Snapshot複本可在VSS備份期間進行自動還原。</block>
+  <block id="a0b47801edb2ca75ad47a72c52e11d7b" category="list-text">在叢集式環境中、應用程式一致的備份只需要一個Snapshot複本、即可進行自動還原程序。SIS複本可用於執行自動還原、自動還原完成後、即會刪除第一個Snapshot複本（snapshot名稱）。</block>
+  <block id="1e151112af779c428fe9c9cac2417357" category="list-text">VM中的每個Windows磁碟區必須至少有300 MB的可用磁碟空間。這包括對應至VHD、iSCSI LUN的Windows磁碟區、以及連接至VM的傳遞磁碟。</block>
+  <block id="392415fca3acb1157d91685eaf8290a1" category="list-text">當機一致的備份工作一律只會建立一個Snapshot複本。它不提供VSS整合。</block>
+  <block id="807b110a0e042fe8c27556d3d3ac10c2" category="list-text">多個損毀一致的備份工作可以並行執行。當機一致的備份工作可與應用程式一致的備份工作同時執行。</block>
+  <block id="929d94772a38d01d0346ef8be9fc617c" category="list-text">AllowSavedStateBackup不適用於損毀一致的備份工作。</block>
+  <block id="9a31c7a9558ce86e67c18872ab08b215" category="summary">您可以使用SnapManager 適用於Hyper-V的功能、來新增、檢視及移除Hyper-V父主機或叢集</block>
+  <block id="de98141b0ad67e6316b7ab5e9dd2c37f" category="doc">設定主機</block>
+  <block id="1f06fec52f443cb0114558d4a03ac4f4" category="summary">您可以在SnapManager 適用於Hyper-V的支援中檢視及刪除備份、還原及組態報告這些報告包含有關資料集、虛擬機器和主機的重要資訊。您也可以匯出多種不同格式的報告。</block>
+  <block id="bfc713844931617994d610549182f8c4" category="doc">管理報告</block>
+  <block id="3843efe20892823d0077617cd08721f1" category="list-text">*備份報告*</block>
+  <block id="b02be203c89094674d38b9a3987ecc0d" category="paragraph">備份報告會顯示屬於特定資料集之所有主機的所有備份資訊。您可以檢視資料集或虛擬機器的備份報告。針對虛擬機器顯示的報告會使用虛擬機器名稱、而非其GUID。</block>
+  <block id="bd9b838529db2595b0e1547f1c815a73" category="paragraph">當顯示備份報告時、您可以將其匯出成多種不同的格式。</block>
+  <block id="9bb984b5c024d988b7e3e8ec3b7ccd37" category="list-text">*還原報告*</block>
+  <block id="ed18f9107c301780412fa2703cf175c4" category="paragraph">還原報告會以每個VM為基礎、顯示還原作業的所有相關資訊。</block>
+  <block id="9b2c6523a445bb2f1588789fece50627" category="paragraph">顯示還原報告時、您可以將其匯出成多種不同的格式。</block>
+  <block id="612ef4d91419f2ffde9ba70ba314e4ec" category="list-text">*組態報告*</block>
+  <block id="d8a0e0306aec7605dc1e445c36068a9d" category="paragraph">組態報告會顯示所選主機的通知設定、報告路徑和SnapInfo路徑。</block>
+  <block id="414009e6625ececab68d6d137e0ee333" category="paragraph">顯示組態報告時、您可以將其匯出成多種不同的格式。</block>
+  <block id="3d1e3ba4492b6cf4530a7b58ed4e3033" category="summary">成功匯入虛擬機器（VM）之後、即可從非ONTAP主機刪除VM。</block>
+  <block id="de6d3cade9f2e76948843a171ace99d8" category="doc">從非ONTAP主機刪除先前匯出的VM</block>
+  <block id="af1dbf1b444caeefdf74dc523a82f849" category="paragraph">VM必須已成功匯入。</block>
+  <block id="32985b828adb5af0b314616c8d2cf3bc" category="list-text">選取原本裝載VM的非ONTAP主機。</block>
+  <block id="486f2710a6e73fc6621e917d0d55037e" category="list-text">在「虛擬機器」窗格中、以滑鼠右鍵按一下先前匯出的VM名稱。</block>
+  <block id="874db297b2254479eeb702a2d7fa8dab" category="list-text">按一下*刪除*。</block>
+  <block id="5a9cb16bfaab21a3d02cda41e32a3842" category="paragraph">隨即開啟視窗、要求您確認是否要刪除VM。</block>
+  <block id="9d94ad975dd5a96bdbe907efd93940a5" category="paragraph">VM會從其原始主機移除。</block>
+  <block id="b6a443741a988a90f257684109af60d4" category="summary">您必須手動將修補程式安裝到Microsoft Windows Server作業系統環境。</block>
+  <block id="fc798bdb49d3c2d605a7d8c0e960849f" category="doc">Windows Server環境的修補程式需求</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="7f5fa70f7f0de20b1035c6057b6b7faf" category="admonition">如需Windows Server 2016和Windows Server 2019需求、請參閱<block ref="9ac0821921acbcb7ffc8a04e39ee2613" category="inline-link-rx"></block></block>
+  <block id="b5751ec538393c23a1c85e5ec3501f50" category="paragraph">Windows Server 2012需要下列修補程式：</block>
+  <block id="d28a0d13680c18c0dcb27b242726e800" category="inline-link">2770917</block>
+  <block id="18e5626edd40ef3fe1538cbeef23603d" category="list-text"><block ref="18e5626edd40ef3fe1538cbeef23603d" category="inline-link-rx"></block></block>
+  <block id="985c8622762c01cb2f7e269eeaf60576" category="inline-link">2779768</block>
+  <block id="dbbae3f0fbe198bc8431215f4b56b8c2" category="list-text"><block ref="dbbae3f0fbe198bc8431215f4b56b8c2" category="inline-link-rx"></block></block>
+  <block id="5326e05dfd3d1e0574d27a8c06918940" category="paragraph">對於Windows Server 2008 R2、需要下列修補程式：</block>
+  <block id="822cede87b8018748d5147db6ff9320a" category="inline-link">974909</block>
+  <block id="c50877258eedb8b82c375daf1d407fe6" category="list-text"><block ref="c50877258eedb8b82c375daf1d407fe6" category="inline-link-rx"></block></block>
+  <block id="90b7cafa5e177790b498421563f2b9c8" category="inline-link">KB375354</block>
+  <block id="05851b952c69a06740862d73fa159681" category="list-text"><block ref="05851b952c69a06740862d73fa159681" category="inline-link-rx"></block></block>
+  <block id="bcdfc22b39056fcbba39e3e75098e3c7" category="inline-link">2637197</block>
+  <block id="7e0092151e83f3a9eae69921b72f534d" category="list-text"><block ref="7e0092151e83f3a9eae69921b72f534d" category="inline-link-rx"></block></block>
+  <block id="99fa3d9c10817df24809b9c564d97b43" category="paragraph">對於Windows Server 2008 R2 SP1、需要下列修補程式：</block>
+  <block id="7cc18a2a00146ce0cd8282666ef707cf" category="inline-link">KB2263829</block>
+  <block id="014c976ce6a6b61ef9825f767517099e" category="list-text"><block ref="014c976ce6a6b61ef9825f767517099e" category="inline-link-rx"></block></block>
+  <block id="9d9c405131f63960e2964c6c3180074e" category="paragraph">這些是最小的修補程式層級。</block>
+  <block id="5fbcbeac1c9323edbfaa4d42e8498112" category="summary">安裝SnapManager 完適用於Hyper-V的功能後、您可以新增保護及還原資料的原則、來設定及管理主機和虛擬機器。</block>
+  <block id="3c982a72c20a469b8dccc548d71219d4" category="doc">設定SnapManager 適用於Hyper-V的功能</block>
+  <block id="195506677cdc504f967b8ebba196fef1" category="summary">針對Hyper-V的支援未在主機或儲存系統中獲得授權。SnapManager</block>
+  <block id="33876ac921b2bc632aaef6a42256b23d" category="doc">針對Hyper-V的支援未在主機或儲存系統中獲得授權SnapManager</block>
+  <block id="2dd9a9fa1ac0d7911deb623eb2417bf4" category="list-text">*訊息*</block>
+  <block id="2d20eb8c65308e47a2b08e27aba5c8e3" category="paragraph">針對Hyper-V、主機或儲存系統未授權、備份會中止SnapManager</block>
+  <block id="f14c276c07197ebef1394a5a219087a1" category="list-text">*說明*</block>
+  <block id="59e79108618fff704166fe7ce5803dd7" category="paragraph">當您的系統未獲授權、或是列舉、虛擬機器快取或主開機記錄（MBbr）磁碟使用有問題時、就會出現此訊息。</block>
+  <block id="40383a03fe003a75842d350885aab9aa" category="list-text">確保您的系統已獲得授權。</block>
+  <block id="a49dbab3319247004e60533531fcbd19" category="list-text">將SnapManager 任何不支援Hyper-V的MBR-磁碟移轉到GUID磁碟分割表（GPT）磁碟。</block>
+  <block id="e4e2c69c7412318a9a9284557e14419f" category="list-text">重新啟動SnapManager 適用於Hyper-V的功能如果這無法解決問題、您很可能遇到列舉問題、請聯絡技術支援部門。</block>
+  <block id="38a569a8b695810bedfc219326f7c957" category="summary">執行叢集作業系統循環升級之後、您必須在所有節點上更新資料集和SnapInfo。</block>
+  <block id="749f93cdad32206d42f7b7eb9e6d064b" category="doc">在所有節點上更新資料集和SnapInfo</block>
+  <block id="8422363b530efa373f87e696b2f3bef3" category="admonition">叢集循環升級可從Windows Server 2016升級至Windows Server 2019；混合模式作業系統不支援共用磁碟備份。</block>
+  <block id="ce544eb22035e6c0d3d0ec2c7e390f58" category="list-text">編輯Windows 2012 R2節點上的所有資料集。</block>
+  <block id="5bc780c2a398c9061cab5e0436fbeb95" category="list-text">確認所有可用的資料集都可在Windows 2016節點上看到。</block>
+  <block id="a511914199a96e0d1ed1fbc3859f85fd" category="list-text">在Windows 2012 R2節點上設定SnapInfo路徑。</block>
+  <block id="bd57c56b4b1557c4bb21f8806d726880" category="list-text">確認Windows 2016節點上顯示正確的SnapInfo路徑。</block>
+  <block id="aaad8541861f53cba82fd2c8926d87f4" category="summary">在安裝SnapManager 適用於Hyper-V的支援之前、您必須從NetApp支援網站下載軟體套件。</block>
+  <block id="f5c6fbf2b0b52b4277040990046cd128" category="doc">下載SnapManager 適用於Hyper-V的</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp 支援網站</block>
+  <block id="15065f0cec37f47f6fb478d2c9e38d16" category="paragraph">在安裝SnapManager 適用於Hyper-V的功能更新之前、您必須從下載軟體套件 <block ref="ddde3f632635f1214fcf71477f4c4e6e" category="inline-link-macro-rx"></block>。</block>
+  <block id="99e5e607db77c21714ad56713649336a" category="paragraph">您必須擁有NetApp支援網站的登入認證資料。</block>
+  <block id="ef2f0d900bc744477aadbce9b212dc20" category="list-text">登入NetApp支援網站。</block>
+  <block id="e558d54c61af5c40188d0d8d288bebd4" category="list-text">前往下載軟體頁面。</block>
+  <block id="96409ef47356e6f1ca404e4dbbd0d460" category="list-text">從下拉式清單中、選取要安裝SnapManager 支援Hyper-V的作業系統、然後按一下「*執行！*」。</block>
+  <block id="1f7538967ef0ad283767576991eadfeb" category="list-text">按一下*「View &amp; Download*（檢視與下載）」以取得您要安裝的軟體版本。</block>
+  <block id="6af81455b6e2cdd1ac9ad149922600be" category="list-text">在「說明」頁面上、按一下*繼續*。</block>
+  <block id="1cec04b1fe6e3bfdcaddfffedd400a12" category="list-text">檢閱並接受授權合約。</block>
+  <block id="075090d125619d0f714d37cba8f9b2c1" category="list-text">在「Download（下載）」頁面上、按一下安裝檔案的連結。</block>
+  <block id="7639edcd0f857dee5c37824943c0a04b" category="list-text">將SnapManager 適用於Hyper-V的功能檔儲存至本機或網路目錄。</block>
+  <block id="27992f0f5ff15a395474dac5a64524e2" category="list-text">按一下*儲存檔案*。</block>
+  <block id="1590b7a8b0b7acb35abe40ef018e8451" category="list-text">驗證Checksum、確保軟體下載正確。</block>
+  <block id="116057e59777a6912b053f16846276cb" category="summary">下列VM的備份失敗、因為無法在線上備份、或找不到要備份的VM。</block>
+  <block id="1b9a0ddcc331d08d4f33c6463540d181" category="doc">下列VM的備份失敗、因為無法在線上備份、或找不到要備份的VM</block>
+  <block id="3499864f6d7f2acfc5b060995b6720a4" category="paragraph">下列VM的備份失敗、因為無法在線上備份、或找不到要備份的VM</block>
+  <block id="f94e13e741fbfd2853be90b741817480" category="paragraph">如果在Windows 2008 R2 SP1 Hyper-V父虛擬機器中備份Windows 2012 VM、但未啟用「允許儲存的狀態VM備份」選項、則會出現此訊息。</block>
+  <block id="5c7f36b1862101e85b1a1b08bf86801a" category="paragraph">對於Windows 2012備份、請在啟用「允許儲存狀態VM備份」選項的情況下執行備份。</block>
+  <block id="78b156c09fb275854cd9790780867e65" category="summary">錯誤1935</block>
+  <block id="d4c99b76e5537b45dc567045ef457d62" category="doc">錯誤1935。安裝組合件零組件時發生錯誤</block>
+  <block id="ba6fe311c47aed667d14e39981d8bb8a" category="paragraph">錯誤1935。安裝組件元件時發生錯誤：\｛2A030FEB-29B5-314B-97B5-ED38673CC885｝。HRESULT：80070BC9。</block>
+  <block id="2f143f115d15603e6a80bcb544ababa5" category="paragraph">當安裝或解除安裝Microsoft即時修復程式後、Hyper-V系統未重新啟動、導致無法執行Hyper-V安裝程式時、就會出現此訊息SnapManager 。</block>
+  <block id="72f3c5d3524a276f01951f5ccce1b021" category="paragraph">重新啟動電腦、SnapManager 然後再次執行適用於Hyper-V安裝程式的功能。</block>
+  <block id="e04e5493bbdf3730d702cbaec9351bf3" category="summary">在安裝適用於Hyper-V的功能之前、您必須先在SnapDrive 所有主機上安裝適用於Windows的功能SnapManager如果主機是叢集的成員、叢集中的所有節點都需要安裝SnapDrive 適用於Windows的版本。</block>
+  <block id="e9e04761b2e3fa887c771ddefa5c5e27" category="doc">適用於Windows的安裝順序SnapDrive 和SnapManager 適用於Hyper-V的更新順序</block>
+  <block id="db047a0b521ee4cf896d8ec09df2654a" category="paragraph">當支援Hyper-V的功能啟動時SnapManager 、它會與SnapDrive Windows的支援部門溝通、以取得主機上執行的所有虛擬機器清單。如果SnapDrive 主機上未安裝適用於Windows的支援功能、則此API會失敗、SnapManager 而且無法使用虛擬機器資訊更新適用於Hyper-V的內部快取。</block>
+  <block id="bdd6036ee8da78481c757800c761826d" category="paragraph">您可能會收到下列訊息：錯誤：SnapManager 無法在主機或儲存系統中授權Hyper-V、備份會中止：</block>
+  <block id="ef15a4ad935b2f543c56737f52c1c4a7" category="summary">某些平台無法安裝必要的修補程式KB2263829。</block>
+  <block id="d8289df174ac8376e457700b7ea3669c" category="doc">某些平台無法安裝必要的修補程式KB2263829</block>
+  <block id="54a025a9ba847dcaa62c40b9b4fa5734" category="paragraph">安裝SnapManager 適用於Hyper-V的功能時、嘗試安裝Windows Server 2008 R2 SP1的修補程式KB2263829可能會失敗。安裝程式指出此修補程式不適用於此伺服器。</block>
+  <block id="427697515b04257202a3b4b5ced27901" category="paragraph">您的平台不支援此修補程式。</block>
+  <block id="0cd04650c65665d252b5bab48c43e335" category="paragraph">與Microsoft一起開啟支援案例、並與Microsoft一起解決問題。</block>
+  <block id="f36427a62208ca85bd66f68cbde021ba" category="summary">進行備份時、SSDDiscoveryFileSystemListInfo回應為null SnapDrive</block>
+  <block id="00d8b617d19c6e8fe50aa280d0dd3c2b" category="paragraph">您在SnapDrive 備份時收到錯誤「SSecure SDDiscoveryFileSystemListInfo」回應為null。</block>
+  <block id="6f5d8bff5f9a9b51ec9f28ae04e4cd4c" category="paragraph">當您要備份的SnapInfo位置無法使用時、就會出現此訊息。</block>
+  <block id="b47b81a663a4385889567ca313b5ee4c" category="paragraph">確認SnapInfo位置存在且可用。如果已變更、請重新執行組態管理程式以指定新位置。再次嘗試備份。</block>
+  <block id="37b6c1d7a1911698f121cf35fc05635f" category="inline-xref-macro">設定SnapInfo LUN</block>
+  <block id="345616fad0a5efb9525cd15ead6ffe9e" category="paragraph"><block ref="345616fad0a5efb9525cd15ead6ffe9e" category="inline-xref-macro-rx"></block></block>
+  <block id="62433c1b4908b09a13b12e252aea86da" category="summary">您可以設定報告路徑設定、以便儲存SnapManager 適用於Hyper-V作業的報告。您必須先設定報告路徑設定、才能將虛擬機器資源新增至資料集。</block>
+  <block id="2a408ba97edbb024d7f44a8d395af0d8" category="doc">報告路徑設定</block>
+  <block id="1434cb8a3957b70ee9c78bd57a6604df" category="paragraph">如果在Hyper-V父主機新增SnapManager 至支援Hyper-V的支援時、未設定報告設定、您可以使用組態精靈稍後設定（甚至變更）這些設定。</block>
+  <block id="fd01b6e9cb06a08b5efd79c6ddbc99de" category="paragraph">如果您設定父主機叢集的報告路徑設定、則必須在每個叢集節點上手動建立報告目錄。報告路徑不應位於叢集共用磁碟區（CSV）或共享LUN上。</block>
+  <block id="89d96bd3d0dc88897d9d64bb8d7f3a1b" category="inline-link">Microsoft TechNet：在容錯移轉叢集中使用叢集共用磁碟區</block>
+  <block id="23d97dc1e44781b784267d24c6612cf6" category="paragraph"><block ref="23d97dc1e44781b784267d24c6612cf6" category="inline-link-rx"></block></block>
+  <block id="4047d1480c3bf3bce47e92233f31eb75" category="summary">您必須在SnapManager 支援Hyper-V的功能區中新增SnapInfo LUN、才能儲存資料集備份中繼資料。SnapInfo路徑必須位在ONTAP 整個LUN上、因為SnapManager 在定期備份之後、適用於Hyper-V的功能會備份SnapInfo複本。</block>
+  <block id="ca0df1c246099b20635f5248e47d5158" category="paragraph">如果您執行的是Windows Server 2012叢集、SnapInfo路徑可位於叢集共用Volume（CSV）上。如果您管理專屬虛擬機器、SnapInfo位置必須是專屬ONTAP 的VMware LUN。如果您管理共享的虛擬機器、SnapInfo位置必須位於共享ONTAP 的VMware LUN。</block>
+  <block id="5dee2f155ee1c019097cbb50fd895737" category="list-text">使用SnapDrive 適用於Windows的功能、建立新的共享磁碟。</block>
+  <block id="47c523e4160395991828dd7708819c66" category="list-text">如果有選項可供選擇Microsoft叢集服務群組、請選取選項*建立新的叢集群組*</block>
+  <block id="e8696b5f1d764b584ec3b71702cc4812" category="list-text">將群組命名為「shimhv_snapinfo'並完成程序。</block>
+  <block id="d0243888dfd577361004f24bc3d5aa25" category="list-text">開啟Windows容錯移轉叢集（WFC）、然後確認新群組已上線。</block>
+  <block id="c7ddc96fc71ae15138dae6f005172621" category="list-text">在SnapManager 叢集中的每個節點上安裝適用於Hyper-V的功能。</block>
+  <block id="8b15ab699a64964dc8016e4e9be49c2c" category="list-text">執行組態精靈、並將SnapInfo組態設定套用至叢集中的所有節點。</block>
+  <block id="44479736f11e9fce68ee0cda1b9c2554" category="list-text">選取其中一個主機。</block>
+  <block id="66e15320eaa4b8d0027de27e817f001b" category="list-text">在「導覽」窗格中、按一下「*保護*」&gt;「*主機*」。</block>
+  <block id="101fb1f032906579fae5b6b3ae4ec822" category="list-text">從「動作」窗格中、執行「組態精靈」。</block>
+  <block id="cbe4dad7c2b6e8efec7c982b5d8ddff3" category="list-text">將SnapInfo設定套用至新建立的LUN。</block>
+  <block id="99f60cd8e244cd40d9c2dc24aff6528d" category="paragraph">執行組態精靈時、SnapInfo組態設定會複寫到叢集中的所有節點。</block>
+  <block id="1dfacf3a4a2dc4b1a044f60476b25d08" category="inline-xref-macro">錯誤：SnapDrive SSDDiscoveryFileSystemListInfo回應為null</block>
+  <block id="2fec41eed06733ee453ea97dc28c5409" category="paragraph"><block ref="2fec41eed06733ee453ea97dc28c5409" category="inline-xref-macro-rx"></block></block>
+  <block id="e6c9d03a83d3c42bfefb7f9540a1aa80" category="summary">適用於Hyper-V的解決方案可為位於執行VMware的儲存系統上的Microsoft Hyper-V虛擬機器（VM）提供資料保護與恢復解決方案。SnapManager ONTAP</block>
+  <block id="095c71dfe395f1dd95b26c1e823cfccd" category="doc">Hyper-V的功能SnapManager</block>
+  <block id="c72c944bad626d5a390b1257b6c64fae" category="paragraph">您可以根據備份管理員所設定的資料集保護原則、執行應用程式一致且損毀一致的資料集備份。您也可以從這些備份還原VM。報告功能可讓您監控備份狀態、並取得有關備份與還原工作的詳細資訊。</block>
+  <block id="7820862667bfa910e751c06790cd735a" category="summary">您可以使用「工作管理」視窗的「排程」索引標籤、檢視特定資料集的排程備份工作。您也可以使用「工作管理」視窗的「執行中」索引標籤、檢視目前執行的備份與還原工作。</block>
+  <block id="4ed8431411d5fef3b64d119526c3ffe2" category="doc">監控備份工作</block>
+  <block id="799cb6b22bc4ea869d10d055fc411c20" category="paragraph">您可以使用「工作管理」視窗的「排程」索引標籤、檢視特定資料集的排程備份工作。您也可以使用「工作管理」視窗「執行」索引標籤、檢視目前執行的備份與還原工作。</block>
+  <block id="be89dad1c86129724507ac60f1ad2654" category="list-text">在導覽窗格中、按一下「*工作*」。</block>
+  <block id="c6d6ab0819681f4ca89d08a08a36c6a2" category="list-text">按一下「排程」索引標籤或「執行中」索引標籤。</block>
+  <block id="be7b6b8818a371284fe07445983923da" category="list-text">選取您要監控的排程或執行中的備份工作、或還原工作。</block>
+  <block id="e02a3b064cf13fc8319be37f8e87c48c" category="paragraph">有關工作的資訊會顯示在「詳細資料」窗格中。</block>
+  <block id="546135fcea6d9fbd992cd82adaa3ace0" category="list-text">若要檢視執行中工作的即時報告、請使用*報告檢視*中的執行中工作報告。</block>
+  <block id="31d804fb6bd7923bde1fe3ccf923b2c5" category="admonition">您也可以使用Microsoft的SCOM主控台監控備份工作。如需詳細資訊、請參閱Microsoft網站。</block>
+  <block id="bdf6ede069059d1339abd9feceab855d" category="summary">在主儲存系統上備份VM之後、您可以使用從主儲存系統建立至二線儲存系統的SnapMirror關係、返回原始組態。</block>
+  <block id="b36d71bc4a614643ff8848ccdeed0f00" category="doc">還原獨立主機的原始組態</block>
+  <block id="6905363f2ff637dfe1824c0c135cf4ea" category="list-text">關閉在次要儲存系統上執行的VM。</block>
+  <block id="22a8deae65a653eb66d09c8bd5c93646" category="list-text">刪除在次要儲存系統上執行的VM。</block>
+  <block id="ed79b11793c8f11f09c0f2d15546dfdc" category="list-text">使用SnapDrive 支援功能中斷SnapInfo磁碟與包含VM的磁碟的連線。</block>
+  <block id="3e444e6d7a9c632d1317e7e4a62e4388" category="list-text">將SnapMirror關係從一線儲存系統重新同步至二線儲存系統。</block>
+  <block id="1d9947062d6e98a2105dd6ea828d692a" category="summary">從Hyper-V Manager移除虛擬機器後、備份失敗。</block>
+  <block id="5ec728668c45e8f81f752d3a99f5fc70" category="doc">從Hyper-V Manager移除虛擬機器後、備份失敗</block>
+  <block id="351c4bb4de2a7fa3d4d5aee0bcbfb656" category="paragraph">從Hyper-V Manager移除Hyper-V虛擬機器（VM）之後、如果不更新與VM相關的資料集、備份作業將會失敗。</block>
+  <block id="94b5d7ad6b008a73cb35522d042dbd04" category="paragraph">當您從Hyper-V Manager移除Hyper-V VM並嘗試備份而不修改資料集時、就會發生此問題。此外、如果您重新建立VM、則必須修改資料集。針對Hyper-V、根據VM ID（Guid）建立資料集。SnapManager刪除、移除或重新建立VM時、備份會失敗、進而建立新的GUID。雖然這並不會觸發整個備份程序的失敗、但如果刪除VM、然後以相同名稱重新建立、SnapManager 則不會自動受到適用於Hyper-V的功能保護</block>
+  <block id="982da8f4f7a8b617dfd506f15e3ea531" category="paragraph">從VM的資料集清單中移除VM、然後將任何重新建立的VM新增至資料集。</block>
+  <block id="1c4e774476d6e9e35f8181fb870d437b" category="inline-xref-macro">設定資料集</block>
+  <block id="19225b7ee14c0729e84adc67933fa763" category="paragraph"><block ref="19225b7ee14c0729e84adc67933fa763" category="inline-xref-macro-rx"></block></block>
+  <block id="2b8bb77363e2ba918a8d55ad17103d3c" category="inline-xref-macro">修改資料集</block>
+  <block id="d5ee393555404ba1169add677cccdea7" category="paragraph"><block ref="d5ee393555404ba1169add677cccdea7" category="inline-xref-macro-rx"></block></block>
+  <block id="96e906863598881be256d4f66fe5c641" category="summary">指定的虛擬機器不存在、或無法線上備份</block>
+  <block id="d6dc8dbe67888f96e6c4ef8c9b23f2b4" category="paragraph">發生此訊息的原因之一、是當VM上的傳遞磁碟大小低於300 MB時、應用程式一致的備份便會失敗。您的錯誤日誌類似於下列範例：</block>
+  <block id="573c1a9a1891d01ab86fe011704619b0" category="paragraph">沒有其他應用程式或系統錯誤訊息可指出故障。</block>
+  <block id="bb7c1bc48907ca3e4f78ca51d6cb1b2a" category="paragraph">您可以調整傳遞磁碟的大小、使其大於300 MB、或是在啟用「允許儲存的狀態VM備份」選項的情況下執行備份。</block>
+  <block id="ce9d4a08dd94289de7bf285d9ec36538" category="admonition">此修正行動適用於SAN和NAS環境。</block>
+  <block id="33db5ea89996dba4c6cf5df66fa05f7f" category="paragraph">出現此訊息的第二個原因是、Windows無法執行此系統的線上備份、因為Hyper-V VM的範圍快照選項已啟用。範圍內的快照主要用於Windows關鍵更新。</block>
+  <block id="261b099cdac97297efd2b2e108ec8695" category="paragraph">您必須建立值為0的DWord ScopeSnapshots參數、以停用範圍內的Snapshot選項：</block>
+  <block id="a0b1a7b293c6d3225d181ea291319ebf" category="paragraph">HKey_local_machine\software\microsoft\windowsnt\Current版本\SystemRestore</block>
+  <block id="6e33f9576af76aa1d9895211dfc03c84" category="summary">適用於Hyper-V的支援與Microsoft Hyper-V Volume陰影複製服務（VSS）寫入器整合、以便在建立應用程式一致的VM Snapshot複本之前、先停止虛擬機器（VM）SnapManager 。</block>
+  <block id="3fc4ca26d6624903b7c1896f0151b7bc" category="doc">適用於Hyper-V的解決方法如何使用VSS SnapManager</block>
+  <block id="c928cc6a46d871561d1a99bf84fd2b56" category="paragraph">適用於Hyper-V的支援是VSS申請者、可協調備份作業以建立一致的Snapshot複本、使用VSS Hardware Provider for the Hyper-V VM執行SAN、並使用遠端VSS供應商執行於SMB 3.0共用區的Hyper-V VM。SnapManager Data ONTAP</block>
+  <block id="d8f1ba52a2fb60b761725669851909c6" category="paragraph">適用於Hyper-V的支援功能可讓您在VM的虛擬硬碟（VHD）上執行Microsoft Exchange、Microsoft SQL或任何其他支援VSS的應用程式時、針對VM進行應用程式一致的備份。SnapManager適用於Hyper-V的支援可與VM內的應用程式寫入器協調、確保在備份時應用程式資料一致。SnapManager</block>
+  <block id="2334b1c6a70e9b217e27598a51229941" category="paragraph">您也可以從應用程式一致的備份還原VM。VM中的應用程式會還原至備份時的相同狀態。適用於Hyper-V的還原功能可將VM還原至其原始位置。SnapManager</block>
+  <block id="8e4c01549f579899f8ef80cf7b0edfec" category="admonition">VSS整合僅適用於應用程式一致的備份。損毀一致的備份不使用VSS。</block>
+  <block id="618658254a548ad9f293de94cb0515c7" category="summary">適用於Hyper-V的支援不包含移轉精靈、可協助您將虛擬機器（VM）從非ONTAP儲存設備移轉至VMware儲存設備、以便搭配使用以供Hyper-V使用SnapManager ONTAP SnapManager而是必須使用伺服器管理員手動匯出及匯入VM。</block>
+  <block id="515e0d9cceee07e1b69a3ad974c9451d" category="doc">移轉Hyper-V虛擬機器SnapManager 以利執行Hyper-V作業</block>
+  <block id="f6845f349e886d648b65a1dc8778589c" category="summary">您可以新增Hyper-V父主機或主機叢集來備份及還原虛擬機器。</block>
+  <block id="1b0d508f3e49b91fa74189bf35f7c3d3" category="doc">新增Hyper-V父主機或主機叢集</block>
+  <block id="0d3666cebabc77e7590a58bc267ed47d" category="list-text">在導覽窗格中、按一下* Protection（保護）*。</block>
+  <block id="d882a70142a49ef1a13cbfa42d2bdae8" category="list-text">在「動作」窗格中、按一下「*新增主機*」。</block>
+  <block id="414231897072d6d0f0d3fc0213b8924c" category="list-text">執行新增主機精靈。</block>
+  <block id="bb5ba928513232a58b2bf0eadc1bdd6b" category="paragraph">將主機新增至叢集時、新主機的相關資訊不會自動顯示在GUI中。手動將主機資訊新增至安裝目錄中的XML檔案。</block>
+  <block id="97530fe40e9f75dabd2b2120f27b812f" category="paragraph">必須在每個叢集節點上安裝適用於Hyper-V的SnapManager如果SnapManager 您未安裝適用於Hyper-V的功能、系統會提示您執行遠端主機安裝精靈。</block>
+  <block id="346b8a90c0a9cbe0b9b480432a61f0bf" category="summary">容錯回復後從備份還原。</block>
+  <block id="d5aea7672ff6c50c0bf6637337f6ff66" category="paragraph">如果您執行容錯移轉和容錯回復、可能無法在容錯移轉之前、從同一個主要站台上建立的備份還原主站台上的VM。</block>
+  <block id="bdb6843d3cb4e489fd8137e5d6a3789b" category="paragraph">Snapshot複製驗證使用Volume GUI。發生災難恢復後、GUI會發生變更。</block>
+  <block id="50ffd216d2c153e1bd4523e537df92b0" category="list-text">*修正行動*</block>
+  <block id="b5fb2fa4979d9d115456123ae739908a" category="paragraph">您可以透過PowerShell或還原精靈停用「驗證快照」選項：</block>
+  <block id="be6a68d587794c4e3ef0edd55eb2a248" category="list-text">取消核取還原精靈*還原選項*頁面中的「啟用Snapshot驗證」選項。</block>
+  <block id="98ad663ef86e393dc076e356ec682cab" category="list-text">使用PowerShell時、請確定已指定-DisableVerifySnapshot參數。</block>
+  <block id="8f93ffc98ff1aa5b53c36e0b48f4b624" category="paragraph"><block ref="8f93ffc98ff1aa5b53c36e0b48f4b624" category="inline-xref-macro-rx"></block></block>
+  <block id="91eb3a157665ba3101f39439240029e4" category="summary">當容錯移轉至二線儲存系統後、SnapManager 由於無法還原至原始的一線儲存系統、所以針對Hyper-V的支援功能可完成災難恢復。</block>
+  <block id="2756e749caa0fb49a20fae8b02820313" category="doc">在災難恢復故障恢復後重新設定儲存系統</block>
+  <block id="9f18ba857214d13e434316a92491862a" category="paragraph">當容錯移轉至二線儲存系統後、SnapManager 由於無法還原至原始的一線儲存系統、所以針對Hyper-V的支援功能可完成災難恢復。容錯回復會在重新啟用或更換儲存系統後、將主要儲存功能還原至原始的主要儲存站台。</block>
+  <block id="4d0b2c0caba9cdb12c8fe559c5f70754" category="list-text">視主要儲存系統的狀況而定、請採取下列其中一項行動：</block>
+  <block id="ea758a7ca74b1868ab2e94c0888a85ef" category="cell">如果主要儲存系統是...</block>
+  <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">然後...</block>
+  <block id="52f3b9f4c13b3350850c24bc26c0cef8" category="paragraph">可恢復的</block>
+  <block id="9b1f5f712954cb0c8e42a3d02051f301" category="paragraph">將資料從次要主機移回主要儲存系統。</block>
+  <block id="30e1dbbeba51424baca4534efcd6f744" category="paragraph">完全毀損</block>
+  <block id="4559b57412d978d8aedaa78c1b755d6c" category="paragraph">配置新的儲存系統。</block>
+  <block id="b9c0f7263d9f4b74ca352eeeec1788f5" category="list-text">管理SnapMirror關係：</block>
+  <block id="23bcbeee430d4451cdd2b8442e1495ff" category="list-text">初始化從二線儲存系統到一線儲存系統的SnapMirror關係、以恢復資料。</block>
+  <block id="69eaaf7236570fe614a7249b56ae98eb" category="list-text">將現有的SnapMirror關係從二線儲存系統重新同步至一線儲存系統。</block>
+  <block id="d24b335b2900fcc4d4a507dbfb1372d9" category="list-text">在SnapDrive 二線儲存系統上使用BIOS、針對二線儲存系統上的每個LUN或SMB共用區、啟動SnapMirror更新。</block>
+  <block id="103c33edbc4c31e9da06cf321cf1ad2a" category="list-text">視您的組態而定、請執行下列其中一項動作：</block>
+  <block id="6c343fe7191b0b21f030da153bbfc23b" category="paragraph">獨立主機（SAN）</block>
+  <block id="4f3f9daf16157a89452e2fb33242bb09" category="paragraph">連接至同一類型主儲存系統上的所有掛載點和LUN。</block>
+  <block id="279ecd0411f7b2239e889bb68565c313" category="paragraph">叢集式主機（SAN）</block>
+  <block id="256716dd432d5e5251239b4b79bd3c0e" category="paragraph">從叢集群組處於線上狀態的節點、連線至叢集中的所有掛載點和LUN。</block>
+  <block id="d215e9e1ded4e8681f61596f2d2793a7" category="paragraph">以單一LUN託管來源支援Volume（SAN）上的虛擬機器、設定為8.1.x Data ONTAP FlexVol</block>
+  <block id="e1bcac0c7757d99a0c904af2b662da63" category="paragraph">為了讓SnapMirror更新成功、您必須先在來源FlexVol 的SnapMirror Volume上建立第二個較小的LUN（10 MB至100 MB）、然後再開始備份工作。從叢集群組處於線上狀態的節點、連線至叢集中的所有掛載點和LUN。</block>
+  <block id="c4d0bcec99058a563641699c4862eb6f" category="paragraph">獨立或叢集式主機（NAS）</block>
+  <block id="380b1ce18897e8b63553fbcce8999af1" category="paragraph">卸載資料保護（DP）磁碟區、將DP磁碟區掛載為可重新寫入、確認磁碟區具有rwx權限、然後為不同的磁碟區建立CIFS共用。</block>
+  <block id="d18c9439f740d30f58fa37337a304801" category="list-text">根據您的環境重新設定SnapInfo：</block>
+  <block id="b6929e4968ce2ed48274a887d3709bf9" category="cell">如果您的組態是...</block>
+  <block id="62a0282d39568be094470486eaf70c4f" category="paragraph">SAN</block>
+  <block id="accaa22437e5cea04eb223a535dac0fc" category="paragraph">從上次Snapshot複本還原SnapInfo LUN。</block>
+  <block id="c07ee5debf5f3a3fef16c1ee5e8e4942" category="paragraph">NAS</block>
+  <block id="f53763874d1457ea2ee8c5e65bfabc4e" category="paragraph">掛載SnapInfo目錄。</block>
+  <block id="90de4e0ecbf1d2fa55cc2e5d55f1a151" category="paragraph">對於NAS、如果發生存取遭拒錯誤、或您無法瀏覽至公開的SMB共用位置、則可能需要重設共用區的ACL。</block>
+  <block id="6e1ab6d83c2d55dae5d355da64e1f4fb" category="list-text">在SnapManager 適用於Hyper-V MMC的支援中新增主要主機或叢集、並使用SnapInfo路徑加以設定。</block>
+  <block id="9c49fc0b62a513703fa7951f104d1176" category="list-text">輸入下列Cmdlet：</block>
+  <block id="2c8078b6f9aeeaf3f09a6e309ca41d90" category="list-text">使用Get-VMsFromBackup Cmdlet擷取備份中繼資料中的VM清單。</block>
+  <block id="e7d0f94f0c4a0c0a09dd748d1e657c6d" category="list-text">使用Get-Backup Cmdlet取得每個VM的備份複本。</block>
+  <block id="c7c18dd465bc05a730bc9b5ff6fc0db6" category="list-text">若要還原、請使用具有VM GUID的還原備份、以及具有下列參數的備份複本：</block>
+  <block id="133b2bd617dde70f06e63226fd43f991" category="cell">若要從...還原</block>
+  <block id="aad95273f4e1ccb563059e89127b7019" category="cell">輸入此命令...</block>
+  <block id="e77ed35fef2422ab5f8dabdd102bb22e" category="paragraph">備用主機</block>
+  <block id="0a14af9930a6ef240d14232a286ff4e4" category="paragraph">還原備份-伺服器輔助主機系統或叢集名稱-停用VerifySnapshot -恢復ToAlternateHost</block>
+  <block id="7c219775f90068e2f59bca43ac97aa7f" category="paragraph">列出的備份複本</block>
+  <block id="a926027a6303fbe4beb9df2ade39e7f0" category="paragraph">還原備份-伺服器-虛擬機器路徑- SnapShotFilePath @VHD</block>
+  <block id="28e33116b6a22ddc29a7cc9bc3d8bdfa" category="paragraph">對於@VHD、虛擬機器可能有多個VHD；您必須同時輸入為每個VHD指定的來源和目的地路徑配對。</block>
+  <block id="c44ac792f6318b4caca8ab6004b27c7c" category="list-text">如果次要主機系統是叢集、請完成下列步驟：</block>
+  <block id="266390977a761c1a63d6ea1ffe21ba82" category="list-text">確保VM所在的LUN在擁有叢集群組的叢集節點上處於線上狀態。</block>
+  <block id="ec84a4212b9b0b3453d0aaf2408af16d" category="list-text">使用容錯移轉PowerShell Cmdlet來提高VM的可用度。</block>
+  <block id="5b889c3cda07c72df504f46500e9d3ab" category="paragraph">對於NAS、當虛擬機器從一個叢集節點公開為SMB共用時、所有設定為使用儲存系統叢集的主機都能存取VM。</block>
+  <block id="9e84326e8ebd79d26eac2feba9d1788a" category="section-title">容錯回復範例</block>
+  <block id="e336fc280b9f4967e6a4aae8034e6155" category="paragraph">以下範例顯示雙叢集設定、其中smhv-cluster -01為主要站台、hv-19叢集為次要站台：</block>
+  <block id="1c0b2b3f3a8e5866b0b3af648b3d2750" category="paragraph">下列範例顯示SAN還原作業的替代路徑、其中N:\是目的地、I:\是來源LUN路徑：</block>
+  <block id="5ded6738b7d3767a7d3860c051770680" category="paragraph">以下範例顯示NAS還原作業至替代路徑、其中\172.17.162.174\是來源SMB共用路徑、\\172.17.175.82\是目的地SMB共用路徑：</block>
+  <block id="cab828e5fe824c4d8d020edecb16ac87" category="inline-link">適用於7-Mode的《Data Protection Online Backup and Recovery Guide》（英文）Data ONTAP</block>
+  <block id="c18d0d6796474338de71386e6ee5160f" category="paragraph"><block ref="c18d0d6796474338de71386e6ee5160f" category="inline-link-rx"></block></block>
+  <block id="a0a59362e21ec3c80e71e3d02aa6a8b8" category="inline-link">SMB/CIFS參考資料</block>
+  <block id="7768fb642347147278f012855e9b95f1" category="paragraph"><block ref="7768fb642347147278f012855e9b95f1" category="inline-link-rx"></block></block>
+  <block id="857864c9e0841bb5665f5e1c2d468333" category="summary">您可以將保留、排程、複寫原則以及指令碼新增至資料集、以便保護資料。</block>
+  <block id="963979f14d8afd442b64acbb14977ac4" category="doc">新增原則</block>
+  <block id="089e99f0946277f67f391a816ed1f2b1" category="list-text">原則名稱與說明</block>
+  <block id="52ccd4cdf171ac2228358ba547bf1d3a" category="list-text">保留資訊</block>
+  <block id="ca1a21dab93efdbb79370e3b2b61c7ea" category="list-text">排程資訊</block>
+  <block id="dfce3effc9eeb1bbd0c45a39f75e72c2" category="list-text">備份選項資訊</block>
+  <block id="c778e64c846dd4cb3d237e56d6c2f07c" category="list-text">備份指令碼資訊</block>
+  <block id="a4c5d123ad41ec29536c7e3da07ceb8e" category="list-text">在導覽窗格中、按一下* Protection（保護）*&gt;* Dataset *。</block>
+  <block id="c34b2c89f78638601a9b28feb2a6f89a" category="list-text">選取您要新增原則的資料集。</block>
+  <block id="4dfc62daf461f1d3989bdacd11e8b943" category="list-text">在「動作」窗格中、按一下「*新增原則*」。</block>
+  <block id="83d1abf74bb79d006c4652f7176d9d13" category="paragraph">此時將出現Create Policy（創建策略）嚮導。</block>
+  <block id="150041fc62ca2850bf50581976c08928" category="list-text">完成精靈中的步驟、為資料集建立保護原則。</block>
+  <block id="bc62e14afadb6d3675a824c92feacbd6" category="summary">若要執行SnapManager 適用於Hyper-V的功能、您必須在安裝授權期間選取主機型或儲存系統授權。</block>
+  <block id="7527dcedb498a9e111f7eb26b4f075a6" category="doc">授權需求</block>
+  <block id="d3ebc6b65771da45bd1e393dac2ffc77" category="section-title">套件授權SnapManager</block>
+  <block id="2f35ac1b0a5cdae94237fb18ed27a693" category="paragraph">Windows主機系統需要套件授權。SnapManager您可以選擇主機型授權或儲存系統授權。</block>
+  <block id="be663e43fbbbd588987bb44c0192f82b" category="section-title">每個伺服器授權</block>
+  <block id="b20a1269302d3675bf122fb4356e322f" category="paragraph">這也稱為主機型授權。如果您選擇以主機為基礎的授權、則必須在SnapManager 安裝期間提供一套不完整的授權金鑰、之後您可以視需要加以變更。您可以在安裝後按SnapManager 一下「適用於Hyper-V」視窗中的*授權設定*、以變更授權金鑰。每個父主機都需要SnapManager 一套不完整的授權。</block>
+  <block id="573abdf739bc16ae5833c5d14076dd5c" category="section-title">每個儲存系統授權</block>
+  <block id="1d7f9f2cb4ae223172db904691326dcd" category="paragraph">這也稱為儲存系統授權。如果您選擇儲存系統授權、則必須在SnapManager 所有儲存系統中新增套件授權、才能執行SnapManager 適用於Hyper-V作業的功能。</block>
+  <block id="3b17063956c4c952dad8e287ec101d6f" category="section-title">每個用戶端系統授權</block>
+  <block id="7b3e45ecd2ec97799e785c56b5bee0c8" category="paragraph">安裝管理主控台時、您應該使用此授權選項。</block>
+  <block id="67691fe1543bb4b0f6bd22784a467cfc" category="summary">您可以根據保護需求來建立、修改、檢視及刪除資料集。</block>
+  <block id="854e17480073a7f9c44ad0bf2ae3b20b" category="summary">若要手動備份資料集、您必須先命名並說明資料集、選擇備份類型和選項、然後設定保留原則。</block>
+  <block id="5af60a8f86833b3c24f3910e384ecdcc" category="doc">手動備份資料集的需求</block>
+  <block id="00e3bc5cca936cfe2f7a532e3431ce70" category="section-title">備份名稱與說明</block>
+  <block id="d58429eac46a83cff222f5a814ee3f97" category="paragraph">您必須為備份指派名稱和說明。</block>
+  <block id="7cbb4b04d4c3e5f4833593507bbb3eaf" category="paragraph">備份的預設命名慣例為DatasetName_Timestamp.您可以變更備份名稱中的所有項目、但時間戳記除外、時間戳記永遠會顯示在備份名稱的一部分。</block>
+  <block id="7ac371a0a57b60af2b0578fb07b34c1e" category="paragraph">備份名稱和說明僅限於下列字元：</block>
+  <block id="85e3f5662f5d8393f464b6fbe9873e2b" category="list-text">a到z</block>
+  <block id="deff25dbe9011091c8682fd6f93f3a90" category="list-text">從A到Z</block>
+  <block id="58c8d474025154d587eb8a3becc73b11" category="list-text">0至9</block>
+  <block id="ca5170dffdff86791bd333afa0818321" category="list-text">_（底線）</block>
+  <block id="6816a980223bd400a4d7d7e1110de913" category="list-text">連字號</block>
+  <block id="3fa8be6addd8848ea558f9dbf62bc509" category="section-title">原則選擇</block>
+  <block id="ce56b535f1d19e7ca636cef262c4137b" category="paragraph">您必須決定要用於隨需備份的原則。</block>
+  <block id="03e7cacff10e2e2fa9503bc3712a028f" category="paragraph">您可以在備份精靈中選取特定原則。您可以覆寫保留或複寫原則、以及與原則相關聯的指令碼、而不需變更原則本身。</block>
+  <block id="b3aabbded8211defce55f1bd8e9bfba8" category="paragraph">您也可以選擇「無」、如此一來、您無需建立任何原則、即可進行隨需備份。此選項使用保留原則、複寫原則和指令碼的預設值。</block>
+  <block id="099c99cfc3001f7909f2d8d330a5b4ba" category="section-title">保留價值</block>
+  <block id="2d372a1baef2785504e6b047dff465f7" category="paragraph">您可以選擇覆寫所選原則中指定的保留原則。如果您這麼做、則必須決定刪除每小時、每日、每週、每月或無限次備份複本之前、保留的最短時間長度。</block>
+  <block id="aa70ad86bef93d3cfb4a27fa47521e30" category="paragraph">您可以根據時間或指定的備份數量來保留備份。例如、您可以保留10個最新的備份、也可以刪除15天之前的備份。</block>
+  <block id="d9f0173ed577dd9b2d9a1d9ca85e330c" category="section-title">備份類型</block>
+  <block id="2b2cbec8203aefb9b0989459586754a3" category="paragraph">您可以執行應用程式一致或損毀一致的備份。</block>
+  <block id="30c210e0173f2ff607cc84dc01ffc1f0" category="section-title">備份選項</block>
+  <block id="05baf42e4b79b1711411c01fec58f8f7" category="paragraph">您可以允許儲存狀態備份。</block>
+  <block id="65f97906e6328cfb3f1495716700a4a5" category="paragraph">如果一或多個虛擬機器無法在線上備份、則支援Hyper-V的預設行為SnapManager 是使備份失敗。如果虛擬機器處於儲存狀態或關機狀態、您就無法執行線上備份。在某些情況下、虛擬機器會處於儲存狀態或關機以進行維護、但即使無法進行線上備份、仍必須繼續備份。為達成此目的、您可以將處於儲存狀態的虛擬機器或關機移至不同的資料集、其中的資料集具有允許儲存狀態備份的原則。</block>
+  <block id="a4d7ee1a85b8d50766da39bca77ded30" category="paragraph">您也可以選取「允許儲存的狀態VM備份」核取方塊、以修改現有原則。這可讓SnapManager Hyper-V在儲存狀態下備份虛擬機器。如果您選取此選項、SnapManager 則當Hyper-V VSS寫入器將虛擬機器備份至儲存狀態、或執行虛擬機器的離線備份時、適用於Hyper-V的功能不會失敗備份。執行儲存狀態或離線備份可能會導致停機。</block>
+  <block id="d40be83026c6456f464275814f7029db" category="paragraph">分散式應用程式一致的備份功能可讓在合作夥伴叢集節點上執行的多個VM在從備份節點建立的單一硬體Snapshot複本中保持一致。在CSV 2.0 Windows磁碟區上執行的所有VM、都能在Windows容錯移轉叢集中的多個節點上支援此功能。</block>
+  <block id="92f511b9eb4bb4295082fbe39d70e007" category="section-title">SnapMirror備份中的二線儲存設備</block>
+  <block id="edb68b35126b90d94565aba284e497f3" category="paragraph">這些選項可讓您接受SnapMirror關係中定義的次要儲存設備適用的選項。您可以選擇*備份後更新SnapMirror *。在Vault標籤選項窗格下、您可以選擇*備SnapVault 份後更新支援*。如果您選擇*在SnapVault 備份後更新*、則必須從下拉式功能表中選擇一個資料保險箱標籤、或輸入自訂標籤。</block>
+  <block id="bc4ed710ca65416d05c8ac48d8a677ad" category="section-title">備份指令碼</block>
+  <block id="71b9d00eedc881643233fd1a13f8ffbd" category="paragraph">您可以覆寫所選原則中指定的指令碼選項。</block>
+  <block id="63d0e153d3a329eb9a4d7fe711618579" category="paragraph">除非您在指令碼中指定特定主機、否則這些指令碼會在所有資料集成員主機上執行。</block>
+  <block id="3fb2d7deed7a56ffb590575548a5a1db" category="inline-link">Microsoft TechNet：Hyper-V</block>
+  <block id="a9736cb44394cf7f4c33dc1e9789dd1d" category="paragraph"><block ref="a9736cb44394cf7f4c33dc1e9789dd1d" category="inline-link-rx"></block></block>
+  <block id="04da4a36dc8631592fed38ad742813b1" category="inline-link">《使用《不適用》指南的《》（英文）9 Volume Backup》ONTAP SnapVault</block>
+  <block id="f83ca4a2b0b656560769c0ea618a9675" category="paragraph"><block ref="f83ca4a2b0b656560769c0ea618a9675" category="inline-link-rx"></block></block>
+  <block id="b14b7c56846be90893ffb5cb1391cd34" category="summary">資料集不會自動複寫至Windows容錯移轉叢集中的新節點。</block>
+  <block id="961ac221e81a771d5cdcc72399350995" category="doc">資料集不會自動複寫至Windows容錯移轉叢集中的新節點</block>
+  <block id="b6b5c0b074a3420f9148b4a52b40a14f" category="paragraph">將新節點新增至Windows容錯移轉叢集之後、資料集不會自動傳輸至新節點。</block>
+  <block id="6526d728800b72f66aee2d2eb2831ba8" category="paragraph">將新節點新增至Windows容錯移轉叢集時、SnapManager 適用於Hyper-V的功能不自動將現有的資料集複寫至叢集中的新節點。</block>
+  <block id="757c846baf71761f3cda1fac61cb7804" category="paragraph">執行「修改資料集」精靈、然後按一下「基本詳細資料」頁面上的「將排程原則更新至所有資料集成員節點*」。</block>
+  <block id="1061247acb05ca020e1156e308573e87" category="paragraph">此精靈必須針對擁有虛擬機器的每個資料集執行。</block>
+  <block id="a3100bf3334206028c894a5568ddcf09" category="summary">說明新功能、升級附註、修正問題、已知限制及已知問題。</block>
+  <block id="e82ed7d0fe395ab8617386f9b6bc3fdd" category="doc">適用於Hyper-V的發行說明SnapManager</block>
+  <block id="50b158528d4ca57587b5d68d878bf767" category="paragraph">。 <block ref="bc76e11df837d05db8b5f12a7909292f" category="inline-link-macro-rx"></block> 說明新功能、升級附註、修正問題、已知限制及已知問題。</block>
+  <block id="dbd469acdcbd52648cb242bcfda6add3" category="paragraph">您必須登入NetApp支援網站、才能存取版本資訊。</block>
+  <block id="8bd0c4b2e4019d7421496ea9febc69d8" category="summary">說明如何安裝、設定及操作SnapManager 適用於Hyper-V軟體的功能。</block>
+  <block id="091af7b23f310c94c6c082a427b321c4" category="doc">安裝與管理指南</block>
+  <block id="31b5ce19fb2f7d7064d9d1b248313ee3" category="paragraph">本指南說明如何安裝、設定及操作SnapManager 適用於Hyper-V軟體的《靜態2.1.4》。</block>
+  <block id="2679aa040e48e5b5b4518fba7adb6852" category="summary">適用於Hyper-V的支援使用資料集和原則、可讓您將虛擬機器分組、然後將規則套用至這些群組、以管理其行為。SnapManager</block>
+  <block id="14ecf602c9be3e8bdbbadaf9997b7d31" category="doc">資料管理概念</block>
+  <block id="58b883c0ea08b0acb505c5d4c026ea0f" category="paragraph">適用於Hyper-V的支援使用資料集和原則、可讓您將虛擬機器分組、然後將規則套用至這些群組、以管理其行為。SnapManager此資訊在您使用SnapManager 支援Hyper-V的功能來排程備份、以及指定備份的保留原則的情況下非常實用。</block>
+  <block id="56b5c63c9100767f0aadf367bb078b02" category="list-text">*資料集*</block>
+  <block id="8794e19266d669cfdfa406148cd60756" category="paragraph">資料集是一組虛擬機器（VM）、可讓您使用保留、排程及複寫原則來保護資料。您可以使用資料集將具有相同保護需求的虛擬機器分組。VM可以是多個資料集的一部分。</block>
+  <block id="f38052a5ab09ec66d507983761353c29" category="list-text">* Hyper-V父主機*</block>
+  <block id="0dab573323092ace51a6943553527f73" category="paragraph">Hyper-V父主機是啟用Hyper-V角色的實體伺服器。包含虛擬機器的主機會新增SnapManager 至適用於Hyper-V的VMware主機、以提供保護與還原。Hyper-V版的支援必須安裝並在每個Hyper-V父主機上執行。SnapManager</block>
+  <block id="a29fa5416ddd4d214af7fb92dbfa5ce6" category="list-text">*未受保護的資源*</block>
+  <block id="9fa0ab140b3c3a5104a8ee6dd0263161" category="paragraph">未受保護的資源是不屬於任何資料集的虛擬機器。您可以將這些資源新增至資料集、以保護這些資源。</block>
+  <block id="35acce734a6f9b6ff298df226a181050" category="list-text">*虛擬機器*</block>
+  <block id="3b1bc0aa1babd01f15814fb1e544ff6a" category="paragraph">在Hyper-V父主機上執行的虛擬機器代表實體機器、並擁有自己的作業系統、應用程式和硬體。</block>
+  <block id="18721329fe471d8632030da31ae5819e" category="paragraph">適用於Hyper-V的支援會追蹤虛擬機器的全域唯一識別碼（即Guid）、而非虛擬機器名稱。SnapManager如果您刪除以SnapManager 適用於Hyper-V的功能受到保護的虛擬機器、然後建立名稱相同的不同虛擬機器、新的虛擬機器就不會受到保護、因為它有不同的GUID。</block>
+  <block id="4f0736bd5c813db580e42dc56c4b509d" category="list-text">*管理主控台*</block>
+  <block id="3fac341cfb30c99df4fa149330b6edea" category="paragraph">管理主控台是SnapManager 指以用戶端形式安裝及執行適用於Hyper-V的電腦。您可以使用管理主控台、在SnapManager 遠端Hyper-V父主機上遠端管理支援Hyper-V作業的功能。</block>
+  <block id="57bc5f868b2a34d67d2b51cd651905f1" category="list-text">*排程原則*</block>
+  <block id="b1743b5ded88d798fb37d7879685b3d3" category="paragraph">排程原則會指派特定時間的備份工作、讓您能夠自動化排程程序。您可以新增多個排程原則、這些原則適用於資料集成員的所有虛擬機器。適用於Hyper-V的解決方法是使用Windows排程器來建立排程工作。SnapManager</block>
+  <block id="1d2c69df5ae41f138f31eb423bba82f4" category="list-text">*保留政策*</block>
+  <block id="8b907a68bc81cf1099542120200c8de6" category="paragraph">保留政策是您在SnapManager 《適用於Hyper-V的資料集備份保留管理方法」中管理資料集備份保留的方法保留原則會根據備份複本的時間或數量、決定保留資料集備份的時間長度。</block>
+  <block id="12e81317e988a1f84f2c5ed8b9d86f7f" category="paragraph">您在保留原則中設定的限制、可確保資料備份不會影響未來的儲存容量。</block>
+  <block id="2621c15f6df51f6afc625d4142579d55" category="paragraph">您可以在SnapManager 《針對Hyper-V的下列保留期間：</block>
+  <block id="850370b35ca3844744e11e622f28254b" category="list-text">一小時</block>
+  <block id="20faf5d958f1d5b65f3a4c67163254f5" category="list-text">一天</block>
+  <block id="d9346ea346566c2f4aaef585681ce309" category="list-text">一週</block>
+  <block id="974985cd65fa0617f7596b848e78a456" category="list-text">一個月</block>
+  <block id="13911d0d343fdc99201f5754a49a07c4" category="list-text">無限*附註：*您可以為每個資料集指定一次保留期間。</block>
+  <block id="4f3dcf3fbeedb384dcc84518e9e22d4f" category="paragraph">選擇刪除資料集備份的頻率之後、您可以選擇刪除超過指定時間段的備份、或是刪除超過最大總計的備份。</block>
+  <block id="c5185b0cce4a2698d6e28faa2cfc0a18" category="paragraph">+如果您的系統似乎保留舊備份、請檢查您的保留政策。共享Snapshot複本的所有備份物件都必須符合備份刪除條件、保留原則才能觸發移除Snapshot複本。</block>
+  <block id="e589c1855acbac9c3ff9fc9a48997a89" category="list-text">*複寫原則*</block>
+  <block id="334e1a4837375f19e8e71c008ef71137" category="paragraph">複寫原則可決定SnapMirror目的地是否在成功備份作業之後更新。適用於Hyper-V的僅支援Volume型SnapMirror。SnapManager在嘗試執行SnapMirror更新之前、您必須在兩個儲存系統上設定SnapMirror關係。來源和目的地都需要這項功能。</block>
+  <block id="25fcd91ebda526a77dcafdb7165ed986" category="inline-link">NetApp文件：SnapDrive 適用於Windows（目前版本）</block>
+  <block id="ece0d01a9e0eca4a9f1ff2e684cb3db6" category="paragraph"><block ref="ece0d01a9e0eca4a9f1ff2e684cb3db6" category="inline-link-rx"></block></block>
+  <block id="171e08e666552d8c38607395fe6a2212" category="summary">為每個備份製作兩個Snapshot複本時所耗用的空間。</block>
+  <block id="764fc9826ef4435c4d9480e76a029697" category="doc">為每個備份製作兩個Snapshot複本時所耗用的空間</block>
+  <block id="4cfd514589a1cec5a5a54eb22abe34b1" category="paragraph">對於每個包含Hyper-V物件的備份、都會建立兩個Snapshot複本、這可能會導致對空間使用的顧慮。</block>
+  <block id="cb466dbf6d5ccf88bca37aef42b7a338" category="admonition">這僅適用於應用程式一致的備份。</block>
+  <block id="97c289884aa9d4e93a2d07080e0030f9" category="paragraph">Microsoft Hyper-V VSS寫入器會在VM內建立VM與應用程式一致的備份複本、並將應用程式駐留在VHD上。為了建立軟體一致和VM一致的備份複本、VSS採用原生的自動恢復程序、將VM設定為與軟體Snapshot複本一致的狀態。Hyper-V VSS寫入器會聯絡備份中的每個VM、並建立軟體一致的Snapshot複本。</block>
+  <block id="19565b6bd9947d4486fafdd4cb7caeee" category="paragraph">建立Snapshot複本之後、父分割區會針對容納這些VM的整個磁碟（LUN）建立VSS Snapshot複本。建立父分割Snapshot複本之後、VSS需要掛載先前建立的父分割區、將每個VM復原至軟體一致的狀態、並移除在建立軟體Snapshot複本之後對VM所做的任何變更。這些VHD的修改必須持續進行。由於這些Snapshot複本預設為唯讀、因此必須建立新的Snapshot複本、才能保留VHD的更新複本。因此、會建立磁碟區的第二個Snapshot複本。此Snapshot複本標有後置詞*備份*、是還原作業所用的備份複本。</block>
+  <block id="445bebb4a3acef418334f1a863c41277" category="paragraph">這兩個Snapshot複本被視為配對。當備份的保留期間結束時、兩個Snapshot複本都會刪除。您不應該手動刪除第一個Snapshot複本、因為這是還原作業所需的。</block>
+  <block id="7e37cd32041062bd7c868857d5575e79" category="paragraph">Microsoft VSS僅支援在擁有叢集共用Volume（CSV）的主機上備份VM、因此CSV所有權會在節點之間移動、以便在叢集中的每個主機上建立VM備份。</block>
+  <block id="9e2129e081a7307a723c1e562db578cf" category="paragraph">備份CSV時SnapManager 、適用於Hyper-V的功能可在叢集中每個主機上建立兩個Snapshot複本、這些複本是從該CSV執行VM。這表示、如果您在單一CSV上備份15個VM、而這些VM會平均分割成三個Hyper-V伺服器、則每個備份總共有六個Snapshot複本。</block>
+  <block id="ecfcb2ea2b7a7e6cd20c217ac4449946" category="summary">您可以安裝SnapManager 適用於Hyper-V的支援功能、以便備份及還原資料。在安裝適用於Hyper-V的功能前、您應該先安裝SnapDrive 適用於Windows的功能SnapManager</block>
+  <block id="7f4fd040e5f989a8a41b8c2ce4b46efb" category="doc">安裝SnapManager 適用於Hyper-V的</block>
+  <block id="64eecf62d9a993f9fd78bf8ccf62a2c7" category="paragraph">您現有的資料必須備份、而且必須準備好下列資訊：</block>
+  <block id="a77d1540925b8613ddf32b875e4c4685" category="list-text">授權金鑰</block>
+  <block id="7160f16e7fce9cb3115837588b08a8ac" category="list-text">登入認證資料</block>
+  <block id="a47bfbfbde5a03a03b9498fe7de36f9d" category="list-text">連接埠編號（預設：808；必須符合SnapDrive Windows安裝連接埠編號的功能）</block>
+  <block id="6df8a2f6b4884dd72cd827631f0c8151" category="list-text">按兩下SnapManager 「適用於Hyper-V的解決方法」執行檔以啟動SnapManager 適用於Hyper-V安裝程式的功能。</block>
+  <block id="fc3e022ba062e33a2d214b632fe690b1" category="list-text">選取安裝位置、然後按一下*下一步*。</block>
+  <block id="ccc36e976afe5008e316e7a1746101ff" category="list-text">完成SnapManager 「適用於Hyper-V的程式集」精靈中的步驟。</block>
+  <block id="acdaf650222f3c0237becc043e307413" category="list-text">按一下「Ready to Install（準備安裝）」頁面上的「* Install*」。</block>
+  <block id="46b9843e7c5f5ff5fbe2ea34495b1cae" category="list-text">檢閱您所選項目的摘要、然後按一下「*完成*」。</block>
+  <block id="d97d7bf86f453c78e0139b9a54f5ec65" category="paragraph"><block ref="d97d7bf86f453c78e0139b9a54f5ec65" category="inline-xref-macro-rx"></block></block>
+  <block id="53531bae4b4c3f1b7404a971d070bb17" category="summary">雖然您應該只從一個管理主控台管理主機、但如果需要從多個主控台進行管理、您可以從一個遠端管理主控台將主機和資料集組態資訊匯入及匯出至另一個主控台、以確保資料一致性。</block>
+  <block id="5a72cd6cdd662de73934212c5acbd0af" category="doc">匯入或匯出主機與資料集組態資訊</block>
+  <block id="a919825400f339d57b335c9acdc82ab0" category="paragraph">您不應將組態資訊匯入或匯出至SnapManager 安裝了適用於Hyper-V的目錄。如果您解除安裝SnapManager 適用於Hyper-V的解決方法、此檔案將會遺失。</block>
+  <block id="6ab078cbfe1468fcdf159e54ea8679ea" category="admonition">您可以使用匯入及匯出精靈、將主機和資料集組態設定變更為先前匯出的設定。如果您在叢集式環境中執行此作業、則必須在叢集中的所有節點上匯入設定、以便所有主機和資料集組態都相同。</block>
+  <block id="f52324a8ae59b8f3c62c3580634a3f65" category="list-text">在「動作」窗格中、按一下*匯入及匯出*。</block>
+  <block id="9b2df22ebea734763e9b824b5dfb58d1" category="paragraph">隨即顯示匯入及匯出精靈。</block>
+  <block id="a97803fe311ef1d2b2cc248b41fb592f" category="list-text">完成精靈中的步驟、將主機和資料集組態資訊從一個管理主控台匯出至另一個管理主控台。</block>
+  <block id="a29cc82b0ee32a993180bad71ccebe76" category="admonition">匯出檔案為靜態且僅在執行匯出檔案時才為目前檔案。</block>
+  <block id="161ff79e48ce5cf248366acf43d2a3bf" category="list-text">完成精靈中的步驟、將主機和資料集組態資訊匯入目的地管理主控台。</block>
+  <block id="3800c0cdaeccf43c635a1ef2fd8c3b82" category="summary">請務必瞭解SnapManager 、某些功能在適用於Hyper-V的2.1版及更新版本中不受支援</block>
+  <block id="7c676e363a34616fe899b41f9e540d3c" category="doc">Hyper-V限制的列舉SnapManager</block>
+  <block id="6e29aba098db79a1ab1f939863149b9a" category="paragraph">請務必瞭解SnapManager 、某些功能在適用於Hyper-V的2.1版及更新版本中並不受支援。</block>
+  <block id="7f6ee1b72e3402fa0b65e6ca171f8937" category="list-text">不支援取消、暫停及恢復備份與還原工作。</block>
+  <block id="c1e824495741db9a98e533bb60d5755a" category="list-text">原則無法跨資料集複製。</block>
+  <block id="45a471dbdf158d2103da0a832d074a64" category="list-text">不支援角色型存取控制（RBAC）。</block>
+  <block id="fc4b9e2f932c4d0f4e49d421dfae0d6b" category="list-text">不支援從SnapManager 適用於Hyper-V Volume陰影複製服務（VSS）的支援功能中排除虛擬硬碟（VHD）。</block>
+  <block id="6293a05f9293306fe723125f627da55f" category="list-text">不支援從備份複本進行單一檔案還原。</block>
+  <block id="1be60482b0c174c58e2b31dcfe218727" category="list-text">不支援跨版本管理、例如、您無法使用Client Console 1.2來管理SnapManager Hyper-V的版本資訊2.0、反之亦然。</block>
+  <block id="6c9d0544955bca5ff2e1b6f7cb20a4af" category="list-text">如果您開始還原Hyper-V虛擬機器（VM）、而且正在進行同一個VM的另一個備份或還原、您的嘗試就會失敗。</block>
+  <block id="c1a6011e9e5599de4f9a5695dbf8542e" category="list-text">只有Windows Server 2012才支援從損毀一致的備份複本還原刪除的VM。</block>
+  <block id="3900c2af50dfd662383f4640686f9d90" category="list-text">不支援在SnapManager 容錯移轉叢集的不同節點上執行不同版本的Hyper-V。</block>
+  <block id="4a62f9c3483c269241e02248563f7d6b" category="list-text">不支援從SnapManager 適用於Hyper-V的還原2.1還原。</block>
+  <block id="610ff5c0597676311607c8e989c00e7e" category="list-text">當使用者在備份或還原時變更叢集擁有權節點、則不支援虛擬機器的備份或還原工作。</block>
+  <block id="04aff58db2c60859b2deece463b4f0b9" category="list-text">不支援混合模式備份（包含CSV 2.0磁碟區和SMB共用上檔案的虛擬機器）。</block>
+  <block id="05fd7159f14393ffd71e7ac1717c6813" category="list-text">使用Windows Server 2012將VM的儲存設備移轉至其他位置之後、您無法從移轉前所製作的備份複本還原該VM。</block>
+  <block id="8f9386708694ecb3a129f6dc8ad1faa2" category="list-text">對於Windows Server 2012、您無法執行備份工作、其中備份集同時包含叢集共用Volume（CSV）和共享磁碟。</block>
+  <block id="cf3468db2f1d778c40a58eaf163abc6d" category="list-text">設定「管理儲存連線設定」時、您無法使用遠端程序呼叫（RPC）傳輸協定、只能使用HTTP和HTTPS傳輸協定。</block>
+  <block id="f85bb370e755df9a8873b1bdc35d35c7" category="list-text">Windows Server 2012 Hyper-V作業系統不支援為儲存在NAS儲存設備上的虛擬機器（VM）建立應用程式一致的備份。</block>
+  <block id="5a3dfbdac5b696f02b128aaf7e587d89" category="paragraph">此限制不適用於損毀一致的備份。它僅適用於免費的Hyper-V伺服器、不含檔案共用陰影複製服務。</block>
+  <block id="935b08257442d9573c059f052b17b83f" category="list-text">VM的虛擬交換器名稱必須與主要和次要Windows主機完全相同。</block>
+  <block id="9b595f6c0bc59490774c69c592fd7b88" category="list-text">當Hyper-V VM透過SMB 3.0部署時、備份與還原作業需要FlexClone授權。</block>
+  <block id="2dce1098f4447d308f7e77337653b2cb" category="list-text">還原作業支援的LUN大小上限為14 TB。</block>
+  <block id="c881d99f27b8d012db97b1f839b10b42" category="list-text">下列Hyper-V伺服器不支援應用程式一致的VM備份：</block>
+  <block id="e0693813bfc92e2a66d11bb92de96adb" category="list-text">Microsoft Hyper-V Server 2016（免費版）</block>
+  <block id="10864acdf6f438d7b026430077a02b30" category="list-text">Microsoft Hyper-V Server 2019（免費版）請注意、此限制不適用於損毀一致的備份或下列Windows平台：</block>
+  <block id="f25ae1b1e1c33b9eae4b2b668af49026" category="list-text">Microsoft Windows Server 2016標準版與資料中心版</block>
+  <block id="21fae6ca9851125bcb8a2ae0fceec434" category="list-text">Microsoft Windows Server 2019標準版與資料中心版</block>
+  <block id="4bebac47bea2fd62c2530bd391076ae9" category="summary">您可以在不再需要原則時、從資料集刪除原則。</block>
+  <block id="6e229fa95b4d823df101ee953df5195d" category="doc">刪除原則</block>
+  <block id="65ccc1f4dbb5fa94ffb4607070db942a" category="list-text">選取包含您要刪除之原則的資料集。</block>
+  <block id="0c877e3a2ccc5492c9c14104b8831f2e" category="list-text">從「原則」窗格中、選取您要刪除的特定原則。</block>
+  <block id="051a915e46f9908c3d0351dda83750bc" category="list-text">在「動作」窗格中、按一下「*移除*」、然後按一下「*確定*」刪除原則。</block>
+  <block id="6564101cefe24665c433a7ea662f58e0" category="paragraph">刪除原則也會從資料集成員的所有主機中刪除排程工作。</block>
+  <block id="585e8b16c6d583e9923b5b6886e6da71" category="summary">還原作業進行期間所進行的虛擬機器備份可能無效。</block>
+  <block id="f87315bce70a053e760c3006bf545883" category="doc">還原作業進行期間所進行的虛擬機器備份可能無效</block>
+  <block id="41deb5cf6b541b6400cca093802e55a8" category="paragraph">在還原作業進行期間建立的應用程式一致備份可能無效。從不完整的備份中還原虛擬機器、會導致資料遺失、並刪除虛擬機器。</block>
+  <block id="078fc9e4f0435e919bdb5862cab1513e" category="paragraph">備份複本中缺少適用於Hyper-V的支援資訊。SnapManager備份作業成功、但備份複本無效、因為未包含虛擬機器組態資訊。執行還原作業之前、適用於Hyper-V還原作業的支援功能會先從Hyper-V主機刪除虛擬機器組態資訊。SnapManager這是Microsoft Hyper-V寫入器的設計行為。</block>
+  <block id="176da1c87a61427a737b5d19d2bba4d3" category="paragraph">請確定備份排程與還原作業不一致、或是您要執行的隨需備份不會與相同資料上的還原作業重疊。</block>
+  <block id="e3a1a05da7993c293b498f9d9fc624b7" category="summary">您可以建立資料集的隨需備份。</block>
+  <block id="fb66e3fca73de007d0d242693c367595" category="doc">手動備份資料集</block>
+  <block id="cf3e70cf8191160db8090e6540b904ef" category="list-text">原則名稱（如有必要）</block>
+  <block id="46bfeff4660732494a60393596febe5e" category="list-text">原則置換資訊（如果您打算變更任何先前指定的原則選項）</block>
+  <block id="a3c82f66d39159c3e9d428cd534beb34" category="list-text">備份類型</block>
+  <block id="2ae563510af7f43208bdf0a049250571" category="list-text">選取您要建立手動備份的資料集、然後按一下*備份*。</block>
+  <block id="f8695fe9c9e85add97ec8947ef849b4c" category="paragraph">此時會出現備份精靈。</block>
+  <block id="ec296684cb531baf002c1737a8bad6ec" category="list-text">完成精靈中的步驟以建立隨需備份。</block>
+  <block id="51f0a22711cc496c6ee23ecc6181d9ff" category="paragraph">關閉精靈不會取消隨需備份。</block>
+  <block id="05c32c67e41cb1a26526aad9bfbb5d51" category="paragraph">您可以在「工作管理」視窗中檢視隨需備份的狀態。</block>
+  <block id="b0339bb9133f07dc81220bf45bf3aee8" category="summary">VSS申請人-備份元件失敗。預期的磁碟未送達系統</block>
+  <block id="17ebef2f1536eecf24febe2f3ff80eb5" category="paragraph">當您使用SnapManager 適用於Hyper-V的支援功能來備份資料集、且Hyper-V主機上的Windows應用程式事件記錄中出現下列錯誤時、就會出現此訊息。</block>
+  <block id="f9a8dae1650ede42aa40b730930e4bdb" category="paragraph">重試資料集備份。</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律聲明提供版權聲明、商標、專利等存取權限。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
+  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="paragraph"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 標誌及 NetApp 商標頁面上列出的標章均為 NetApp 、 Inc. 的商標。其他公司與產品名稱可能為其各自所有者的商標。</block>
+  <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">專利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">如需最新的 NetApp 擁有專利清單、請參閱：</block>
+  <block id="547ea2e305891e64d8e744949b0aca2c" category="paragraph"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隱私權政策</block>
+  <block id="50921fca0d376fca62102a5e608994e2" category="paragraph"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
+  <block id="24efa7ee4511563b16144f39706d594f" category="section-title">注意</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
+  <block id="c5b9e90bde2fb032b0e52bfb24173ab1" category="inline-link-macro">適用於Hyper-V的聲明SnapManager</block>
+  <block id="0331d89981f387a88bcac9456bb6b3c2" category="paragraph"><block ref="0331d89981f387a88bcac9456bb6b3c2" category="inline-link-macro-rx"></block></block>
+  <block id="6ba0d06cfc8e02c6b42874c98ef3e318" category="summary">當您不再需要此軟體時、可以從SnapManager Windows主機上解除安裝適用於Hyper-V的支援功能。您必須以互動方式執行解除安裝程式。</block>
+  <block id="2dfe0a7f9309d495d0d3c25f2bcc72fe" category="doc">在SnapManager Windows上解除安裝適用於Hyper-V的功能</block>
+  <block id="f4b321874f1eac53048a073337df9eae" category="summary">錯誤：VSS要求者-備份元件失敗。</block>
+  <block id="9372ca9d1d85f69ebdacefd5b1139eb0" category="doc">錯誤：VSS要求者-備份元件失敗</block>
+  <block id="17e15f437867a5f4e6b814c901ae864e" category="paragraph">下列錯誤訊息會顯示在SnapManager 《適用於Hyper-V的資訊》報告和Windows事件記錄中：「錯誤：VSS申請人-備份元件失敗」。寫入器與備份或還原有關的Microsoft Hyper-V VSS寫入器發生可重新輸入的錯誤。寫入器傳回失敗代碼：800423f3。寫入器狀態為XXX。如需詳細資訊、請參閱Windows事件檢視器中的Hyper-V VMM事件記錄。</block>
+  <block id="d8fc3002325e48a0d3fc0d78174308e8" category="paragraph">如果收到VSS重試錯誤、導致應用程式一致的備份失敗、SnapManager 則針對Hyper-V、在每次嘗試之間等待一分鐘、即可重試三次備份。</block>
+  <block id="dd5d812d0bb2e347a06973d2fa0346f1" category="paragraph">您可以使用下列登錄機碼來設定重試次數（重試次數）和重試之間的等待時間（重試時間間隔）：</block>
+  <block id="2ca21b57463c72312d5d629525355c87" category="paragraph">「Key：HKLM \System\CurrentControlSet\Services\OnCommandHyperV\參 數字字節值（以秒為單位）：VSS_Retry（VSS_retry）睡眠（重試之間等待的時間）」雙字節值：VSS_retry（重試次數）</block>
+  <block id="cdbb776ad5142b1b207ebc2e52decdcf" category="paragraph">這些設定位於Hyper-V主機層級、而且應該在Hyper-V主機上為每個虛擬機器設定金鑰和值。如果虛擬機器是叢集式的、則應在叢集中的每個節點上設定金鑰。</block>
+  <block id="4a0be8cd9c11021849e7fc56b44fe038" category="paragraph">變更或新增這些登錄機碼之後、您必須重新啟動SnapManager Hyper-V的功能。</block>
+  <block id="ba88d591f87671b80a620329f4aa3c68" category="summary">容錯移轉叢集事件ID 5121。</block>
+  <block id="ee6211ef27874cc88b293c816304c2fa" category="doc">容錯移轉叢集事件ID 5121</block>
+  <block id="15afc85c4d48627126a12dbbb73addb7" category="paragraph">容錯移轉叢集事件ID 5121（來自應用程式事件記錄）、或主機訊息no_direct_io_due to _f故障。</block>
+  <block id="858e4f65a625a9aa6cfeaef1248c7e87" category="paragraph">當叢集共用Volume（CSV）無法從叢集節點直接存取、且I/O存取權限重新導向至擁有該磁碟區的儲存設備時、就會出現此錯誤訊息。這是因為只有協調節點可以使用VSS備份來執行動作。在備份作業期間、協調節點會鎖定CSV、並要求所有非協調節點重新導向I/O</block>
+  <block id="78ebdbc1a2994ad181451bf7f4fe6ce1" category="paragraph">作業完成後、協調節點會釋放CSV上的鎖定、且I/O不再重新導向。如果錯誤訊息僅在VSS備份期間發生、則不會發生故障、這是預期的行為。</block>
+  <block id="e40ccea93b8bd7fd60bb288a3d07c31f" category="summary">您必須ONTAP 安裝好才能SnapManager 使功能正常運作的功能不正常的VSS硬體供應商。VSS硬體供應商將執行此功能的整套服務與儲存系統整合到VSS架構中。ONTAP SnapDrive ONTAP這是在SAN儲存設備上執行的VM所需的。</block>
+  <block id="bfe7a7ad3d1a7441ee7b75e8f14e60e2" category="doc">VSS硬體供應商需求ONTAP</block>
+  <block id="93ec4cda146bea59af1d02092a5e99ed" category="paragraph">不需要個別安裝包含在內的《》（《不含》）《不含》的《不含》（《不含）《不含》（《不ONTAP SnapDrive</block>
+  <block id="f5ecea394661f7f0b3901b762ff354b1" category="paragraph">對於在SMB 3.0共用區上執行的Hyper-V VM、Data ONTAP Windows Hypervisor會叫用執行於支援支援對象支援對象的遠端VSS硬體供應商。</block>
+  <block id="ad2bb8c14d7977a39ba5cdd2b6945f22" category="summary">若要完全啟用SnapManager 適用於Hyper-V實作的功能、以進行災難恢復、您必須確保主要和次要主機具有相同的組態、並知道您只能使用PowerShell執行災難恢復。</block>
+  <block id="51a3cdfcc13216a372d56996eedb0049" category="doc">設定SnapManager 適用於Hyper-V的功能以進行容錯移轉</block>
+  <block id="bf5e9b3f5954bedb975ebb72a1703bce" category="paragraph">下列類型的設定支援災難恢復：</block>
+  <block id="a51993adcd77282fd3ab8c60861f760b" category="list-text">獨立的主要主機和獨立的次要Hyper-V主機</block>
+  <block id="ce4a0560534be6e4184a28d4140603a4" category="list-text">叢集式主要和次要Hyper-V主機</block>
+  <block id="cbea32125c692a82b2f18365172f641e" category="list-text">在主要和次要Hyper-V主機上叢集共用磁碟區（CSV）</block>
+  <block id="e76d850f5bdb791eadd09b85ffa60e94" category="paragraph">例如、主主機上的叢集虛擬機器（VM）必須還原為叢集VM、專用（獨立）VM必須還原為專用VM、而CSV VM則必須還原為CSV VM。</block>
+  <block id="44170356ae052f02c7081a5cbbdd2cb8" category="paragraph">次要主機上的LUN連接方式應與主要主機上的LUN連接方式相同。也就是LUN類型（專用、共享或CSV）以及磁碟機代號、掛載點或CSV重新分析點、在主要和次要主機上應該相同。如果將SAN還原作業移至替代路徑位置、則可針對次要位置上的LUN還原作業指定不同的磁碟機代號。</block>
+  <block id="0dda7108073e7d311318541d5362a5d8" category="admonition">支援磁碟機代號、CSV和磁碟區掛載點。</block>
+  <block id="c17b3b535d69b83ec58875d048aa7c1b" category="paragraph">下列範例顯示基本的災難恢復設定：</block>
+  <block id="6381565192b9680b5689671c36c9b041" category="list-text">站台A（主要）包含儲存系統、獨立Hyper-V主機系統或Hyper-V主機叢集。</block>
+  <block id="d0efe2a2cfe2ce4b13e79ea3bcadf29e" category="paragraph">在這些主機上執行的VM位於Data ONTAP 不支援儲存設備上。</block>
+  <block id="12b4c0bc9da6cbd802b09d4ce65b106f" category="list-text">站台B（次要）包含儲存系統和Hyper-V主機或叢集（與主要主機或叢集相同）。</block>
+  <block id="dbd5a2d122952b7b10d3bec5e2f5827e" category="list-text">適用於Windows的支援功能和適用於Hyper-V的支援功能均安裝在站台A和站台B上SnapDrive SnapManager</block>
+  <block id="d026771d7d8aa2c2af2f0415ad5a1173" category="list-text">SnapMirror關係從站台A初始化為站台B</block>
+  <block id="3ef3c01221fbc24ebd60feb4cf80d48b" category="list-text">在現場A、將Hyper-V主機或叢集新增至SnapManager 支援Hyper-V的支援、並使用SnapManager 支援Hyper-V的功能進行VM備份</block>
+  <block id="b37cd8506f84d61a0b44abf9093bfab2" category="paragraph">檢查備份後更新SnapMirror的原則。每次備份之後、次要站台都會以VM和SnapInfo複本的新Snapshot複本進行更新。</block>
+  <block id="206a69513a554c2ee397148c18f7fd5e" category="summary">適用於Hyper-V授權的版本取決於您使用的版本。SnapManager ONTAP</block>
+  <block id="00e2fe0a2c0dcf10ebcbb5322c13827a" category="doc">適用於Hyper-V的for Hyper-V授權SnapManager ONTAP</block>
+  <block id="2d3afe83061284bdabbffa76a340dbaa" category="paragraph">若要取得主機型授權和儲存型授權、您必須使用Data ONTAP 支援功能更新版本的支援功能。</block>
+  <block id="6e8ccd8744d9d11213db2a72e5a3bada" category="paragraph">您必須使用Data ONTAP 更新版本MultiStore 的功能才能搭配SnapManager 使用適用於Hyper-V的功能</block>
+  <block id="419f32ca591e98830773cb732397b9b4" category="paragraph">如果您使用Data ONTAP 的是8.2之前的版本、則某些作業會受到一些限制。</block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互通性對照表工具</block>
+  <block id="d38df2295bfe768071dcfe28649a9438" category="paragraph"><block ref="d38df2295bfe768071dcfe28649a9438" category="inline-link-rx"></block></block>
+  <block id="74ea49fa75cd05fb118325f9605dccd5" category="summary">您可以在保護需求變更時刪除資料集。</block>
+  <block id="3e15174cd54ab9db4679ac6ced74d91f" category="doc">刪除資料集</block>
+  <block id="4de283003835ce9c753ed01c103206d2" category="paragraph">刪除資料集並不會刪除屬於該資料集的虛擬機器。刪除資料集之後、如果所屬的虛擬機器不屬於其他資料集、則其將會變成無保護狀態。</block>
+  <block id="4089200b34fa99a60b145b36fb4f8018" category="list-text">在導覽窗格中、按一下* Protection（保護）*&gt;* Dataset。*</block>
+  <block id="9a7f2045e29c7015a5aef725cf21d715" category="list-text">選取您要刪除的資料集。</block>
+  <block id="73b57cbe35150d214e13c1470f8599ae" category="list-text">在「動作」窗格中、按一下*刪除*、然後按一下*確定*以刪除資料集。</block>
+  <block id="25bc160d143584c0503a8a7d599d4268" category="paragraph">刪除資料集也會從資料集成員的所有主機中刪除排程工作。當您刪除資料集時、即使重新建立同名的資料集、也無法再管理保留備份。SnapManager</block>
+  <block id="69ce911ef79a734ef7855400a092a1fc" category="paragraph">適用於Hyper-V的不再保護與刪除資料集相關的資源、除非這些資源屬於其他資料集。SnapManager</block>
+  <block id="ae05e937f1abf80c94aa8e13db1fe036" category="summary">VSS申請人-備份元件失敗。無法呼叫保留快照集。</block>
+  <block id="ee1aa480797e2ea152dcfd86124099de" category="list-text">*錯誤*</block>
+  <block id="10d98066ee40a7661c2106e4067993ca" category="paragraph">VSS申請人-備份元件失敗。無法呼叫保留快照集。原因索引和計數必須參照字串內的位置。</block>
+  <block id="146fa05f11b1650e7028db3c82c620c6" category="paragraph">當備份工作中的VM位於名稱相同的儲存虛擬機器和CIFS伺服器上時、就會發生此錯誤。</block>
+  <block id="f5768417859475b0d881b6f2a24a4cc6" category="paragraph">此版本不適用。</block>
+  <block id="4fd11abfd3c4f9f62f320ec74063e750" category="list-text">*故障範例*</block>
+  <block id="e3bb9328db1513b58e625cf33de9e1bd" category="list-text">建立名稱相同的儲存虛擬機器和CIFS伺服器：例如「'test1'」。</block>
+  <block id="0aa9ef3b09293cef1028fa824a84ae58" category="list-text">使用兩個IP位址將test1名稱新增至DNS。</block>
+  <block id="b5dd78876564ec0040f73a144770f5ea" category="list-text">在Windows Server 2012主機上、安裝SnapManager 適用於Hyper-V的支援功能、並使用來自test1的CIFS共用區來建立部分VM。</block>
+  <block id="c4fab528a2073847eeca7f2dcd6bb96e" category="list-text">建立包含這些VM的備份複本。</block>
+  <block id="c8fe51e0515bca6e21087bea49bb5400" category="list-text">請注意、備份工作失敗、並顯示備份元件故障錯誤。無法呼叫保留快照集。原因索引和計數必須參照字串內的位置。</block>
+  <block id="9bf4093831798b5c4d2e0e0f0c2613ed" category="summary">在將父主機或主機叢集新增SnapManager 至適用於Hyper-V的支援之前、您必須擁有所有必要的組態資訊</block>
+  <block id="3ccdc0cb8d7b5aef750244f0678e3759" category="doc">新增Hyper-V父主機或主機叢集的需求</block>
+  <block id="c3dc9dedf1883d5556cb3815e4da2a40" category="section-title">適用於Hyper-V安裝SnapManager</block>
+  <block id="cd91a0db6ff13cff1cf946cbb36133b4" category="paragraph">Hyper-V版的支援必須安裝在您要新增的Hyper-V主機上。SnapManager</block>
+  <block id="578181228f759b1ac8b95355ef4d2cc0" category="paragraph">如果SnapManager 您未安裝適用於Hyper-V的功能、系統會提示您執行遠端主機安裝精靈。Hyper-V版本的相同功能必須安裝在每個叢集節點上。SnapManager</block>
+  <block id="d0d22e03456c3fce1282b8574dfd0c8f" category="section-title">組態設定</block>
+  <block id="4781cebe5be96afc4191c4cc744a5378" category="paragraph">您要新增的Hyper-V父主機必須設定SnapManager 成適用於Hyper-V的</block>
+  <block id="889bdecb58cbb9ece5485c8823bee365" category="paragraph">如果SnapInfo設定、報告目錄設定和通知設定未設定SnapManager 為適用於Hyper-V的功能、您可以在新增主機之後、使用組態精靈進行設定。</block>
+  <block id="e36bfe5e64d7355ac969bea6f8212660" category="paragraph">一開始、「*管理儲存連線*」索引標籤為空白。您可以從*管理儲存連線*索引標籤新增儲存連線、但SnapDrive 從Windows（SDW）傳輸傳輸傳輸協定設定（TPS）可看到新增的連線。</block>
+  <block id="2f2d6a0c53fd036afaf80fe6a624bcfa" category="paragraph">您必須設定備份儲存庫和報告目錄設定、才能使用SnapManager 支援Hyper-V的功能來新增和管理虛擬機器通知設定為選用項目。</block>
+  <block id="bec2d798891a82b99b71e36d3086f2ef" category="section-title">虛擬機器和ONTAP LUN</block>
+  <block id="2f3d173ac3b3e7e911aca4487aca0738" category="paragraph">所有與虛擬機器相關的檔案、包括組態檔、Snapshot複製檔案位置和VHD、都必須位於ONTAP VMware LUN上。</block>
+  <block id="d702234e21af8bf8c02b69bd028091b6" category="paragraph">這是執行成功備份所必需的。</block>
+  <block id="c7291559f829d8719895a830d63494fa" category="admonition">如果您在建立虛擬機器後、將虛擬機器的Snapshot檔案位置變更ONTAP 為不同的版本LUN、則在使用SnapManager 適用於Hyper-V的NetApp進行備份之前、應使用Hyper-V Manager建立至少一個虛擬機器的Snapshot複本如果您變更Snapshot複本檔案位置、但在進行備份之前未建立虛擬機器Snapshot複本、則備份作業可能會失敗。</block>
+  <block id="0ebae4c420d4fb62257765f30622a1ea" category="section-title">專用和叢集式虛擬機器</block>
+  <block id="dc8a4c68152b6375c4d7f566aabd0e19" category="paragraph">您的虛擬機器可以是專屬的、也可以是叢集的一部分。</block>
+  <block id="8c0677e5dff0ab0a92910776b4c7a62f" category="paragraph">如果您新增單一主機、SnapManager 適用於Hyper-V的VMware可管理該主機上的專屬虛擬機器。如果您新增主機叢集、SnapManager 適用於Hyper-V的功能可管理主機叢集上的共享虛擬機器。位於SAN和NAS上且屬於同一個主機叢集的虛擬機器、不應存在於同一個資料集中。將這些類型的資源新增至單一資料集可能會導致資料集備份失敗。</block>
+  <block id="970377b7107098d943ff5763e6bcdcb6" category="paragraph">對於應用程式一致的備份、當虛擬機器在叢集的不同節點上執行時、叢集式虛擬機器的資料集備份需要較長的時間才能完成。當虛擬機器在不同節點上執行時、叢集中的每個節點都需要個別的備份作業。如果所有虛擬機器都在同一個節點上執行、則只需執行一次備份作業、即可加快備份速度。</block>
+  <block id="f41eab292eefef8cd8354d80d20462ab" category="section-title">虛擬機器數量</block>
+  <block id="9852703357683b259e9a71033740086a" category="paragraph">如果您的Hyper-V主機或主機叢集擁有超過1、000部虛擬機器、則必須增加SnapMgrServiceHost.exe.config檔案中SnapMgrServiceHost.exe.config檔案中的「最大值ElementsInCacheBeforeScavenging」屬性值。此值應大於或等於在獨立主機或叢集上執行的Hyper-V主機數量。此值應在叢集的每個節點上變更、SnapManager 變更此值後、必須重新啟動適用於Hyper-V的功能。您必須使用文字編輯器手動編輯SnapMgrServiceHost.exe.config檔案。</block>
+  <block id="3ea2fc0fb28b3fb504dc6193ce5a3c54" category="section-title">適用於Hyper-V服務帳戶需求SnapManager</block>
+  <block id="6e164dd4ec04738f16abddb3cb99f5db" category="paragraph">使用SnapManager 支援Hyper-V的支援功能來管理Hyper-V主機叢集時、SnapManager 適用於Hyper-V和SnapDrive Windows的支援功能帳戶必須是具有伺服器本機系統管理員權限的網域使用者帳戶。</block>
+  <block id="27f5c527b6f2a36da432d987fbe2a974" category="paragraph">適用於Hyper-V應用程式一致的備份作業、可在執行虛擬機器的叢集節點上執行。SnapManager如果虛擬機器所使用的叢集共用磁碟區（CSV）並非由同一個節點擁有、則SnapManager 當針對Hyper-V服務使用本機系統帳戶（即使帳戶具有系統管理員權限）時、虛擬機器備份可能會失敗。在這種情況SnapManager 下、針對Hyper-V的支援無法偵測到虛擬機器檔案位於CSV上、導致備份失敗。</block>
+  <block id="f2b435cb61126cb2311539a153d03b8a" category="admonition">對於遠端Volume陰影複製服務（VSS）作業、若虛擬機器儲存在叢集Data ONTAP 式VMware 3.0持續可用度（CA）共享區上、則可正常運作、 您必須授予SnapDrive 對Windows服務帳戶的共享區的完整控制權、以及SnapManager 對Hyper-V Web服務帳戶的最低讀取層級存取權限。</block>
+  <block id="a56dd8abb3798a37b1c7790e2a456ec5" category="summary">在容錯移轉後刪除備份。</block>
+  <block id="c1ed94f45c8e142708aaee604ef8045e" category="doc">在容錯移轉後刪除備份</block>
+  <block id="e770210a45f72b4979b63a196c5e8504" category="paragraph">資料集中的某些物件不存在指定的備份。</block>
+  <block id="3b84a70fe39b4ce1f059c75552736b65" category="paragraph">容錯移轉至次要站台（站台B）之後、您可能無法刪除在主要站台（站台A）建立的備份。如果您位於災難恢復站台（站台B）、並嘗試刪除在主要站台（站台A）所做的備份、您將會從主要站台（站台A）刪除備份、而非從災難恢復站台（站台B）刪除備份。</block>
+  <block id="5dee9d1a21781195d092306928ae41a6" category="paragraph">執行災難恢復作業之後、只會刪除您目前營運站台所做的備份。</block>
+  <block id="5e7c1128e5aa53e6eebe201a3ce32c30" category="summary">您可以檢視與特定資料集相關的原則詳細資料。</block>
+  <block id="61e83173e8e1c0e9bf88676e53b8f06c" category="doc">檢視原則</block>
+  <block id="d18d9a78ded0e8683f187facef65a666" category="list-text">選取包含您要檢視之原則的資料集。</block>
+  <block id="d0aa3f91258aff5ef8af7b3895ef0a45" category="list-text">從「原則」窗格中、選取您要檢視其詳細資料的特定原則。</block>
+  <block id="c22e9c878557311ee6057ff5a762d372" category="paragraph">有關原則的資訊會顯示在「詳細資料」窗格中。</block>
+  <block id="dc719ab420cea5c8b267d389e0f0d53a" category="summary">您可以使用Microsoft Windows Server Volume陰影複製服務（VSS）來協調資料伺服器、備份應用程式和儲存管理軟體、以支援一致備份的建立和管理。</block>
+  <block id="d32cae400d3bb5771392999f91088572" category="doc">VSS元件</block>
+  <block id="e4b92cec3fd6cb910c8feb81698305c6" category="paragraph">VSS可協調Snapshot複製型備份與還原作業、包括下列元件：</block>
+  <block id="2dd4d3e504508a7dd4ded7a84b29c3fb" category="list-text">* VSS申請者*</block>
+  <block id="c6cda2cfc23517cc7820477f609cd30a" category="paragraph">VSS申請者是一個備份應用程式、例如SnapManager 適用於Hyper-V或NTBackup的功能。它會啟動VSS備份與還原作業。申請者也會指定Snapshot複本屬性、以便進行所起始的備份。</block>
+  <block id="407f749f95d0beadeccedd18e9d94e9d" category="list-text">* VSS寫入器*</block>
+  <block id="a96fd1c100fb63ec8634a45eb47f6a28" category="paragraph">VSS寫入器擁有並管理要在Snapshot複本中擷取的資料。Microsoft Hyper-V VSS寫入器是VSS寫入器的範例。</block>
+  <block id="1995dcadb2aca2f14c66842f1aba1795" category="list-text">* VSS提供者*</block>
+  <block id="339c65802c22c15b90eb26e484e892c8" category="paragraph">VSS提供者負責建立及管理Snapshot複本。供應商可以是硬體供應商或軟體供應商：</block>
+  <block id="b00334ca1b5ca102c5e2e25c45b8ed4e" category="list-text">硬體供應商將儲存陣列特定的Snapshot複本與複製功能整合至VSS架構。</block>
+  <block id="a287aaac307fe15de37c683693f07b47" category="paragraph">此功能可將執行此功能的整套服務與儲存系統整合至VSS架構中。ONTAP SnapDrive Data ONTAP</block>
+  <block id="9cd86d400babd755f769fd83ccefe0d7" category="admonition">將會自動安裝「功能完整的VSS硬體供應商」、作為安裝此軟體的一部分。ONTAP SnapDrive</block>
+  <block id="cf40ffd26ee3a761d09d3d4db27c8968" category="list-text">軟體供應商在Windows系統上執行的軟體中實作Snapshot複本或複製功能。</block>
+  <block id="8c215fb257b71c6d8444c7f5cb307458" category="admonition">為確保ONTAP 無法正常運作、請勿在Data ONTAP 整個流程中使用VSS軟體供應商。如果您使用VSS軟體供應商在Data ONTAP 某個LUN上建立Snapshot複本、則無法使用VSS硬體供應商刪除該LUN。</block>
+  <block id="15e537c840bde26c4ac33c19cf7f2454" category="summary">您可以SnapManager 使用作業系統的控制台解除安裝應用程式、從Windows伺服器解除安裝適用於Hyper-V的功能。</block>
+  <block id="1f51ec339f54504123e26bd4e5568895" category="doc">解除安裝SnapManager 適用於Hyper-V的功能</block>
+  <block id="1611f491344ff052478e1e6db93fdc82" category="paragraph">您可以SnapManager 使用作業系統的控制台解除安裝應用程式、從Windows伺服器解除安裝適用於Hyper-V的功能。您可以SnapManager 使用「保護」視窗的「動作」窗格中的「遠端主機安裝精靈」、在獨立節點和叢集節點或主機上遠端解除安裝適用於Hyper-V的功能。</block>
+  <block id="fed856d312ae48967d1259bd555d517b" category="paragraph">解除安裝SnapManager 適用於Hyper-V的功能會刪除所有資料集和原則。解除安裝完成後、您將無法恢復該資訊。如果您想要儲存資料集和主機組態資訊、可以在解除安裝之前先匯出。</block>
+  <block id="78e3081567a103abe2e00fabb77db9db" category="list-text">在安裝SnapManager 了適用於Hyper-V的Windows伺服器上、瀏覽至「控制台」、然後選取*「控制台」*&gt;*「程式集」**「程式和功能」*。</block>
+  <block id="e60317a9056bd822eab4cccc59424c22" category="list-text">捲動已安裝程式的清單、尋找SnapManager 適用於Hyper-V的功能</block>
+  <block id="9d35c0608963f2df159f7d7f145b31f9" category="list-text">按一下程式名稱、然後按一下「*解除安裝*」。</block>
+  <block id="d9e82483fc02d94efd8c3c7f1f024825" category="list-text">當系統提示您確認解除安裝時、請按一下*是*。</block>
+  <block id="424104f002a58b60418f31efbf7bf5a6" category="paragraph"><block ref="424104f002a58b60418f31efbf7bf5a6" category="inline-xref-macro-rx"></block></block>
+  <block id="ccdcdb65514509fa0bc73249ccd8dba7" category="summary">某些類型的備份失敗不會導致部分備份失敗。</block>
+  <block id="d8b5d4992ee6e8865582c7b07b5beb9f" category="doc">某些類型的備份失敗不會導致部分備份失敗</block>
+  <block id="b99ec583cc5282d67e9e5e18215ee7df" category="paragraph">如果資料集中的某個虛擬機器發生錯誤、SnapManager 則適用於Hyper-V的功能無法成功完成資料集備份、而且在某些情況下不會產生部分故障。在這些情況下、整個資料集備份都會失敗。</block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="list-text">* 範例 *</block>
+  <block id="67c2917af8830bc6c5370cb1bc747b1f" category="paragraph">在某個儲存系統磁碟區超過255個Snapshot複本限制的情況下、SnapManager 即使問題與資料集中的虛擬機器子集相關聯、Hyper-V的VMware for Hyper-V仍會產生部分故障。</block>
+  <block id="711c59ccc9dd16e21b6c667e38228187" category="paragraph">若要成功完成備份作業、您必須修正發生問題的虛擬機器。如果不可能、您可以將虛擬機器暫時移出資料集、或建立僅包含已知沒有問題的虛擬機器的資料集。</block>
+  <block id="8bcb602f8f424d5f10e5fff8a3110791" category="summary">從同一個儲存系統進行的備份工作可能會失敗、而這些工作涉及15個以上的CSV。</block>
+  <block id="a2eba6171afed7bf3ab72b21a0d96241" category="doc">從同一個儲存系統進行的備份工作可能會失敗、而這些工作涉及15個以上的CSV</block>
+  <block id="fad4af869b760fa472fd968f4a185f8a" category="paragraph">針對涉及相同儲存系統15個以上叢集共用磁碟區（CSV）的Hyper-V備份工作、下列錯誤會導致失敗：SnapManager</block>
+  <block id="375150297edd599b7d34916c85c1f285" category="paragraph">這是Data ONTAP 由於不保留系統資源而造成的限制。僅當所有LUN都屬於同一個儲存系統時、才適用15個LUN的限制。如果建立備份資料集、使單一儲存系統不涉及超過15個CSV、則不會發生此問題。</block>
+  <block id="7961b1422035900b7f2fdace77d2a99e" category="paragraph">如果您想要從同一個儲存系統製作包含15個以上LUN的備份、請建立多個資料集以避免此故障。</block>
+  <block id="1788e977f20e1f86df49d2cedec68849" category="summary">備份報告會在報告名稱中使用管理主控台時區資訊。</block>
+  <block id="bf99ca448ce8f3d20c202a99dd06a747" category="doc">備份報告會在報告名稱中使用管理主控台時區資訊</block>
+  <block id="232951cc31d37beb2ec28193d43493f2" category="paragraph">當您使用與父主機位於不同時區的用戶端主機來產生備份報告時、報告名稱會使用用戶端主機時區資訊、而報告內容會使用父主機時區。</block>
+  <block id="31a824937ad8b8aab6be6fc62cb03c7e" category="paragraph">備份報告名稱中的時間戳記會與用戶端主機時區資訊一起顯示。</block>
+  <block id="abb046be6cec841f4556bc725146d71f" category="paragraph">無需採取修正行動。</block>
+  <block id="975cb3813294b8e39c92f42ca0227a52" category="summary">新增主機之後、您應該在SnapDrive 「Protection」（保護）&gt;&gt;「Dataset Management」（資料集管理）中輸入SnapManager 所有使用管理儲存連線的儲存連線（適用於Windows、適用於Hyper-V）。</block>
+  <block id="ade2be58fd2780db17586ba0e3e6286a" category="doc">管理儲存連線設定</block>
+  <block id="03aeaa33152b631e06799c38d29ca83d" category="paragraph">新增主機之後、您應該在SnapDrive 「*保護*&gt;*資料集管理*」中輸入SnapManager 所有使用管理儲存連線的儲存連線（適用於Windows、適用於Hyper-V）（適用於Windows）、以及使用「管理儲存連線設定」（適用於Hyper-V）。</block>
+  <block id="be9a73a0e98cd7be7f653ad024e20233" category="paragraph">在SnapManager 管理儲存連線設定之前、您必須至少將一部主機新增至適用於Hyper-V的支援區。</block>
+  <block id="5327a47470ebf139d313fdc30faa4fde" category="list-text">從* Protection（保護）&gt;* Dataset Management（資料集管理）*中、選取Manage Storage Connection Settings（管理儲存連線設定）。</block>
+  <block id="e5743733f43978d18adb5eded4d83059" category="list-text">新增儲存連線。</block>
+  <block id="71b09a5ad5bfea4835869efab410501f" category="paragraph">所有的儲存連線都可在SnapDrive Windows TPS的「參考」中檢視。</block>
+  <block id="36c5838aab4fa29bd5c9cdad6fa9ac89" category="summary">通知的多個電子郵件收件者必須以逗號分隔。</block>
+  <block id="1d6ad37292fd66fcad97d0d0c43b584c" category="doc">設定電子郵件通知</block>
+  <block id="32e3caa78e4a147c7040d3108a792237" category="paragraph">當您在SnapManager 適用於Hyper-V的支援功能中設定多個電子郵件收件者來接收電子郵件通知時、請以英文分隔每個收件者。這項要求與SnapManager SQL的不相同、因為SQL的每個電子郵件通知收件者都必須以分號分隔。</block>
+  <block id="1447d6708050e5e3ed4d0c1bdd5c70bc" category="summary">如果SnapManager 在安裝或組態支援Hyper-V的過程中遇到非預期的行為、您可以依照特定的疑難排解程序來識別及解決此類問題的原因。</block>
+  <block id="c06247ab3f7830ed4ddeac878f635b94" category="doc">Hyper-V疑難排解SnapManager</block>
+  <block id="c5dbce49f6fd4c7e1bae3afca4cec4d4" category="summary">從虛擬機器的「詳細資料」窗格的「虛擬機器」索引標籤和「VHD」索引標籤中、您可以檢視該機器的相關資訊、並監控其狀態。</block>
+  <block id="7bb2d74d450c1bbfdc22700d91e51efd" category="doc">檢視虛擬機器</block>
+  <block id="6784dcf6fa583322f2fe694fef065d7b" category="list-text">在導覽窗格中、按一下* Protection（保護）*&gt;* host*或* Protection（保護）*&gt;* Dataset *。</block>
+  <block id="7b753f96317e26050f91e5b27eee026b" category="list-text">選取虛擬機器所屬的資料集或主機。</block>
+  <block id="951892dc8a79b705bf58b07591dcaf0f" category="list-text">選取適當的虛擬機器。</block>
+  <block id="13f16352257850b119e32a9509413e14" category="paragraph">虛擬機器索引標籤會顯示所選虛擬機器的名稱、GUID和狀態。</block>
+  <block id="38f6536040e293e93bc3792d9a34e07f" category="paragraph">VHD索引標籤顯示系統磁碟、掛載點、VHD完整路徑、LUN路徑、儲存系統名稱、 與所選虛擬機器相關聯的序號和Volume名稱。</block>
+  <block id="fedcd7638790c189ed6bac7695336514" category="summary">您必須先設定主機的SnapInfo設定、才能將該主機內的虛擬機器資源新增至資料集。</block>
+  <block id="16466e0f244fbc8d627772c9c9e7cc51" category="doc">設定SnapInfo目錄設定</block>
+  <block id="7fdbb32fcd2831a317f5b4cfb0f71a78" category="paragraph">您必須先設定主機的SnapInfo設定、才能將該主機內的虛擬機器資源新增至資料集。如果將Hyper-V主機新增SnapManager 至適用於Hyper-V的支援、但未設定SnapInfo設定、您可以稍後使用組態精靈或* SnapInfo設定*動作來設定這些設定。</block>
+  <block id="f01f7a731768e13af1949951a3c80879" category="paragraph">您也可以在將主機新增至SnapManager 適用於Hyper-V的支援後、變更SnapInfo設定不過、如果您變更SnapInfo設定、則必須手動將所有檔案移至新位置；SnapManager 適用於Hyper-V的版本不會自動更新。如果您不移動檔案、就無法從備份複本還原或管理備份複本、SnapManager 而適用於Hyper-V的還原功能則不會列出備份複本。</block>
+  <block id="c2aa3d9f61982da148456721ae79587e" category="paragraph">從Hyper-V的支援功能開始SnapManager 、SnapInfo路徑可位於叢集共用磁碟區（CSV）上、也可位於Windows Server 2012的SMB共用區上。</block>
+  <block id="54bbbae6b75598d96e01a8ef292c1580" category="summary">您可以為共享相同保護需求的虛擬機器資源建立資料集。您可以視需要將虛擬機器新增至多個資料集。</block>
+  <block id="d82a6aed3492ef2e7f7b5cbf1eddf8da" category="doc">建立資料集</block>
+  <block id="618322761e8dcd886ce91475cd7877a5" category="list-text">資料集名稱與說明</block>
+  <block id="e50edd97d3a01977ba8ffe981ab1a2fc" category="list-text">您計畫新增至資料集的虛擬機器資源</block>
+  <block id="5625da2889c91899be39a9e7a1f676d1" category="paragraph">屬於同一個主機叢集的專用和共享磁碟、不應放在同一個資料集中。將這些類型的資源新增至單一資料集可能會導致資料集備份失敗。每個資料集只能有一種類型的VM：NAS或SAN。您無法擁有混合模式資料集。</block>
+  <block id="0e71afb1ed54e227a67b45b4ddd9578b" category="paragraph">「驗證資料集」核取方塊預設為選取狀態。適用於Hyper-V的功能可在建立或修改資料集期間、檢查所有VM中的任何組態錯誤。SnapManager如果您不想啟用資料集驗證、則必須確保未選取此核取方塊。</block>
+  <block id="bb2d7ceb9599c8ee580a614582533e4e" category="list-text">在「動作」窗格中、按一下「*建立資料集*」。</block>
+  <block id="799b0434e98e576358bbb4ff50f65a46" category="list-text">完成精靈的頁面。</block>
+  <block id="19bb48d3ade7ccf63660ddd80481e1cc" category="paragraph">接下來、您應該將保護原則新增至所建立的資料集。</block>
+  <block id="d6cc51cf29a35476bbb45dd0854ea089" category="summary">您可以新增、修改或刪除與資料集相關的原則、以便保護資料。</block>
+  <block id="bbf4d8084facd429e86123ec7b6a9bd0" category="doc">設定原則</block>
+  <block id="2e09f66acdc6e3807831e87c2c274677" category="summary">將資料集更新至新節點時、Web服務用戶端通道無法連線。</block>
+  <block id="8b3b23156be5ac30b137f82199c93fb2" category="doc">將資料集更新至新節點時、Web服務用戶端通道無法連線</block>
+  <block id="5d26a3bbb243b9111fa1388872d4d277" category="paragraph">如果Web服務用戶端未明確啟動、就無法連線SnapManager 到適用於Hyper-V的功能</block>
+  <block id="fd3156c5d3666c9e747ad687a4899e98" category="paragraph">適用於Hyper-V的不再自動啟動Web服務用戶端通道。SnapManager如果Web服務用戶端通道在將資料集更新至新節點時無法連線、可能是因為下列其中一個原因：</block>
+  <block id="9518dd0bf8afe06c3cffa0628aed4c71" category="list-text">尚未啟動Web服務。</block>
+  <block id="5c68c7379217e4320b79c2a7352f0fc8" category="list-text">未安裝適用於Hyper-V的。SnapManager</block>
+  <block id="d0c1faeb6e379a4a2d5039749dd8e9c5" category="list-text">Web服務主機當機。</block>
+  <block id="432196714b84ebf92fe914667704041c" category="paragraph">若要修正此行為、請確定您已執行下列工作：</block>
+  <block id="c59865ab79a0744a0aec9654ddfc8a5a" category="list-text">啟動Web服務。</block>
+  <block id="70b3a6db887e39dac6f6c45a12d5b44e" category="list-text">安裝SnapManager 適用於Hyper-V的</block>
+  <block id="0f99140d32024a77e05b26ec975e43fa" category="list-text">重新啟動Web服務主機。</block>
+  <block id="c27423bb8e5e6cf832538373c8eaffc3" category="summary">建立陰影複製時發生備份失敗錯誤</block>
+  <block id="2ef940b95f23ccd7106b4fd53c93110c" category="doc">備份失敗、出現「陰影複製建立已在進行中」錯誤</block>
+  <block id="8dadc1857407aef266dee20961d67d99" category="paragraph">發生此問題的原因是先前的備份未中止且仍處於作用中狀態。使用下列命令檢查是否有列出的任何項目：「CIFS共用show -ShadowCopy」</block>
+  <block id="fb6f2e6782f9cbfac9dc69d562f3b75e" category="paragraph">中止先前的備份工作、然後重試此作業。</block>
+  <block id="6ce4fc9e1ea4b9bdd5944a4c4fef1693" category="summary">VSS申請人-備份元件失敗、並出現部分寫入錯誤。</block>
+  <block id="5aec979810f717c2bd06a3f109296bb6" category="doc">VSS申請人-備份元件失敗、並出現部分寫入錯誤</block>
+  <block id="d93505cbb4de4cf55bbd8a4f9730af33" category="paragraph">Hyper-V主機上的Windows應用程式事件記錄中會出現下列錯誤：</block>
+  <block id="9b0af1bcd79b97399ce6605073c34a5a" category="paragraph">執行資料集的應用程式一致備份時、會出現此訊息。此錯誤會導致資料集中部分虛擬機器的備份失敗。</block>
+  <block id="6832ae75ebdd3174319fb1eb8b03aa45" category="list-text">如果重試嘗試再次失敗、請將資料集分割成兩個資料集、以便將備份失敗的所有VM放入單一資料集、所有其他VM都會放入另一個資料集。然後再次執行備份。</block>
+  <block id="a1f1032aa2d3baced636ad4ef4333b28" category="summary">您可以刪除與資料集或虛擬機器相關的一或多個備份。</block>
+  <block id="4574586aa737250bfcda95872412374c" category="doc">刪除備份</block>
+  <block id="e296d076e980ec567325795266c68391" category="list-text">在包含您要刪除之備份的資料集中選取虛擬機器。</block>
+  <block id="10fdc0e5c9a54280b130aed4d7a0b6e0" category="paragraph">如果刪除與資料集相關的備份、則與屬於該資料集的任何虛擬機器相關聯的備份也會一併刪除。如果刪除與虛擬機器相關的備份、則只會刪除該備份。</block>
+  <block id="87372cabc36ee202e94b8b4d26eaa578" category="list-text">在備份窗格中、選取您要刪除的備份。</block>
+  <block id="3b2dc7db426da50807132dd7a1aee03a" category="paragraph">此時將顯示*刪除備份*對話框。您可以選擇刪除所選VM或整個資料集的備份。</block>
+  <block id="43c71a832bf25c4e9d1dbb3ef536b79d" category="list-text">選取適當的選項、然後按一下*確認刪除*。</block>
+  <block id="6fd2f78e84faf0f67adc4307fbd62724" category="paragraph">您可以在狀態視窗中檢視備份刪除作業的狀態。</block>
+  <block id="1d54878873bda79ba6f6f488be52b7db" category="summary">您可以在不再需要時刪除一或多個報告。</block>
+  <block id="db0a7e575789aeec7430c480d1cdbf90" category="doc">刪除報告</block>
+  <block id="492d10510b8068b0b2bd4fd6b5e7db8f" category="list-text">在導覽窗格中、按一下*報告*&gt;*資料集*或*報告*&gt;*主機*。</block>
+  <block id="cfdb6ad6562c35577220f2d2ea051140" category="list-text">選取包含您要刪除之報告的資料集、虛擬機器或主機。</block>
+  <block id="177e4969ffcd1fb05e9df1da6273fc62" category="list-text">從「報告」窗格中、選取您要刪除的報告。</block>
+  <block id="160729de3f7b7c0a18a074f71e6d5660" category="list-text">在「動作」窗格中、按一下「*刪除報告*」、然後按一下「*確定*」刪除。</block>
+  <block id="56186ca948e6e2f0d7873e6938dad843" category="summary">為多個應用程式設定單一儲存虛擬機器（SVM）或CIFS伺服器、可能會導致資源共用問題、進而影響Hyper-V環境。</block>
+  <block id="cfab628a3188c03c7095801849d2119e" category="doc">在SMB上設定Hyper-V的SVM或CIFS伺服器</block>
+  <block id="2a451f26e097f6452847e824aff787d8" category="paragraph">為多個應用程式設定單一儲存虛擬機器（SVM）或CIFS伺服器、可能會導致資源共用問題、進而影響Hyper-V環境。您應該根據需求、針對SMB上的Hyper-V設定專屬的SVM或CIFS伺服器。</block>
+  <block id="7c9f946d8fc9c1bc8c966878e44efc69" category="inline-link">NetApp知識庫文件編號1015099：如何針對SMB上的Hyper-V設定SVM/CIFS</block>
+  <block id="4c842a7c58d79eb45e70fb117cba80d3" category="paragraph"><block ref="b51738f37f5bb4b910df6838f087c67c" category="inline-link-rx"></block></block>
+  <block id="ddb1e3ae2fe994cd6f2cbf626ec1aec2" category="summary">適用於Hyper-V的支援可讓您在多個主機上備份及還原多個虛擬機器。SnapManager您可以建立資料集並將原則套用至這些資料集、以自動化備份工作、例如排程、保留和複寫。</block>
+  <block id="56e00e502522f8f9c1bf72739fc7d6b0" category="doc">如何運用SnapManager 適用於Hyper-V的功能</block>
+  <block id="1942f365945297729bd80e08dbd9ef55" category="paragraph">您可以使用SnapManager 適用於Hyper-V的下列功能執行下列工作：</block>
+  <block id="b20cb048b9feda6e061835940fc5f6ca" category="list-text">將虛擬機器分組為具有相同保護需求的資料集、並將原則套用至這些資料集</block>
+  <block id="0686f7937978ebba5e524899d138763a" category="list-text">備份及還原執行ONTAP VMware軟體之儲存系統上的專屬和叢集式虛擬機器</block>
+  <block id="54d4c0474d7100ef471223471ea39232" category="list-text">備份及還原叢集共用磁碟區（CSV）上託管的虛擬機器</block>
+  <block id="c1ba19d1fa9f7fe81b4469bf18569455" category="list-text">使用排程原則來自動化資料集備份</block>
+  <block id="c0b5b722d2fc5e7702a26493b71e7284" category="list-text">執行資料集的隨需備份</block>
+  <block id="08a84764e165844b72e72b3c361f75bf" category="list-text">使用保留原則、只要您需要、就能保留資料集備份</block>
+  <block id="ff913bf483085ae67b6db660a9b54769" category="list-text">備份成功完成後、請更新SnapMirror目的地位置</block>
+  <block id="df30d2a876f35e3c55ab84e445c1bdee" category="list-text">指定在備份前後執行的自訂指令碼</block>
+  <block id="2b6f0d8477449afa9c1f20ac00cfac4c" category="list-text">從備份還原虛擬機器</block>
+  <block id="fecd9fbae73a24e6d80dc51a54a9d6d6" category="list-text">監控所有排程和執行中工作的狀態</block>
+  <block id="3c2190647b63a0bc718d912624647267" category="list-text">從管理主控台遠端管理主機</block>
+  <block id="b71cbe96d87276f01b10df5bc5ff5166" category="list-text">針對資料集備份、還原及組態作業提供整合式報告</block>
+  <block id="4623328acd481dbe715800e88dc07488" category="list-text">結合執行損毀一致且應用程式一致的備份</block>
+  <block id="b218fcb26f722d30f041dd0af9669b87" category="list-text">使用PowerShell Cmdlet執行災難恢復作業</block>
+  <block id="85ce68ce75d094769a965ba2dc1947a6" category="list-text">執行叢集作業系統（OS）循環升級</block>
+  <block id="f375afd3b93b2a4700a74a4d41f5e198" category="summary">雖然Hyper-V的預設行為SnapManager 是將包含處於儲存狀態之虛擬機器的備份關閉或失敗、但您可以將虛擬機器移至具有允許儲存狀態備份原則的資料集、以執行儲存狀態備份。</block>
+  <block id="0bf1b700eaedae30d9d1c644e8027120" category="doc">如何使用適用於Hyper-V的功能來處理儲存狀態備份SnapManager</block>
+  <block id="9845564fe8752b966d5bc32e7dd5b247" category="paragraph">您也可以建立或編輯資料集原則、以允許儲存狀態的虛擬機器備份。如果您選擇此選項、SnapManager 則當Hyper-V VSS寫入器使用儲存狀態備份虛擬機器、或執行虛擬機器的離線備份時、適用於Hyper-V的功能不會導致備份失敗。但是、執行儲存狀態或離線備份可能會導致停機。</block>
+  <block id="32d1bfdf8c6344fe503f87687f5a8962" category="summary">已刪除SnapInfo Snapshot複本。</block>
+  <block id="c5d492b9a95788785d322809db0f5d3a" category="doc">已刪除SnapInfo Snapshot複本</block>
+  <block id="1e24c774a941f73ff113ac649bb5ee65" category="paragraph">適用於Hyper-V的不維護或刪除SnapInfo Snapshot複本。SnapManager</block>
+  <block id="952de9aa949a3ae5e9c9175bd9f009ac" category="paragraph">建立資料集備份之後、SnapManager 適用於Hyper-V的功能可建立SnapInfo LUN的Snapshot複本。如果刪除備份、SnapInfo Snapshot複本將不會刪除。根據預設、SnapManager 適用於Hyper-V的支援功能會保留30個SnapInfo LUN Snapshot複本、每次最新複本超過30個複本臨界值時、會以最新的複本取代最舊的複本。</block>
+  <block id="8ae7a4b621e7286f83f2e0b5b0e7abdb" category="paragraph">您可以使用下列其中一個登錄機碼、為每個Hyper-V主機設定要保留的SnapInfo Snapshot複本數目：</block>
+  <block id="a462ca2398fe279403cf60c92d13855d" category="paragraph">對於獨立式Hyper-V主機：機碼：HKL\software\netapp\SnapManager for Hyper-V \server\&lt;主機名稱&gt;雙字節值：snapinfo_snaps_count（要保留的SnapInfo Snapshot複本數）</block>
+  <block id="6058b8b336df7e71c918e9bfaa78a869" category="paragraph">對於叢集式Hyper-V主機（要在叢集中的每個節點上設定）：機碼：HKLM \Cluster\software\NetApp\SnapManager for Hyper-V \server\&lt;clustername&gt;；雙字節值：snapinfo_snaps_count（SnapInfo Snapshot複本數目待保留）</block>
+  <block id="335cdc1cdd845dd68fb0af4318d17323" category="summary">用於無聲安裝的MSI自訂屬性。</block>
+  <block id="c2b018668fb0b779ead5f9f95bae0698" category="doc">用於無聲安裝的MSI自訂屬性</block>
+  <block id="e33f003e65659cbd1b34de1441c9a0b6" category="paragraph">執行Windows Server 2008或Windows Installer 4.5版的系統無法辨識SnapManager 出適用於Hyper-V安裝的內建功能。</block>
+  <block id="840a7fa4f3f1957770bb36e45ef90ae3" category="paragraph">安裝時使用MSIRESTARTMANDERCONTROL=停用命令切換參數。</block>
+  <block id="4ea9f7e1381b19e48a38a7a35061e916" category="inline-link">Microsoft開發人員網路（英文）程式庫</block>
+  <block id="fe7c1b974e579dd2b5c229a1c5cebf3c" category="paragraph"><block ref="fe7c1b974e579dd2b5c229a1c5cebf3c" category="inline-link-rx"></block></block>
+  <block id="585932dc663b862a65f668864742bb10" category="summary">Microsoft增強了VSS基礎架構、使用在SMB目標上執行的全新遠端VSS硬體供應商、支援在SMB 3.0共用區上執行Hyper-V虛擬機器（VM）的應用程式一致備份。</block>
+  <block id="01cb67706eed4ef65de10c645b6657c1" category="doc">在Windows Server 2012中支援Hyper-V VM的SMB 3.0</block>
+  <block id="67c8b8d5e0462b6752a2c97f85948d9d" category="paragraph">Windows 2012 Hypervisor中有一家名為SMB檔案共用供應商的新供應商、可支援及協調在SMB 3.0共用區上執行的Hyper-V VM備份。</block>
+  <block id="2d9c02a3cfb8e65c9c1aaa46b2fc8e86" category="paragraph">當VSS申請人SnapManager （適用於Hyper-V的支援）將包含Hyper-V VM的SMB 3.0共用新增至VSS Snapshot集時、VSS會叫用新的SMB檔案共用複製提供者、將MSRPC命令傳送至SMB目標、以協調VSS備份。</block>
+  <block id="4ae232dd83c1800c9700a41a957e5a0a" category="paragraph">在SMB目標上執行的新檔案共用陰影複製代理程式（遠端VSS Provider）負責建立實際的硬體Snapshot複本。</block>
+  <block id="066bf8e788a744db3f1d3d776ae6d60b" category="paragraph">供應檔案共用陰影複製代理程式（遠端VSS硬體供應商）、以執行應用程式一致的SMB共用備份複本。Data ONTAP</block>
+  <block id="d329328b4b22a529b57fff240766dc66" category="summary">建立資料集之後、您可以修改資料集說明及與資料集相關的資源。</block>
+  <block id="6d98fc44786239f4b5144fd84d482ba8" category="list-text">選取您要修改的資料集。</block>
+  <block id="8b003fa95f73f3b785cb6e0ec4ec2df7" category="list-text">在「動作」窗格中、按一下*「修改資料集」*。</block>
+  <block id="a35bd6b16b9341c7c3c28c63b800b49e" category="list-text">完成精靈中的步驟。</block>
+  <block id="113433cb14879d5855c0cfcff78e7366" category="summary">災難恢復功能可確保如果發生災難或其他情況、導致主要儲存站台的關鍵受保護資料無法使用、您可以透過次要儲存站台存取該資料的備份複本。災難恢復只能使用PowerShell介面執行。</block>
+  <block id="455a9d5e4a47da0f33133f449ad5f856" category="doc">執行災難恢復</block>
+  <block id="e1c209ac85bfb81e9855f0e3b99afb7e" category="summary">查詢IVssWriterCallback介面時發生非預期的錯誤。HR = 8007000、存取遭拒。</block>
+  <block id="521166875196b366b08ccb1fe3582b86" category="paragraph">如果CSV是由叢集群組擁有者所擁有、而VM是由合作夥伴節點所擁有、則VM的備份會成功完成、並在應用程式事件記錄中顯示VSS錯誤。這通常是因為寫入器或要求程序中的安全性設定不正確所致。</block>
+  <block id="7ea39b60427774995e2bee8e874dca9e" category="paragraph">無：可忽略此錯誤訊息。</block>
+  <block id="601935beb642d668b3969656d707806c" category="summary">您可以驗證Data ONTAP 在製作Snapshot複本之後、是否成功使用了《不完整版VSS硬體供應商》。</block>
+  <block id="4817f39c0025365c4b2b581ea7d8627a" category="doc">驗證VSS硬體供應商是否已成功使用</block>
+  <block id="f66fa44621c6a877026312208f6c7ae1" category="list-text">瀏覽至*系統工具*&gt;*事件檢視器*&gt;* MMC中的應用程式*、尋找具有下列值的事件：</block>
+  <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">來源</block>
+  <block id="1be7f4094822039b4634c93c23dd7efb" category="cell">事件ID</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">說明</block>
+  <block id="311859000270251f433cd8b94760970d" category="paragraph">納維斯普夫</block>
+  <block id="be93cca187e923aabc702667ba5f0d06" category="paragraph">4089</block>
+  <block id="a9b5235dd78cbe7fe1b1c523e48d02a7" category="paragraph">VSS提供者已成功完成SnapshotSetId ID的CommitSnapshotSnapshot、只需n毫秒。</block>
+  <block id="38b3dc2a6f667646b5f282943f9f6219" category="paragraph">*注意：* VSS要求供應商在10秒內提交Snapshot複本。如果超過此時間限制、Data ONTAP 則支援不支援的VSS硬體供應商會記錄事件ID 4364。由於暫時性問題、可能會超過此限制。如果記錄此事件以進行失敗的備份、請重試備份。</block>
+  <block id="358bb410ee4fdb1466406179a2d7e7c1" category="summary">您可以使用「修改原則」精靈來修改保護資料集的原則。</block>
+  <block id="03d1659c055878f5063665deaef01e56" category="doc">修改原則</block>
+  <block id="0fff1f36590a637c233d1cddf99f3433" category="list-text">選取包含您要修改之原則的資料集。</block>
+  <block id="cf9e7be685e452f2c08dda68d30ae872" category="list-text">選取您要修改的原則。</block>
+  <block id="ca9c50f2667ce74f476bc4348cbdb40e" category="list-text">在「動作」窗格中、按一下「*修改原則*」。</block>
+  <block id="b3dd7ffc8a54676ed3847b3f7998dc8a" category="paragraph">此時將出現「修改原則」精靈。</block>
+  <block id="2f7f4ca12b1f546b90c2369696eddb77" category="list-text">完成精靈中的步驟、以修改資料集的保護原則。</block>
+  <block id="07553da01bd8f0509367dab702f0df9b" category="summary">您可以使用SnapManager 支援Hyper-V的支援功能、從備份複本還原虛擬機器（VM）。您也可以還原屬於叢集一部分的VM。適用於Hyper-V的解決方法是決定叢集中要還原VM的適當節點。SnapManager</block>
+  <block id="b2423fe04190a4d2fa2e997bc883b91f" category="paragraph">若要還原VM、SnapManager 適用於Hyper-V的解決方法使用SnapDrive 適用於Windows的解決方法、以還原檔案層級的還原功能。您可以將VM的相關檔案（包括組態檔、Snapshot複本和任何VHD）散佈在多ONTAP 個支援重的LUN上。LUN可以包含屬於多個VM的檔案。</block>
+  <block id="f7535d861055071a871a1a379dc967cd" category="paragraph">如果LUN僅包含與您要還原的VM相關聯的檔案、SnapManager 則使用LCSR（LUN實體複製分割還原）、即可針對Hyper-V還原LUN。如果LUN包含與您要還原的虛擬機器無關的其他檔案、SnapManager 則使用檔案複製還原作業來還原虛擬機器。</block>
+  <block id="154cac16b753308457b9a262443343ba" category="summary">在安裝SnapManager 適用於Hyper-V的功能之前、最好先決定環境的設定方式、包括在SnapDrive 安裝SnapManager 適用於Hyper-V的功能之前、先在所有Hyper-V主機上安裝適用於Windows的功能</block>
+  <block id="8a58858995de7d124bdacc564f7d7d41" category="summary">儲存系統磁碟區重新命名後還原失敗。</block>
+  <block id="9d56008e7cafbef0c16363409787df4b" category="doc">儲存系統磁碟區重新命名後還原失敗</block>
+  <block id="b73953d69b5826bc994c59820fe70281" category="paragraph">還原VM所需的部分儲存系統快照遺失或不一致。</block>
+  <block id="414fc30787c8e1cec056910d40c873e9" category="paragraph">如果儲存系統磁碟區已重新命名、則無法從重新命名磁碟區之前所建立的備份還原虛擬機器（VM）。</block>
+  <block id="e240593319cfdae29dea4e050a0b9c5d" category="paragraph">如果儲存系統磁碟區已重新命名、而您需要從重新命名磁碟區之前所建立的備份還原VM、請完成下列步驟：</block>
+  <block id="391acb1460138f2c146d23275cb16d0e" category="list-text">從MMC還原VM時、請確定「還原精靈」的「**還原選項」頁面中未核取「啟用Snapshot驗證」選項。</block>
+  <block id="f7c055253485e427f46278db4076d0bf" category="list-text">使用PowerShell還原VM時、請確定已指定-DisableVerifySnapshot參數。</block>
+  <block id="ee1fb48cf427020b1bc11a95d41e1b89" category="summary">您可以檢視SnapManager 有關在《針對Hyper-V的》中管理的資料集或虛擬機器資源的報告</block>
+  <block id="6e0141f614c580e105922d35f1522f47" category="doc">檢視資料集報告</block>
+  <block id="3fb30d8f1e545b766aa6fbe1fb0270c9" category="list-text">在導覽窗格中、按一下*報告*&gt;*資料集*。</block>
+  <block id="f76c0baf15ead2975d705e3c32493a76" category="list-text">選取包含您要檢視之報告的資料集或虛擬機器。</block>
+  <block id="93b5a720f8e4504a3412458bd9c452d7" category="list-text">在「報告」窗格中、按一下「備份」索引標籤或「恢復」索引標籤。</block>
+  <block id="5f6940ecd347062b2a819310646bd413" category="list-text">選取您要檢視的報告、然後按一下*檢視報告*。</block>
+  <block id="2143271db1b4deadd83681d45a3475e6" category="cell">如果您想要檢視...</block>
+  <block id="d1f0ba34e78627dc049ace1d8ae99de8" category="paragraph">*資料集報告*</block>
+  <block id="b593829a06bd7d897992774622814a90" category="paragraph">您可以檢視備份報告。</block>
+  <block id="12ae71df924eae6ed493da1acd0a74f5" category="paragraph">*虛擬機器報告*</block>
+  <block id="e4a52aa830b539c290e19001441428ff" category="paragraph">您可以檢視備份或還原報告。</block>
+  <block id="6dc624ee7751a3136ddfb2246d7a757f" category="paragraph">報告會出現在另一個視窗中。</block>
+  <block id="b8bfde7509ea6e746a0d2dc3fa8e035b" category="summary">遠端主機安裝精靈可讓您在SnapManager 獨立主機和叢集主機或節點上、遠端安裝或解除安裝適用於Hyper-V的功能。</block>
+  <block id="f288e721031c69ab5958873c60b80a6c" category="doc">在SnapManager 節點或主機上遠端安裝或解除安裝適用於Hyper-V的功能</block>
+  <block id="7c7073c19cc9ef7ce5633f713af732c6" category="paragraph">遠端主機安裝精靈可讓您在SnapManager 獨立主機和叢集主機或節點上、遠端安裝或解除安裝適用於Hyper-V的功能。如果您想要同時在叢集的所有節點上安裝軟體、而不是在每個個別節點上安裝、則可以從遠端安裝SnapManager 適用於Hyper-V的功能。</block>
+  <block id="92ca4e5f52582eb9dfaa6711eeeeb8aa" category="paragraph">您必須SnapManager 在主機節點上安裝支援Hyper-V的功能、才能使用遠端主機安裝精靈。</block>
+  <block id="c1228ebb2ee56220624e3fc941f39a1d" category="list-text">在「動作」窗格中、按一下*遠端主機安裝*。</block>
+  <block id="9713a6b14a0ea321bda5f3bf2348ebd6" category="list-text">執行遠端主機安裝精靈。</block>
+  <block id="0f1ab98cd7d8b82174962ce96d682725" category="paragraph">執行遠端主機安裝精靈時、主機節點會將SnapManager 執行Hyper-V安裝或解除安裝的功能推送至叢集中的其他節點或主機。</block>
+  <block id="a824865ad11687b869fb7c3688b30aab" category="summary">在主儲存系統上備份VM之後、您可以使用SnapMirror關係、將主要儲存系統與次要儲存系統建立起來、以恢復原始組態。</block>
+  <block id="229eb0a0aaf5bb5e417996de47006416" category="doc">還原叢集主機的原始組態</block>
+  <block id="1e85116c51e33e89bd1860490e8526bf" category="list-text">讓所有VM的虛擬機器資源和虛擬機器組態資源離線。</block>
+  <block id="8193de4cd637235b89646ee62bd3ae58" category="list-text">從叢集刪除這些資源。</block>
+  <block id="27f116dd2c8a9ae5e03e493e359cc954" category="list-text">從Hyper-V Manager刪除所有VM。</block>
+  <block id="7a6480918ea2439065c4289577ac8e48" category="list-text">使用SnapDrive 中斷所有磁碟的連線。</block>
+  <block id="c3ba3fc89fcdafe39f808075d73d0f49" category="summary">您可以使用命令列切換參數執行無聲安裝、以便使用安裝指令碼來安裝SnapManager 適用於Hyper-V的功能</block>
+  <block id="e306b1733b6ed9e0a5c51db654088e20" category="doc">用於無聲安裝的命令列參數清單與說明</block>
+  <block id="4e895b550bc9aa4297d558e23e3849a5" category="paragraph">下表提供值清單、並說明每個可用的命令列安裝參數。</block>
+  <block id="bbc155fb2b111bf61c4f5ff892915e6b" category="cell">交換器</block>
+  <block id="689202409e48743b914713f96d93947c" category="cell">價值</block>
+  <block id="198b4e57fb63a5deedec193f2fb2325c" category="paragraph">無聲模式=</block>
+  <block id="c4ca4238a0b923820dcc509a6f75849b" category="paragraph">1.</block>
+  <block id="266a184f6d07d85f07a8590b69dc4bc7" category="paragraph">啟用SnapManager Hyper-V的支援功能、以正確執行無人管理的安裝功能。首次安裝、升級及完整解除安裝時、必須使用此交換器。</block>
+  <block id="ad03e4e307289bacbb9cc0a680af3da0" category="paragraph">REINSTALLMODE=</block>
+  <block id="47a5489e00a9e07702fa39ff6845dce4" category="paragraph">指定要使用的重新安裝模式。</block>
+  <block id="9e3669d19b675bd57058fd4664205d2a" category="paragraph">V</block>
+  <block id="2d64b7b8ec30590efc918a142a275576" category="paragraph">表示安裝是從來源套件執行、而且本機套件已快取。請勿在初次安裝SnapManager 適用於Hyper-V的版本時使用此選項重新安裝所有檔案、無論版本、日期或Checksum值為何。</block>
+  <block id="0cc175b9c0f1b6a831c399e269772661" category="paragraph">答</block>
+  <block id="457e9669098ea7596bf25b32e8216120" category="paragraph">如果有較舊版本或檔案遺失、請重新安裝SnapManager 適用於Hyper-V檔案的功能。</block>
+  <block id="d95679752134a2d9eb61dbd7b91c4bcc" category="paragraph">O</block>
+  <block id="837b0d7799666e7109f4312ed3c8aca4" category="paragraph">表示SnapManager 應重新寫入Hkey_local_machine和HKEY_CLASSES根目錄中所有的Hyper-V必要登錄項目。</block>
+  <block id="6f8f57715090da2632453988d9a1501b" category="paragraph">m</block>
+  <block id="c95a26abe96bacd1248a25f386e6a53d" category="paragraph">表示SnapManager 應重新寫入來自於Hkey_current_user和Hkey_user-的 所有針對Hyper-V的必要登錄項目。</block>
+  <block id="7b774effe4a349c6dd82ad4f4f21d34c" category="paragraph">U</block>
+  <block id="080fb47f00779e46697aa15e68ce40da" category="paragraph">重新安裝所有捷徑並重新整理所有圖示、覆寫任何現有的捷徑和圖示。</block>
+  <block id="6837cb2ef440deda62cdfd92f893462c" category="paragraph">REINSTALL=</block>
+  <block id="5fb1f955b45e38e31789286a1790398d" category="paragraph">全部</block>
+  <block id="b3caa15fd4cdc96f686c9e3caa66672c" category="paragraph">重新安裝SnapManager 所有適用於Hyper-V功能的功能。</block>
+  <block id="b3f1e272edb813115cf66bf7b2bcc282" category="paragraph">/LI</block>
+  <block id="435ed7e9f07f740abf511a62c00eef6e" category="paragraph">檔案名稱</block>
+  <block id="d40d4ca09f94bec6ac232ec9abdb8a75" category="paragraph">指定SnapDrive 應產生一個安裝記錄檔。</block>
+  <block id="76ffdf03cd11a15447f8ff236347a48f" category="paragraph">SMHP_LUSES=</block>
+  <block id="718779752b851ac0dc6281a8c8d77e7e" category="paragraph">授權</block>
+  <block id="aa9997668080e600098201c800794a9a" category="paragraph">指定適當且有效SnapManager 的適用於Hyper-V授權的功能。</block>
+  <block id="902e50640559acf2618232cb467d71c6" category="paragraph">InstallLDIR=</block>
+  <block id="92174ec7a91131c3d23e5ec8e145b56e" category="paragraph">目標安裝目錄</block>
+  <block id="f6136c894dd665b771dc27dfcdb15e5b" category="paragraph">指定SnapManager 安裝for Hyper-V的目標安裝目錄。只有SnapManager 在初次安裝適用於Hyper-V的功能時、才需要此交換器。</block>
+  <block id="4308fbf9e781c7b5b49ce2679e42f116" category="paragraph">SVCUSERNAME =</block>
+  <block id="5e5fdbee204306d3d25070f14577adb5" category="paragraph">網域\使用者名稱</block>
+  <block id="b1a5a00134f1d26f309333310a714bb3" category="paragraph">指定SnapManager 在無人管理安裝期間、適用於Hyper-V的網域和使用者名稱。</block>
+  <block id="b3bafd27e7a73f30ce8732de686ce492" category="paragraph">SMHVSRV_密碼=</block>
+  <block id="5f4dcc3b5aa765d61d8327deb882cf99" category="paragraph">密碼</block>
+  <block id="983e205468372f5b54306075f011c3e7" category="paragraph">指定SMHVSRV_password使用者的密碼。</block>
+  <block id="50bd414adb9352637601f7b9213aa96d" category="paragraph">SMHVSRV_COFFIRMUSERPASSEND=</block>
+  <block id="8983eeecdf244f22cec1336291134ec3" category="paragraph">確認SMHVSRV_COFFIRMUSERPASS協會 使用者的密碼。</block>
+  <block id="a61a3b5b5e4cead0800f62ae9bb66136" category="paragraph">SMHV_WebSRV_tcp_port</block>
+  <block id="b8ebd2c0b854ff6570d728914e7849e8" category="paragraph">連接埠號碼</block>
+  <block id="b746df63e4f5f356b289dbe20ff3ddf7" category="paragraph">指定SnapManager 供Hyper-V Web服務使用的連接埠用於Net.TCP。預設連接埠為808。</block>
+  <block id="63b9599be551312d5e3cf53bc555bc96" category="paragraph">下列語法顯示全新安裝：</block>
+  <block id="81fedb9b338bf45d21d66418f59a062b" category="paragraph">「etup.exe /s /v」/qn silent_mode=1 /L* v SMHVInstall.log SVCUSERNAME =網域\使用者名稱SMHVSRV_Password=密碼SMHVSRV_CONFIRMUSERPASSEV=password」</block>
+  <block id="d04a98437172200dd00fe91c21b12a6a" category="paragraph">下列語法顯示升級：</block>
+  <block id="263e5a95756538f004b9f4be0693d047" category="paragraph">「etup.exe /s /v」/qn REINSTALLMODE=vamus REinstall=all silent_mod=1 /L* v SMHVUpgrade.log SVCUSERNAME =網域\使用者名稱SMHVSRV_Password=密碼SMHVSRV_CONFIRMUSERPASSCED=password」</block>
+  <block id="712ef0af99264750df06acf2ceaeb496" category="paragraph">下列語法顯示解除安裝：</block>
+  <block id="c678cc6163ef02a2dd28b9cbe0db5d16" category="paragraph">「etup.exe /s /x /v」/qn silent_mod=1 /L* v SMHVuninstall.log」</block>
+  <block id="ce7db543aa06ec7ff44a4bc12924f66f" category="summary">Hyper-V父主機是啟用Hyper-V角色的實體伺服器。</block>
+  <block id="e82c4340e2eafd38e062fccd93987b16" category="paragraph">Hyper-V父主機是啟用Hyper-V角色的實體伺服器。包含虛擬機器的主機伺服器會新增SnapManager 至適用於Hyper-V的支援與恢復功能。若要安裝並執行SnapManager 所有的支援Hyper-V軟體元件的功能、您必須確保Hyper-V父主機符合最低作業系統和Hyper-V需求。</block>
+  <block id="d2c33f738e00f240ee4b4cf84fe38db1" category="list-text">*支援的作業系統*</block>
+  <block id="0346e0e72471991307e842e6d2a221a9" category="paragraph">適用於Hyper-V的支援可在下列作業系統上執行：SnapManager</block>
+  <block id="5ed6d03e7c3f615ab8fdbae833ffb0b9" category="list-text">Windows Server 2008 R2 SP1</block>
+  <block id="96bc7f42979153694e05a6a2b867772e" category="list-text">Windows Server 2012 R2</block>
+  <block id="00aae0645113cb861020a7a42ded48c2" category="list-text">Windows Server 2012</block>
+  <block id="ed590cb2453f0683b64cb528f78610a2" category="list-text">Windows Server 2016</block>
+  <block id="31f8757839909e87266f2b53482c86ef" category="list-text">Windows Server 2019</block>
+  <block id="ba498e453ebf249225711f39b1e238cc" category="list-text">*支援的管理主控台作業系統*</block>
+  <block id="6e513523c6dc9a4c1cc51397b63aed1c" category="paragraph">管理主控台必須執行下列作業系統：</block>
+  <block id="4e968295ae15428d21e4d601d133970d" category="list-text">* Hyper-V需求*</block>
+  <block id="16854cdf08f480287c8423a246622e5a" category="paragraph">如需詳細資訊、請參閱Microsoft TechNet程式庫中的Hyper-V入門資訊。</block>
+  <block id="2e569174a670e65be51fa1a29861108d" category="list-text">*國際化支援*</block>
+  <block id="18478c0d096363246455e61681139d9f" category="paragraph">適用於Hyper-V的支援已在德文和日文作業系統上通過測試。SnapManager</block>
+  <block id="9ef9aa257b15f049fe45bfeadd581901" category="summary">執行叢集作業系統循環升級時、您可以使用下列程序、從Windows 2012 R2節點取消對應LUN、並在將LUN新增至叢集後將其重新對應至Windows Server 2016節點。</block>
+  <block id="4f95ae6fef70ed87e3e8d5be1f86db4e" category="doc">在混合式作業系統模式中對應LUN</block>
+  <block id="1230344a2fabe714726457cfbea52ca9" category="paragraph">Windows Server 2016節點必須新增至叢集。</block>
+  <block id="693d74cdde31ff59f565613960bb98cf" category="admonition">支援從Windows Server 2016升級至Windows Server 2019的叢集循環升級</block>
+  <block id="44794b5aca0963aac9c7913a28588d56" category="list-text">登入ONTAP 《Sytricity System Manager》。</block>
+  <block id="7b3fd96975e5acb98ccd6d057ee36e1c" category="list-text">選取對應至Windows 2012 R2的LUN。</block>
+  <block id="f0e334dd11c87357165565ccbe3cd55b" category="list-text">按一下*編輯*、然後選取啟動器群組。</block>
+  <block id="51064c1864ef207564681f1f4a30562f" category="image-alt">混合作業系統模式3.</block>
+  <block id="ccaa470ad4830933be058d46b71753bf" category="list-text">取消核取從叢集移除之節點的igroup。</block>
+  <block id="01b136dfa868398668f555e864e6aab4" category="list-text">為所有新增的Windows 2016節點新增啟動器群組。</block>
+  <block id="063d97ac5e2b1de822379713510c1b5f" category="image-alt">混合作業系統模式4.</block>
+  <block id="1e4247399d5002eefa579ab314bcaa09" category="list-text">選取新建立的啟動器群組旁的核取方塊、將LUN對應至新增至叢集的Windows 2016主機。</block>
+  <block id="7d2a80dae0d60498c0c6a64099e7a6b4" category="image-alt">混合作業系統模式6.</block>
+  <block id="f7b89b3e8b56f0c37b434e4f1e9c4cea" category="list-text">重複步驟4和6、將每個LUN對應至Windows 2016節點。</block>
+  <block id="eb527f5a61ced06c8190410aaf6114de" category="paragraph">Windows 2016節點中應該會顯示所有LUN。</block>
+  <block id="a150560e09fb15f8bb63c8735c5a3138" category="list-text">從Windows 2016節點的磁碟管理工具重新掃描磁碟。</block>
+  <block id="80316dd1c05a83cead5bd9bc18d01e38" category="image-alt">混合作業系統模式8.</block>
+  <block id="0eee869e562049efec90606fcfb92495" category="list-text">將儲存管理LIF新增至新的Windows 2016 SnapDrive 更新傳輸傳輸協定設定（TPS）、然後重新整理磁碟。</block>
+  <block id="447031a2c3ddc330f826b1707f165254" category="image-alt">混合作業系統模式9.</block>
+  <block id="3784cdca88e33c31b92e73c29cc6281d" category="summary">Web服務用戶端通道無法連線至機器smhv51_81 cluss上的Configuration Management Service執行個體。</block>
+  <block id="9dfbb9d6f545bc2012ccb952dffaa54f" category="doc">Web服務用戶端通道無法連線至機器smhv51_81 cluss上的Configuration Management Service執行個體</block>
+  <block id="978d91cb9f7c24b46e19b15fcd94244d" category="paragraph">net.tcp：//smhv51_81 clus/Snap/HyperV/ConfigMgmtService/v_10沒有端點偵聽功能、無法接受訊息。這通常是因為位址或SOAP動作不正確所致。如需詳細資料、請參閱InnerException（如果有）。</block>
+  <block id="a2b084a9f95ba3b25f1f637979847b5d" category="paragraph">如果匯出組態資訊、則受管理主機的本機Web服務連接埠設定會儲存在匯出的組態檔中。如果您稍後必須使用SnapManager 不同的Web服務連接埠重新安裝適用於Hyper-V的功能、並匯入先前的組態資訊、就會遇到連線問題。</block>
+  <block id="5eb53b8f7ae08c399198ee7c4a0e7ffe" category="paragraph">若要避免此問題、請在重新安裝SnapManager 適用於Hyper-V的還原時、使用匯出組態檔中所包含的相同Web服務連接埠設定</block>
+  <block id="dd5cfb29bd3e878ccef8250cee1cc7d2" category="summary">未在純IPv6環境中傳送的備份與還原通知。</block>
+  <block id="6654ce07e74638a6c41c7de8fd372bab" category="doc">未在純IPv6環境中傳送的備份與還原通知</block>
+  <block id="8f62d60c72e411a69a11527016246b16" category="paragraph">當您執行純IPv6主機時、不會收到任何備份或還原作業通知。</block>
+  <block id="6ec78d8f9e0e84024ab564c4750d7ca7" category="paragraph">您的SMTP伺服器不支援IPv6、或未啟用IPv6。</block>
+  <block id="65f89a77c7a404d833288f80127ffc9a" category="paragraph">在您的SMTP伺服器上啟用IPv6。</block>
+  <block id="54b04bc0d41ab31a5f12b1196896e27e" category="summary">您可以檢視安裝在主機上的VSS供應商。</block>
+  <block id="aac15e699d8896a7b2d986e0648e7384" category="doc">檢視已安裝的VSS供應商</block>
+  <block id="792a7c8ccc244135b48be8fb180811ad" category="list-text">選擇* Start*&gt;* Run*並輸入下列命令以開啟Windows命令提示字元：</block>
+  <block id="64cd475900b6fddfc9d4d9fb7f2ef8b1" category="paragraph">cmd</block>
+  <block id="b988824771d7c292abce3028b1a6ee99" category="list-text">在提示字元下、輸入下列命令：</block>
+  <block id="b82379d924b247bed1d063953160eead" category="paragraph">「vssadmin list provers」</block>
+  <block id="a68c3c53417789e724bdb983d1b29d52" category="paragraph">輸出應類似於下列內容：</block>
+  <block id="03786309c480465fa5faa4bb7bc17de2" category="summary">Volume陰影複製服務錯誤：偵測到內部不一致。</block>
+  <block id="cb42bb6a16f9f1beae25774adb796dba" category="doc">Volume陰影複製服務錯誤：偵測到內部不一致</block>
+  <block id="b8bdcd5f4cd224e9a0c218984a005234" category="paragraph">Volume陰影複製服務錯誤：嘗試聯絡陰影複製服務寫入器時偵測到內部不一致。請檢查事件服務和Volume陰影複製服務是否正常運作。</block>
+  <block id="bc531f5732c0fe66d5a145a5c79c3b83" category="paragraph">當您對使用Windows Server 2003的虛擬機器執行備份時、因為重試錯誤而重複失敗。</block>
+  <block id="5d4856a31047c0d9604a8bf4214195d7" category="paragraph">檢查虛擬機器內的Windows應用程式事件記錄、查看是否有任何VSS錯誤。</block>
+  <block id="8ca3a1c2cee34714baa3cdbb555be8fa" category="inline-link">Microsoft支援文件編號940184：在Windows Server 2003型電腦上執行「vssadmin list Writers」命令時出現錯誤訊息：「錯誤：0x8000FFFF」</block>
+  <block id="66ddb81cfb2b9c3cb20556525aa3ef06" category="paragraph"><block ref="66ddb81cfb2b9c3cb20556525aa3ef06" category="inline-link-rx"></block></block>
+  <block id="ac9af776a3185cf2b06fb0d0a7cd7a64" category="summary">當您想要建立資料集以保護資料時、必須符合特定要求。</block>
+  <block id="92887ee2efa3d6433ca84970a02d8e2b" category="doc">建立資料集的需求</block>
+  <block id="fc01ba2e746c58919b429d2fd4e376e2" category="paragraph">當您想要建立資料集以保護資料時、必須符合特定要求。您必須先將主機或主機叢集新增SnapManager 至適用於Hyper-V的支援、然後將虛擬機器新增至主機或主機叢集。</block>
+  <block id="fd5bb59e7d014d235c68789b1135795d" category="paragraph">命名資料集時、您應該在站台上使用命名慣例、以協助系統管理員找到及識別資料集、限制為下列字元：</block>
+  <block id="592e3c4687690a8e75020c4f4585edc6" category="section-title">資料集資源</block>
+  <block id="173db84d210ae07ad8b5cd80aab52026" category="paragraph">在SnapManager 將虛擬機器等資源新增至資料集之前、您必須先將主機或主機叢集新增至適用於Hyper-V的功能。</block>
+  <block id="fd3940b5cf818e85baca9b042e0bcb89" category="paragraph">您可以將主機、專用虛擬機器或共享虛擬機器新增至資料集。如果新增主機、則會新增屬於主機的所有虛擬機器。您也可以將屬於不同主機的虛擬機器新增至資料集。虛擬機器可以屬於多個資料集。</block>
+  <block id="8c0679507602d4802b80d3cf5c7efbef" category="admonition">屬於同一個主機叢集的專用和共用虛擬機器、不應存在於同一個資料集中。將這些類型的資源新增至單一資料集可能會導致資料集備份失敗。</block>
+  <block id="a737d3e7798680e23775f1e5f35c182c" category="paragraph">所有與虛擬機器相關的檔案、包括組態檔、Snapshot複本和VHD、都必須位於ONTAP VMware LUN上。</block>
+  <block id="b277e186379856ae1bd03b2e5d1c9abb" category="section-title">資料集資源使用量</block>
+  <block id="f29e5485ef3e75c61f25913cdbcefbf2" category="paragraph">在任何指定時間、主機上只能執行一項應用程式一致的備份作業。如果相同的虛擬機器屬於不同的資料集、則不應同時排程應用程式一致的資料集備份。如果發生這種情況、其中一個備份作業就會失敗。</block>
+  <block id="936b9c10d3f3932ec845567bb28015a5" category="paragraph">建立資料集時、您應該選取位於特定ONTAP 的VMware LUN上的所有虛擬機器。如此一來、您就能在單一Snapshot複本中取得所有備份、並減少儲存系統的空間使用量。</block>
+  <block id="699aaa675ca238a5dab5d28da08a3035" category="summary">備份失敗後、儲存效能會降低。</block>
+  <block id="a2794223e9d576724f127b652b416ed6" category="doc">備份失敗後、儲存效能會降低</block>
+  <block id="5ad8aa6ff5b24dfffd0b1f734bc98a6b" category="paragraph">備份工作失敗後、儲存效能可能會降低。</block>
+  <block id="757401961a2d50be2256c37ea70ff8f0" category="paragraph">如果Microsoft Hyper-V VSS元件在備份期間發生例外狀況、叢集共用磁碟區（CSV）可能仍處於重新導向的I/O模式、導致Windows容錯移轉叢集內的I/O負荷和潛在瓶頸。這可能會導致整體效能降低、對位於CSV上的虛擬機器在重新導向I/O模式下的影響最大。</block>
+  <block id="64dd56c59188950b0ec09057b8734bf1" category="paragraph">如需此問題的協助、請聯絡Microsoft支援部門。</block>
+  <block id="0266b3a5f13d93fbbf84109b9387cb7e" category="summary">當您想要將原則套用至資料集以進行備份或還原功能時、必須符合特定要求。您可以將多個保留、排程及複寫原則新增至同一個資料集。</block>
+  <block id="3a9a3dc805cdcfcaae25ecb4c15f163e" category="doc">將原則新增至資料集的需求</block>
+  <block id="ae39c66937b8980b60d9388be573019c" category="section-title">原則名稱與說明</block>
+  <block id="2befe0bbee2fa8767d0083c8195b4bc5" category="paragraph">原則名稱和說明、限制為下列字元：</block>
+  <block id="1f0b72c9fe5aa6fa1bc0bc0d67fa1404" category="list-text">（連字號）</block>
+  <block id="950e7111974d7a592ec3959027d83548" category="section-title">備份保留限制</block>
+  <block id="f8995014c19a701588f3b457bb3bd210" category="paragraph">您必須決定要保留每小時、每日、每週或每月備份複本的最短時間長度、才能刪除。</block>
+  <block id="4b477474ab2a7b8255b8ca1e04af4a3a" category="admonition">保留類型為「無限」的備份不會刪除。</block>
+  <block id="5c1534d7d0b2f06ed73fa0138b59de0e" category="paragraph">您可以根據時間或指定的數字來保留備份。例如、您可以保留10個最新的備份、也可以刪除15天之前的備份。</block>
+  <block id="b2ce75868082f42f112c8a0f38225a95" category="paragraph">如果您的系統似乎保留舊備份、您應該檢查保留原則。共享Snapshot複本的所有備份物件、都必須符合保留原則的備份刪除條件、才能觸發移除Snapshot複本。</block>
+  <block id="2a82a0be63dfab9ffb7147358323f75c" category="section-title">排定的備份工作名稱</block>
+  <block id="4242f84e8731df3d9beef42442106e7d" category="paragraph">您必須為排程的備份工作指派名稱。</block>
+  <block id="8f2e8de2d528d2fcff64889bfc234dcc" category="section-title">排程備份的權限</block>
+  <block id="245c70f2ec0507bd8c36848846bae3b9" category="paragraph">您必須擁有適當的認證資料、才能排程資料集備份。</block>
+  <block id="0c989ccfc82014c30ee8b0c47e404ac3" category="section-title">同時排程備份的可能資料集數量</block>
+  <block id="2c401305a667f888e89bbd9a52476871" category="paragraph">如果相同的虛擬機器屬於不同的資料集、則不應同時排程包含相同VM的多個資料集的備份。發生這種情況時、其中一個備份作業會失敗。在任何指定時間、主機上只能執行一項備份作業。</block>
+  <block id="dd3c46dc8f4da0f46e3f6f7837b02cf2" category="section-title">排程備份的類型</block>
+  <block id="1ebe2f403310f20afc46fd5b5fdb3b4b" category="paragraph">您可以執行應用程式一致或損毀一致的備份。</block>
+  <block id="f7d4327488390afe4c65725ff82002de" category="paragraph">您必須選擇是否要在備份完成後更新SnapMirror目的地位置。</block>
+  <block id="446bf6a6fe4e3f61cc97e65cdc55726b" category="paragraph">只有在您已設定SnapMirror、且資料集中包含虛擬機器的LUN屬於來源SnapMirror Volume時、更新才會成功。</block>
+  <block id="afe6bb39ca14f26068030842ad6d03ce" category="paragraph">如果一或多個虛擬機器無法在線上備份、則支援Hyper-V的預設行為SnapManager 是使備份失敗。如果虛擬機器處於儲存狀態或關機狀態、您就無法執行線上備份。在某些情況下、虛擬機器會處於儲存狀態或關機以進行維護、但即使無法進行線上備份、仍需繼續備份。為達成此目的、您可以使用允許儲存狀態備份的原則、將處於「已儲存」狀態的虛擬機器或關機移至不同的資料集。</block>
+  <block id="c9fe310a0f2be6e993252a806083cdfd" category="paragraph">您也可以選取「允許儲存的狀態VM備份」核取方塊、讓SnapManager Hyper-V能夠在儲存狀態下備份虛擬機器。如果您選取此選項、SnapManager 則當Hyper-V VSS寫入器將虛擬機器備份至儲存狀態、或執行虛擬機器的離線備份時、適用於Hyper-V的功能不會失敗備份。執行儲存狀態或離線備份可能會導致停機。</block>
+  <block id="f9c4c1efdf6118da046109d8e0cb6733" category="paragraph">分散式應用程式一致的備份功能可讓在合作夥伴叢集節點上執行的多個VM在從備份節點製作的單一硬體Snapshot複本中保持一致。在CSV 2.0 Windows磁碟區上執行的所有VM、都能在Windows容錯移轉叢集中的多個節點上支援此功能。若要使用此功能、請選取應用程式一致的備份類型、然後選取「*啟用分散式備份*」核取方塊。</block>
+  <block id="bd49ab85818f7b15f21fb9bfebdacfbe" category="paragraph">這些選項可讓您接受SnapMirror關係中定義的次要儲存設備適用的選項。您可以在此選擇*備份後更新SnapMirror *。在Vault標籤選項窗格下、您可以選擇*備SnapVault 份後更新支援*。如果您選擇*在SnapVault 備份後更新*、則必須從下拉式功能表中選擇一個資料保險箱標籤、或輸入自訂標籤。</block>
+  <block id="dccc207d2e8bb25d32111190fdcef439" category="paragraph">您必須決定是否要在備份之前或之後執行選用的備份指令碼。</block>
+  <block id="b3ef543ddc4a07d75f614e67df474b1e" category="paragraph">除非您指定特定的伺服器、否則這些指令碼會在所有資料集成員主機上執行。</block>
+  <block id="4079acb40e762ec368ceca219971f2d1" category="paragraph">備份指令碼會在資料集中的每個節點上執行。您可以設定資料集原則、以指定要在其上執行指令碼的主機名稱。原則會在叢集中執行要備份之VM的每個節點上處理。</block>
+  <block id="e38e6cb3f20f9d6511778003946ac36e" category="image-alt">smhv policyWizard指定的主機</block>
+  <block id="eb9bd6f9e51c769289fc9968644d25e4" category="paragraph">您可以在備份後置指令碼的引數中使用下列環境變數：</block>
+  <block id="3eda86050d67f5eb2434d54aeae569a6" category="list-text">*$VMSnapshot *：指定此備份在儲存系統上建立的Snapshot複本名稱。當您在ONTAP 執行7-Mode的支援環境中執行應用程式一致的備份時、這是第二個（備份）Snapshot複本的名稱。名字與第二個名稱相同、但沒有備份尾碼。</block>
+  <block id="b5133b11033d21a21643b9257a0736dc" category="list-text">*$SnapInfoName*：指定SnapInfo目錄名稱中使用的時間戳記。</block>
+  <block id="6fe06e28a445c63b4f719be1cc245050" category="list-text">*$SnapInfoSnapSnapshot *：指定在儲存系統上建立的SnapInfo Snapshot複本名稱。針對Hyper-V、在資料集備份作業結束時、會製作SnapInfo LUN的Snapshot複本。SnapManager</block>
+  <block id="b6e45987b96add476796a4d8f3f1f1fe" category="admonition">$SnapInfoSnapshot變數僅支援專用虛擬機器。</block>
+  <block id="838cf5b575a0505a14018f6e663ec5a1" category="summary">當您不想再使用SnapManager 適用於Hyper-V的功能來管理Hyper-V父主機或父主機叢集時、可以移除該主機或父主機叢集</block>
+  <block id="cc43b98b4cb49bdf19bbb52431e65493" category="doc">移除Hyper-V父主機或父主機叢集</block>
+  <block id="78b37256b05600c143aa52ea55f13809" category="list-text">在導覽窗格中、按一下* Protection（保護）*&gt;* hosts*。</block>
+  <block id="73ffaf70fdb5268887be5437d428aa9e" category="list-text">選取您要移除的主機或主機叢集。</block>
+  <block id="b12e37979532378004a27949cf339e83" category="list-text">在「動作」窗格中、按一下「*移除*」。</block>
+  <block id="a809b7569832b3c3064a2b1ce1e39453" category="paragraph">您可以選取*刪除所有VM備份*、刪除與主機相關的任何虛擬機器備份。</block>
+  <block id="62f5b4fd0e05bed543854db08c47a6da" category="paragraph">Hyper-V父主機或主機叢集會從SnapManager 支援Hyper-V管理的功能中移除、但不會永久刪除。屬於該主機或主機叢集的虛擬機器也會從其所屬的任何資料集中移除。</block>
+  <block id="8353750689069297c64bbb7feb0a4149" category="summary">匯出虛擬機器（VM）之後、您可以將其匯入ONTAP 到一個支援系統。</block>
+  <block id="9f5885ba762c8085111beef15fe81cd3" category="doc">將VM匯入ONTAP 到某個不支援的主機</block>
+  <block id="cca2b2116e2d1dd4d836c88a8dc2927c" category="paragraph">匯出虛擬機器（VM）之後、您可以將其匯入ONTAP 到某個物件主機。</block>
+  <block id="74af0dfe33bb453e9ffe9a2de207f04a" category="paragraph">VM必須已從非ONTAP主機匯出。</block>
+  <block id="8f593d38cee342b7f34d9d4f9737fa53" category="list-text">在左窗格中、以滑鼠右鍵按一下ONTAP 您要匯入VM的物件主機名稱。</block>
+  <block id="6ff51118664c90823cf111e1e86a7a17" category="list-text">選取*匯入虛擬機器*。</block>
+  <block id="35f5eb39140590b7f450a26eaac73f44" category="image-alt">在伺服器管理程式中匯入VM</block>
+  <block id="048004d77f09a6a45275ec0bc957d0c8" category="paragraph">「匯入虛擬機器」視窗即會開啟。</block>
+  <block id="acc0f5a6972e5e0985054875c3e5c26d" category="list-text">按一下先前匯出VM的主機名稱、然後按一下*選取資料夾*。</block>
+  <block id="1c86bec301f53929e1351bfa96d02a25" category="list-text">在匯入設定下、選取*複製虛擬機器[建立新的唯一識別碼]*。</block>
+  <block id="e4ca0be6435e2cb971783f45129d42f6" category="list-text">按一下*匯入*。</block>
+  <block id="0b29b174c2c020e59433e336ef666b9d" category="list-text">確認已成功匯入VM、並從非ONTAP主機刪除VM。</block>
+  <block id="da0d5b8f0133d5bc40085dfa02016eb9" category="list-text">將組態版本從5.0升級為8.0、特別適用於Hyper-V 2016。</block>
+  <block id="ca781f7941adb700d92ae2f74dfb1a9e" category="list-text">在右窗格中、以滑鼠右鍵按一下您要升級的VM名稱。</block>
+  <block id="82f27991e861e4bacbaf70378a1f6fee" category="list-text">選擇*升級組態版本*。</block>
+  <block id="088198923469d6bd61bb711fa1f35cf3" category="paragraph">VM的組態版本會升級至8.0。</block>
+  <block id="156ef710da0dc6ef70ebcd96483cd0be" category="list-text">啟動VM。</block>
+  <block id="4de9c592c9c483c15c12e019e53af4e0" category="summary">若要從災難中恢復、SnapManager Hyper-V的支援必須先容錯移轉至次要儲存系統。容錯移轉涉及PowerShell中的一系列手動步驟。</block>
+  <block id="049b485e63b9d0a8f09be1d721e8d109" category="doc">從災難恢復容錯移轉中還原及還原</block>
+  <block id="a62b489ed8388f31c051be160c2a7a1c" category="paragraph">大多數備份都可以還原至NAS和SAN的替代主機、但是Windows Server 2008 R2損毀一致的備份無法還原至替代主機。</block>
+  <block id="b3cf58f2e0c64638e85e47fa73969973" category="list-text">如果您執行Data ONTAP 的是Sf2 8.1.x、請在次要站台上、將儲存虛擬機器（SVM）資訊輸入SnapDrive 到Windows MMC的傳輸傳輸協定設定（TPS）。</block>
+  <block id="68e9602f82dcc2fbbe7a63fd2836e5bf" category="list-text">從次要儲存系統連線至所有LUN。</block>
+  <block id="2445745a3c1237d089b42b9bc34de800" category="paragraph">如果次要儲存系統是叢集式的、請移至叢集群組（目的地叢集中可用的儲存群組擁有者節點）處於線上狀態的節點、然後從叢集中的該節點連線至所有LUN。如SnapDrive 需有關對應LUN的資訊、請參閱《Windows版》文件。</block>
+  <block id="f0fdff1de5564d478e585eb301849c76" category="paragraph">連接至主儲存系統上所有相同類型的掛載點和LUN。</block>
+  <block id="221778cf2906612d5524dbe68a0c2956" category="paragraph">從叢集群組處於線上狀態的節點、連線至叢集中的所有掛載點和LUN。</block>
+  <block id="37e5d5064c98f8aff06e461d8fdf6f98" category="paragraph">為了讓SnapMirror更新成功、您必須先在來源FlexVol 的SnapMirror Volume上建立第二個較小的LUN（10 MB至100 MB）、然後再開始備份。從叢集群組處於線上狀態的節點、連線至叢集中的所有掛載點和LUN。</block>
+  <block id="4d2404f1f314e76e2aff542b67926dad" category="paragraph">對於NAS、如果發生存取遭拒錯誤、或您無法瀏覽至公開的SMB共用位置、則可能需要重設共用區上的存取控制清單。</block>
+  <block id="f83c890bd05e09abd044579352d4d154" category="admonition">這是使用System Center Virtual Machine Manager（SCVMM）主控台和Data ONTAP SView SMI-S Agent時的典型做法。</block>
+  <block id="1f47c5f8fb489d346eeb6fbea74fa541" category="list-text">在SnapManager 適用於Hyper-V MMC的支援區中新增次要儲存系統或叢集、然後使用SnapInfo路徑加以設定。</block>
+  <block id="37b2da3eb5fb6fcbad0e779ecd0c4ccc" category="list-text">輸入Get-VMsFromBackup以擷取備份中繼資料中的VM清單。</block>
+  <block id="05887e10a85da9d61eba4d604ca4c1c8" category="list-text">輸入Get-Backup以取得每個VM的備份複本。</block>
+  <block id="6d922687b694d91c33858bcc43e91608" category="paragraph">列出的備份</block>
+  <block id="362b72df7531b147c68ef42baa4dab0e" category="paragraph">對於@VHD而言、VM可能有多個VHD；請確定您同時輸入為每個VHD指定的來源和目的地路徑配對。</block>
+  <block id="f118b05c5987541658924b4b3861a41c" category="section-title">容錯移轉範例</block>
+  <block id="bb457fed9f40315999456df6d76baeb8" category="summary">您可以檢視與資料集相關聯的虛擬機器。</block>
+  <block id="e2c5fd00749a48ae5cdf6a58b4da108a" category="doc">檢視資料集</block>
+  <block id="67003e9e0d77b8a5bb5e8f13b32fb888" category="list-text">展開樹狀檢視、查看屬於資料集的虛擬機器。</block>
+  <block id="02f2739a7ac8086d93880546b5e81bcd" category="summary">您可以執行叢集作業系統（OS）循環升級、以升級叢集節點的作業系統、而不需停止SnapManager 適用於Hyper-V的支援此功能可減少停機時間、以支援SLA法規遵循。</block>
+  <block id="9dd7630a4b702ca0bc5829bc710af18b" category="doc">執行叢集作業系統循環升級</block>
+  <block id="e0d9a1c74a891cca8fcc653471ff5e01" category="paragraph">執行SnapManager Hyper-V的容錯移轉叢集可從Windows Server 2012 R2升級至Windows Server 2016和Windows Server 2019、無需停機。</block>
+  <block id="53f46f0ad5e5e48eb602230bb6b7bdf4" category="paragraph">如需叢集作業系統循環升級效益、安裝程序及限制的相關資訊、請參閱相關資訊。</block>
+  <block id="5a0bd2d9eacaf1e1597799c6d6822d15" category="inline-link">Microsoft TechNet：叢集作業系統循環升級</block>
+  <block id="38f3dbcb8b2856f29d646be11e300c2e" category="paragraph"><block ref="38f3dbcb8b2856f29d646be11e300c2e" category="inline-link-rx"></block></block>
+  <block id="65f7569620d04db9505d950ab1e58a34" category="summary">您可以檢視特定Hyper-V父主機或主機叢集的組態資訊、以便監控其狀態。</block>
+  <block id="06f5fb73a66b1b97eef5b0e41c6bb9ce" category="doc">檢視Hyper-V父主機或主機叢集</block>
+  <block id="5428c4d335b305e6b134fe69a03dc499" category="list-text">選取您要檢視的主機或主機叢集。</block>
+  <block id="150f95faef726d7318a48f6b2a63d883" category="paragraph">「Details（詳細資料）」窗格會顯示主機或主機叢集名稱、網域、叢集成員（若適用）和組態訊息。如果您選取未設定的主機、「詳細資料」窗格會顯示尚未設定的項目相關資訊。</block>
+  <block id="f0a99465e51dce4c6fb2ba331e84d9dc" category="summary">如果虛擬機器（VM）屬於SnapManager 安裝有支援Hyper-V的主機、而您在SnapManager 該VM上安裝支援Hyper-V的功能、以做為管理主控台、則SnapManager 不應使用支援Hyper-V的功能來管理VM所屬的主機。</block>
+  <block id="ecd18fc31ef844e27ee1b2ae1c07688e" category="doc">虛擬機器自行管理</block>
+  <block id="f3813a8c5f322373abcf4783c08a3e3c" category="paragraph">虛擬機器上的Hyper-V無法自行管理。SnapManager</block>
+  <block id="14dcd2586f39f173d4b29e763e432e69" category="paragraph">無需採取修正行動。</block>
+  <block id="6fd38c0075da1b37198bdce33f27e6b4" category="paragraph">如果VM1屬於主機1（SnapManager 安裝了支援Hyper-V的功能）、而SnapManager 您在VM1上安裝支援Hyper-V的功能、則不應使用SnapManager 支援Hyper-V的功能來管理VM1中的主機1。</block>
+  <block id="73ec114e82bec10ec0fab5d13d464c20" category="paragraph">如果您這麼做、並嘗試自行還原VM、則會從Hyper-V Manager刪除或重新啟動VM。</block>
+  <block id="fbe2d0a0910e141c9a8f2e55c41c89a4" category="summary">適用於Hyper-V的支援功能儀表板會顯示目前受到保護的資源總覽、SnapManager 以及未受保護的資源總覽。您可以在VM Protection Status（VM保護狀態）圓形圖或工作歷史記錄長條圖中選取不同的區段、以檢視工作、資源和歷史記錄狀態的一般資訊。</block>
+  <block id="5ceb2bce5b2f8cd2564671c353768215" category="doc">儀表板設定</block>
+  <block id="120b5d70e55ff9181d0fc250186c98d6" category="image-alt">Smhv儀表板</block>
+  <block id="1d2a3b6e961cc31ace5fe0348dcda069" category="list-text">* VM保護狀態*</block>
+  <block id="7e820355f26b47a309017c28cf42f5b0" category="paragraph">當您在VM Protection Status（VM保護狀態）圓形圖中選取區段時、可以在Details（詳細資料）窗格中檢視有關虛擬機器保護狀態的資訊。有效值的說明如下：</block>
+  <block id="d894f72fcb26b6e46eaec333d56fc64c" category="list-text">*確定*</block>
+  <block id="eafb6e6e01d296df9fd05aec086aac34" category="paragraph">顯示所有虛擬機器的最新成功備份。</block>
+  <block id="f44027b669999f97854e8ef8c8215f16" category="list-text">*失敗*</block>
+  <block id="9a67da2f211972aa1f89de5e4aeef2f0" category="paragraph">顯示每個虛擬機器最近發生的故障備份。</block>
+  <block id="a9e2b370126b715cc6b8e32af977c417" category="list-text">*無保護*</block>
+  <block id="5fbdb05dd6bda477ba1532e2c07213f4" category="paragraph">顯示不屬於任何資料集的虛擬機器、因此不受保護。</block>
+  <block id="8ebdf3d0ee92cd5df7dd3210579dffb4" category="list-text">*工作歷史*</block>
+  <block id="ecad8c823f2697d551d42ff06468b06f" category="paragraph">在「工作歷程記錄」長條圖中選取區段時、您可以在「詳細資料」窗格中、檢視指定期間內已完成、失敗及執行工作的歷程記錄。您可以變更工作詳細資料在「工作歷程」長條圖中顯示的時間長度。預設值為七天。</block>
+  <block id="71f8cc6d9ab3ad57e930240cf2e1b73a" category="list-text">*設定重新整理*</block>
+  <block id="aae38610bead65a7d2127e7b2c9c88a6" category="paragraph">您可以使用*組態重新整理*按鈕來變更儀表板重新整理顯示資訊的頻率。預設值為10分鐘。</block>
+  <block id="ab4daba51c77334b22d9ee8a92a9d98c" category="summary">在使用遠端主機安裝精靈在SnapManager 主機或節點上遠端安裝適用於Hyper-V的支援功能之前、您必須先收集一些必要的主機詳細資料。</block>
+  <block id="d9101724dd2995ac7e40db52bb9fa12e" category="doc">使用遠端主機安裝精靈的需求</block>
+  <block id="0f27cb4b9e262641740b6024e4a9cf82" category="paragraph">您可以從「保護」視窗的「動作」窗格存取「遠端主機安裝精靈」。它可讓您在SnapManager 獨立式節點和叢集節點或主機上、遠端安裝或解除安裝適用於Hyper-V的支援功能。</block>
+  <block id="92396d12132cf037fee50e3292f232d5" category="paragraph">如果您新增的主機SnapManager 不具備適用於Hyper-V的功能、新增主機精靈會提示您將其安裝在主機上。</block>
+  <block id="764c5e4962b6e24d210c25c9056f848d" category="list-text">*安裝或解除安裝*</block>
+  <block id="5c184795ac1979a7fafe69711a820356" category="paragraph">您必須選擇是否使用精靈、在SnapManager 主機或節點上遠端安裝或解除安裝適用於Hyper-V的功能。</block>
+  <block id="3cf9f264c7e0412a7d84ef83c7d3995b" category="list-text">*每個伺服器或每個儲存設備*</block>
+  <block id="4efda04b842b589387afb2523faa1f7f" category="paragraph">您必須選擇是SnapManager 以每部伺服器或每個儲存設備為基礎來安裝適用於Hyper-V的功能。</block>
+  <block id="7e08b1f5898656f33b1a750acefe92d0" category="list-text">*主機名稱/IP*</block>
+  <block id="eb1c730b91c1eceed6b450eaee2a19bc" category="paragraph">您必須提供要安裝SnapManager 支援Hyper-V的主機名稱或IP位址您可以選取*瀏覽...*來瀏覽主機或節點。</block>
+  <block id="5ddcf17f54788a5bb9148e8671562c06" category="list-text">*連接埠*</block>
+  <block id="59b8cc8c01bbed8087ca45df9b0fcffa" category="paragraph">您必須提供連接埠號碼、才能連線至主機或節點。</block>
+  <block id="c2494ab9d3d742993d7ea729fba1ce94" category="list-text">* SMHV授權金鑰*</block>
+  <block id="5e6533ed3317e3a0ea0aa766adb519c8" category="paragraph">您必須提供SnapManager 適用於Hyper-V的功能表授權金鑰。</block>
+  <block id="ca8347de6191aaa9753655df4a58f7b4" category="list-text">* SDW授權金鑰*</block>
+  <block id="a59b67300e72e3be62783c96dd5ea93f" category="paragraph">您必須提供SnapDrive 適用於Windows的功能表授權金鑰。</block>
+  <block id="9b1ea6d299d8e415d53a65fe6c78bafe" category="list-text">*使用者名稱*</block>
+  <block id="3e51ca4c0e5005fc512ad64d916856ac" category="paragraph">您必須使用網域\使用者名稱格式來提供主機或節點管理員層級的使用者名稱。</block>
+  <block id="519a06883e7db4dbb9a21eeecb16986a" category="list-text">*密碼*</block>
+  <block id="2dcadfb9eb7d2a79f3d948fbd94f9ed7" category="paragraph">您必須輸入主機或節點密碼。</block>
+  <block id="a1c00612102855350eb712748e306b75" category="list-text">*確認密碼*</block>
+  <block id="133a94d79622ad277f38fde90995deeb" category="paragraph">您必須重新輸入主機或節點密碼以供確認。</block>
+  <block id="3715e6ae6b6bc5a7d00a1dcf39caa1b4" category="summary">您可以使用組態精靈或SnapInfo設定動作來控制SnapInfo目錄路徑設定。</block>
+  <block id="46c247a1004ec7215f682df4b41dfd79" category="doc">變更SnapInfo目錄路徑</block>
+  <block id="69528947109f0d89a0cff98cabdba541" category="paragraph">您可以使用組態精靈或* SnapInfo設定*動作來控制SnapInfo目錄路徑設定。</block>
+  <block id="802d13f66c7f1dcd73c7a3c855c7ff42" category="paragraph">SnapInfo目錄設定是在SnapManager 支援Hyper-V的主機層級上指定適用於Hyper-V的支援NAS（SMB）主機和SAN主機。SnapManager對於SAN主機、SnapInfo設定會套用至磁碟區層級；對於NAS主機、SnapInfo設定會套用至SMB共用層級。</block>
+  <block id="c9aaf3938a037437bbec77a4b37ca048" category="paragraph">如果您已將儲存系統的IP位址新增SnapDrive 至Windows TPS的版本、SnapDrive 則當您執行SnapManager 適用於Hyper-V的組態精靈時、會自動填入來自Windows的儲存設定如果SnapDrive 您尚未設定適用於Windows TPS的功能、則必須在SnapManager 適用於Hyper-V的「管理儲存連線」索引標籤中、指定儲存系統的IP位址</block>
+  <block id="fc667cb0846d2e6308c1062d1b31a9a1" category="list-text">選取您要變更SnapInfo目錄路徑的主機。</block>
+  <block id="9c82ae420300b9dd6a925b910eddba4b" category="list-text">從「動作」窗格中、選取* SnapInfo設定*。</block>
+  <block id="a3e0a45fa17b7a80cfaa22dcd77428cd" category="paragraph">SnapInfo設定對話方塊隨即開啟。</block>
+  <block id="35860252ffa58c8c17a9f10686668483" category="list-text">從顯示的選項中選取儲存類型：</block>
+  <block id="054b4f3ea543c990f6b125f41af6ebf7" category="cell">選項</block>
+  <block id="50525418dca9302d23550ea6a4182c12" category="paragraph">這是預設的儲存類型。</block>
+  <block id="f5d4b592b21fbeb4a61c20c6f0d40726" category="paragraph">此選項適用於SMB共用區。</block>
+  <block id="6b0c274b49a81c634eaa34f74d894d44" category="paragraph">「瀏覽資料夾」視窗隨即開啟。</block>
+  <block id="ebf28afd430534d0f687caf9402c5957" category="list-text">選取SnapInfo儲存系統（SAN）或Volume（NAS）、然後按一下「* OK（確定）*」。</block>
+  <block id="679a7f6a14179d30487e739357af4565" category="paragraph">顯示的主機為NAS共用區、對應於已在主機層級使用「管理儲存連線」選項登錄的儲存系統。如果您看不到您要尋找的共用區、請確定已正確設定管理儲存連線。</block>
+  <block id="36b090838e736bd51f0e55001e8c1689" category="list-text">在SnapInfo設定視窗中、按一下*確定*。</block>
+  <block id="5388f79ac89eec582c7c61678f20a405" category="summary">您可以檢視SnapManager 有關以支援Hyper-V的方式管理主機的報告</block>
+  <block id="fcb212f7c22020d335c9e387a0a07e4f" category="doc">檢視主機報告</block>
+  <block id="c3c5ca3418a15b4026538b1580f06ceb" category="list-text">在導覽窗格中、按一下*報告*&gt;*主機*。</block>
+  <block id="24b2c55d686927dec582979f5bcc45c0" category="list-text">選取包含您要檢視之報告的主機。</block>
+  <block id="27560bbce6a8c3ed31ead266803aa867" category="list-text">從「報告」窗格中、選取您要檢視的報告、然後按一下「*檢視報告*」。</block>
+  <block id="ef5a8d85343305fa10c26cf95a30d0a6" category="paragraph">組態報告會出現在另一個視窗中。</block>
+  <block id="d70f5be61d8dfe9c40d866f0c9b93484" category="summary">支援Hyper-V的MBRLUN SnapManager 不受支援</block>
+  <block id="79d176df7c036fff171dfcacb9040eba" category="doc">支援Hyper-V的MBRLUN SnapManager 不受支援</block>
+  <block id="3f1aadc503dede86134b0f8d3d531e85" category="paragraph">針對在共享磁碟區或叢集共用磁碟區上執行的虛擬機器、適用於Hyper-V的支援不支援MBbr LUN。SnapManager</block>
+  <block id="195bbb0e90cf353d7344be556a33722c" category="paragraph">當叢集共用Volume磁碟擁有權變更時、Microsoft API問題會傳回不同的Volume GUI。Volume Guid與叢集磁碟資源內容中的GUID不同。此問題也適用於使用Microsoft容錯移轉叢集的高可用度虛擬機器。</block>
+  <block id="25a907990086c3b74fbc72cc3818bd9a" category="paragraph">請參閱Microsoft知識庫。</block>
+  <block id="b32f4108776356b16f608914024f481f" category="summary">若要從備份複本還原虛擬機器、您必須先決定要如何還原備份複本。</block>
+  <block id="0e581f9dd5766b699240f5d0904b087d" category="doc">還原虛擬機器的需求</block>
+  <block id="9d85a093959031782de1b3bf5921ccca" category="section-title">VM備份複本名稱</block>
+  <block id="3d577c50cef9bb538d236a3d7af073cf" category="paragraph">您必須決定要還原的備份複本。</block>
+  <block id="fc801efef30c203e31b1360062aaa5c1" category="paragraph">所有備份複本都會在「恢復管理」視窗的「備份」窗格中依名稱列出。</block>
+  <block id="43e8ccc7b6f2cdf7cb177e093798e358" category="section-title">VM備份複本類型</block>
+  <block id="03feea99991cbcd9161de5bfea7b80a0" category="paragraph">從應用程式一致的備份還原VM、是與VSS協調進行。Hyper-V VSS寫入器會在還原作業完成後、先刪除VM、再將VM還原並登錄至Hyper-V Manager。</block>
+  <block id="d238be103eebb14866b32be53d84dd7b" category="paragraph">從損毀一致的備份還原VM並不涉及VSS。VM會在還原作業之前關閉。當您從損毀一致的備份還原時、VM必須存在；從損毀一致的備份還原刪除的VM將會失敗。</block>
+  <block id="a651aaaf069e68138281beb92ba34c5c" category="section-title">VM備份複本狀態</block>
+  <block id="9d75b3669b134eae06587df25b02c4aa" category="paragraph">您必須判斷虛擬機器是否仍存在。</block>
+  <block id="00b7c0a5e36bd62d36e3de7e1a690572" category="paragraph">如果虛擬機器不再存在、您仍可在虛擬機器所在的LUN仍存在時還原虛擬機器。LUN的磁碟機代號和Windows Volume GUI必須與備份時相同。</block>
+  <block id="a6aa9113d4ad56733e70e2f2fd14e4f7" category="paragraph">如果您在Windows Server 2008 R2中刪除虛擬機器、可以從應用程式一致的備份還原虛擬機器、但在Windows Server 2012和Windows Server 2012 R2中、您可以從損毀與應用程式一致的備份中還原刪除的虛擬機器。</block>
+  <block id="0eac70134b21e1d7f02651e5f43025de" category="paragraph">如果虛擬機器在刪除之前已從所有資料集中移除、您仍可選取「未受保護的資源」並選取所屬的備份來還原。</block>
+  <block id="6fad907a1e0858a858c0fd998edd83fc" category="section-title">VM備份複本組態狀態</block>
+  <block id="4076f8baf81109cc452c9661ef7d6e81" category="paragraph">您必須判斷虛擬機器組態是否與備份時相同。</block>
+  <block id="89489127ea11c91995fda4da581f0758" category="paragraph">如果目前的虛擬機器組態與備份時不同、SnapManager 則適用於Hyper-V的功能會通知您虛擬機器配置已變更、並詢問您是否要還原備份中的虛擬機器組態和資料。</block>
+  <block id="6be75dfd4ad3eb2ebdecaa0d583fa42c" category="admonition">由於適用於Hyper-V的不備份虛擬機器的叢集組態、因此無法還原叢集組態。SnapManager如果虛擬機器和叢集組態遺失、您可以從SnapManager 適用於Hyper-V的物件還原虛擬機器、但必須手動將其設為高可用度。</block>
+  <block id="47560442ef973392bad1f503047f9ab2" category="paragraph">如果虛擬機器的設定與備份中虛擬機器的目前組態不同、您可能需要更新叢集組態、以反映任何新增或移除的虛擬硬碟（VHD）。</block>
+  <block id="88cb7b202eace6296ee01cd0881e9cbc" category="section-title">Snapshot複製狀態</block>
+  <block id="1adbfcf0ea2a1b2b74479f8deddd78a4" category="paragraph">您可以在嘗試還原作業之前、先確認儲存系統上是否存在備份Snapshot複本。</block>
+  <block id="fe5c5c937b5cafc4dccbc844523f2851" category="section-title">VM重新啟動</block>
+  <block id="e0899440c7c83cc20c1c4d2cc2beb8cf" category="paragraph">您可以選擇在虛擬機器還原後啟動。</block>
+  <block id="de60b57f630a569347a0ebfb03f51f73" category="inline-link">Microsoft TechNet：Windows Server 2008 R2中的容錯移轉叢集</block>
+  <block id="7c890966217440f252398dd7820efb40" category="paragraph"><block ref="7c890966217440f252398dd7820efb40" category="inline-link-rx"></block></block>
+  <block id="fbf5e949cfd0e7ec5f30158744d3a05d" category="summary">Windows Server 2012及更新版本提供叢集共用Volume（CSV）2.0的新功能、包括新的檔案系統、CSV寫入器的變更、CSV陰影複製的變更、以及CSV備份的增強功能。</block>
+  <block id="12dc8916c1d106eb0eaf92ab73647be7" category="doc">Windows Server 2012及更新版本中的CSV 2.0</block>
+  <block id="ebab76ddd0a719d01cf3ea91dc8841a8" category="paragraph">Windows Server 2012及更新版本包含下列CSV 2.0變更：</block>
+  <block id="903e7fccbabfe3126418737fdeba9dfc" category="list-text">CSV檔案系統（CSVFS）可作為新的分散式檔案系統、在叢集中的所有節點上使用。</block>
+  <block id="e9c2e73ac73fd0ae380ef7f28ed66085" category="list-text">CSV寫入器可為CSV磁碟區提供非要求節點的磁碟區和元件層級中繼資料、並可將遠端節點的Hyper-V寫入器納入備份工作階段、作為Proxy使用。</block>
+  <block id="2ebf2c6d77ebd0396ab1ed1d56324c98" category="list-text">CSV陰影複製提供者是CSV磁碟區的預設軟體提供者、可協調所有叢集節點的VSS凍結和VSS thaw、以提供應用程式和當機一致性。</block>
+  <block id="8f06bda8ca313d7f140e14a08afe8f51" category="paragraph">CSV陰影複製提供者可確保CSV Snapshot磁碟區可在要求的節點上寫入。</block>
+  <block id="fa130d138fad9e89a6b021992155c9db" category="list-text">CSV現在可在多部虛擬機器的所有CSV中、支援一個應用程式一致的Snapshot Volume。</block>
+  <block id="543d339f28d66beb0b28502ae21d5985" category="paragraph">Snapshot磁碟區的CSV磁碟區會公開給所有虛擬機器擁有者節點、以執行自動恢復。</block>
+  <block id="82719e24f601e00b0b0375e6bf912e8f" category="paragraph">CSV只會在建立Snapshot期間進入重新導向I/O模式、而不會在備份期間進入。</block>
+  <block id="88afa0f950757277b9cd0a86d35b94bb" category="summary">您可以設定事件通知設定、AutoSupport 以便在發生事件時傳送電子郵件、Syslog和資訊。</block>
+  <block id="84e8a88048bb97b5a6416d8b9f99a8b0" category="doc">事件通知設定</block>
+  <block id="997dd00ff1d3ff7ca24a0de47fef203c" category="paragraph">如果將Hyper-V父主機新增SnapManager 至適用於Hyper-V的支援功能時、未設定事件通知設定、您可以稍後使用組態精靈來設定這些設定。</block>
+  <block id="0235fd2d5cccf9c82b4b94b7f03a5e1a" category="paragraph">您可以使用組態精靈來變更事件通知設定、即使主機已新增SnapManager 至適用於Hyper-V的功能</block>
+  <block id="b26a8aad4334f73863648d787bd12b09" category="paragraph">您可以先設定事件通知設定、再將虛擬機器資源新增至資料集。</block>
+  <block id="7c3ef091f5e9de900650e022373ffe32" category="summary">防毒解決方案造成大量記憶體使用量。</block>
+  <block id="9accf46f4705bca9602a29da75a6d11a" category="doc">防毒解決方案造成大量記憶體使用量</block>
+  <block id="f5ccf0f5a43d30ed01c351daf610c72c" category="paragraph">檔案層級的防毒解決方案可能會導致大量記憶體使用量、這似乎是記憶體洩漏。</block>
+  <block id="302341b993add035e17852f48ede6ba1" category="paragraph">在某些情況SnapManager 下、由於錯誤設定的防毒解決方案會掃描VM組態檔、因此適用於Hyper-V的支援功能可能會耗用大量且持續增加的記憶體容量。當防毒解決方案掃描VM組態檔時、會顯示_InstanceModifyationEvent事件、說明變更內容。當適用於Hyper-V的支援收到此通知時、會觸發列舉儲存設備和VM、並使用適用於Windows的支援功能。SnapManager SnapDrive在某些情況下、這些事件可能會發生、導致SnapDrive Windows無法處理的速度太高、SnapManager 導致Hyper-V佇列其中的故障。</block>
+  <block id="9dcb12971ce7ee1ca4a0e6c1aa6602ac" category="paragraph">排除SnapManager 防毒解決方案掃描Hyper-V VM檔案的功能。</block>
+  <block id="0949c83f1f00368865bd1bf8d478711f" category="summary">使用純IPv6主機的連線時間較長。</block>
+  <block id="d51691493b478822bf45a736a571c098" category="doc">使用純IPv6主機的連線時間較長</block>
+  <block id="1b4e1cebc792cbce25156d6e542ae745" category="paragraph">如果您是在混合式的IPv4和IPv6環境中工作、並將純IPv6主機新增SnapManager 至適用於Hyper-V的支援、則連線可能需要比正常時間更長的時間。</block>
+  <block id="bb29b6e6a49fb6882e905eeab395597d" category="paragraph">之所以會發生此延遲、是因為SnapManager 針對Hyper-V的支援功能會先嘗試使用IPv4傳輸協定。</block>
+  <block id="54761137c08a41abfde2004613c26d51" category="paragraph">若要解決此延遲、請在\windows\system32\drivers\etc\hosts檔案中新增主機。</block>
+  <block id="8cf04a9734132302f96da8e113e80ce5" category="sidebar">主頁</block>
+  <block id="bc75d43ed20a1ef476a229e08f6582f1" category="sidebar">下列虛擬機器的備份失敗、因為無法在線上進行backedup或找不到要備份的虛擬機器</block>
+  <block id="4f9d4ca3184d1887e8be4f7de3aa95bf" category="sidebar">備份失敗、出現「陰影複製建立已在進行中」錯誤</block>
+</blocks>

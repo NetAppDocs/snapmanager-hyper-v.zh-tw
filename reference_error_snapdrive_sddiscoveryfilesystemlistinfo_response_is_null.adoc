@@ -1,0 +1,29 @@
+---
+permalink: reference_error_snapdrive_sddiscoveryfilesystemlistinfo_response_is_null.html 
+sidebar: sidebar 
+keywords: snapdrive, sddiscoveryfilesystemlistinfo, response, null, back, up 
+summary: 進行備份時、SSDDiscoveryFileSystemListInfo回應為null SnapDrive 
+---
+= 進行備份時、SSDDiscoveryFileSystemListInfo回應為null SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+您在SnapDrive 備份時收到錯誤「SSecure SDDiscoveryFileSystemListInfo」回應為null。
+
+* *原因*
++
+當您要備份的SnapInfo位置無法使用時、就會出現此訊息。
+
+* *修正行動*
++
+確認SnapInfo位置存在且可用。如果已變更、請重新執行組態管理程式以指定新位置。再次嘗試備份。
+
+
+
+*相關資訊*
+
+xref:task_setting_up_a_snapinfo_lun.adoc[設定SnapInfo LUN]

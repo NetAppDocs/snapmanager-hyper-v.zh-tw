@@ -1,0 +1,25 @@
+---
+permalink: reference_some_types_of_failures_do_not_generate_error_message.html 
+sidebar: sidebar 
+keywords: backup, failure, result, partial 
+summary: 某些類型的備份失敗不會導致部分備份失敗。 
+---
+= 某些類型的備份失敗不會導致部分備份失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+如果資料集中的某個虛擬機器發生錯誤、SnapManager 則適用於Hyper-V的功能無法成功完成資料集備份、而且在某些情況下不會產生部分故障。在這些情況下、整個資料集備份都會失敗。
+
+* * 範例 *
++
+在某個儲存系統磁碟區超過255個Snapshot複本限制的情況下、SnapManager 即使問題與資料集中的虛擬機器子集相關聯、Hyper-V的VMware for Hyper-V仍會產生部分故障。
+
+* *修正行動*
++
+若要成功完成備份作業、您必須修正發生問題的虛擬機器。如果不可能、您可以將虛擬機器暫時移出資料集、或建立僅包含已知沒有問題的虛擬機器的資料集。
+
+

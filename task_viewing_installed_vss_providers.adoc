@@ -1,0 +1,36 @@
+---
+permalink: task_viewing_installed_vss_providers.html 
+sidebar: sidebar 
+keywords: view, vss, provider, install, host 
+summary: 您可以檢視安裝在主機上的VSS供應商。 
+---
+= 檢視已安裝的VSS供應商
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以檢視安裝在主機上的VSS供應商。
+
+. 選擇* Start*>* Run*並輸入下列命令以開啟Windows命令提示字元：
++
+cmd
+
+. 在提示字元下、輸入下列命令：
++
+「vssadmin list provers」
+
++
+輸出應類似於下列內容：
+
++
+[listing]
+----
+
+Provider name: ‘Data ONTAP VSS Hardware Provider’
+Provider type: Hardware
+Provider ID: {ddd3d232-a96f-4ac5-8f7b-250fd91fd102}
+Version: 7.0.0.xxxx
+----
+

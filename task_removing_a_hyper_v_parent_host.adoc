@@ -1,0 +1,25 @@
+---
+permalink: task_removing_a_hyper_v_parent_host.html 
+sidebar: sidebar 
+keywords: remove, hyper-v, parent, host, cluster, snapmanager, removing 
+summary: 當您不想再使用SnapManager 適用於Hyper-V的功能來管理Hyper-V父主機或父主機叢集時、可以移除該主機或父主機叢集 
+---
+= 移除Hyper-V父主機或父主機叢集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+當您不想再使用SnapManager 適用於Hyper-V的功能來管理Hyper-V父主機或父主機叢集時、可以移除該主機或父主機叢集
+
+. 在導覽窗格中、按一下* Protection（保護）*>* hosts*。
+. 選取您要移除的主機或主機叢集。
+. 在「動作」窗格中、按一下「*移除*」。
++
+您可以選取*刪除所有VM備份*、刪除與主機相關的任何虛擬機器備份。
+
++
+Hyper-V父主機或主機叢集會從SnapManager 支援Hyper-V管理的功能中移除、但不會永久刪除。屬於該主機或主機叢集的虛擬機器也會從其所屬的任何資料集中移除。
+
+

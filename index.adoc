@@ -1,0 +1,13 @@
+---
+permalink: index.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, install, configure, operate, installation, configuration, operation 
+summary: 說明如何安裝、設定及操作SnapManager 適用於Hyper-V軟體的功能。 
+---
+= 安裝與管理指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+本指南說明如何安裝、設定及操作SnapManager 適用於Hyper-V軟體的《靜態2.1.4》。

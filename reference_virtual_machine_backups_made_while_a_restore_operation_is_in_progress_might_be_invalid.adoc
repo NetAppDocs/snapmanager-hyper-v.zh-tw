@@ -1,0 +1,25 @@
+---
+permalink: reference_virtual_machine_backups_made_while_a_restore_operation_is_in_progress_might_be_invalid.html 
+sidebar: sidebar 
+keywords: virtual, machine, backup, restore, operation, progress, invalid 
+summary: 還原作業進行期間所進行的虛擬機器備份可能無效。 
+---
+= 還原作業進行期間所進行的虛擬機器備份可能無效
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+在還原作業進行期間建立的應用程式一致備份可能無效。從不完整的備份中還原虛擬機器、會導致資料遺失、並刪除虛擬機器。
+
+* *原因*
++
+備份複本中缺少適用於Hyper-V的支援資訊。SnapManager備份作業成功、但備份複本無效、因為未包含虛擬機器組態資訊。執行還原作業之前、適用於Hyper-V還原作業的支援功能會先從Hyper-V主機刪除虛擬機器組態資訊。SnapManager這是Microsoft Hyper-V寫入器的設計行為。
+
+* *修正行動*
++
+請確定備份排程與還原作業不一致、或是您要執行的隨需備份不會與相同資料上的還原作業重疊。
+
+

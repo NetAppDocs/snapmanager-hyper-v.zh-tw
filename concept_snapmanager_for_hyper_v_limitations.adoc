@@ -1,0 +1,46 @@
+---
+permalink: concept_snapmanager_for_hyper_v_limitations.html 
+sidebar: sidebar 
+keywords: important, understand, snapmanager, hyper-v, limitation 
+summary: 請務必瞭解SnapManager 、某些功能在適用於Hyper-V的2.1版及更新版本中不受支援 
+---
+= Hyper-V限制的列舉SnapManager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+請務必瞭解SnapManager 、某些功能在適用於Hyper-V的2.1版及更新版本中並不受支援。
+
+* 不支援取消、暫停及恢復備份與還原工作。
+* 原則無法跨資料集複製。
+* 不支援角色型存取控制（RBAC）。
+* 不支援從SnapManager 適用於Hyper-V Volume陰影複製服務（VSS）的支援功能中排除虛擬硬碟（VHD）。
+* 不支援從備份複本進行單一檔案還原。
+* 不支援跨版本管理、例如、您無法使用Client Console 1.2來管理SnapManager Hyper-V的版本資訊2.0、反之亦然。
+* 如果您開始還原Hyper-V虛擬機器（VM）、而且正在進行同一個VM的另一個備份或還原、您的嘗試就會失敗。
+* 只有Windows Server 2012才支援從損毀一致的備份複本還原刪除的VM。
+* 不支援在SnapManager 容錯移轉叢集的不同節點上執行不同版本的Hyper-V。
+* 不支援從SnapManager 適用於Hyper-V的還原2.1還原。
+* 當使用者在備份或還原時變更叢集擁有權節點、則不支援虛擬機器的備份或還原工作。
+* 不支援混合模式備份（包含CSV 2.0磁碟區和SMB共用上檔案的虛擬機器）。
+* 使用Windows Server 2012將VM的儲存設備移轉至其他位置之後、您無法從移轉前所製作的備份複本還原該VM。
+* 對於Windows Server 2012、您無法執行備份工作、其中備份集同時包含叢集共用Volume（CSV）和共享磁碟。
+* 設定「管理儲存連線設定」時、您無法使用遠端程序呼叫（RPC）傳輸協定、只能使用HTTP和HTTPS傳輸協定。
+* Windows Server 2012 Hyper-V作業系統不支援為儲存在NAS儲存設備上的虛擬機器（VM）建立應用程式一致的備份。
++
+此限制不適用於損毀一致的備份。它僅適用於免費的Hyper-V伺服器、不含檔案共用陰影複製服務。
+
+* VM的虛擬交換器名稱必須與主要和次要Windows主機完全相同。
+* 當Hyper-V VM透過SMB 3.0部署時、備份與還原作業需要FlexClone授權。
+* 還原作業支援的LUN大小上限為14 TB。
+* 下列Hyper-V伺服器不支援應用程式一致的VM備份：
++
+** Microsoft Hyper-V Server 2016（免費版）
+** Microsoft Hyper-V Server 2019（免費版）請注意、此限制不適用於損毀一致的備份或下列Windows平台：
+** Microsoft Windows Server 2016標準版與資料中心版
+** Microsoft Windows Server 2019標準版與資料中心版
+
+
+

@@ -1,0 +1,32 @@
+---
+permalink: reference_virtual_machine_adding_itself_to_a_dataset.html 
+sidebar: sidebar 
+keywords: virtual, machine, managing, manage, itself 
+summary: 如果虛擬機器（VM）屬於SnapManager 安裝有支援Hyper-V的主機、而您在SnapManager 該VM上安裝支援Hyper-V的功能、以做為管理主控台、則SnapManager 不應使用支援Hyper-V的功能來管理VM所屬的主機。 
+---
+= 虛擬機器自行管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+如果虛擬機器（VM）屬於SnapManager 安裝有支援Hyper-V的主機、而您在SnapManager 該VM上安裝支援Hyper-V的功能、以做為管理主控台、則SnapManager 不應使用支援Hyper-V的功能來管理VM所屬的主機。
+
+* *原因*
++
+虛擬機器上的Hyper-V無法自行管理。SnapManager
+
+* *修正行動*
++
+無需採取修正行動。
+
+* * 範例 *
++
+如果VM1屬於主機1（SnapManager 安裝了支援Hyper-V的功能）、而SnapManager 您在VM1上安裝支援Hyper-V的功能、則不應使用SnapManager 支援Hyper-V的功能來管理VM1中的主機1。
+
++
+如果您這麼做、並嘗試自行還原VM、則會從Hyper-V Manager刪除或重新啟動VM。
+
+

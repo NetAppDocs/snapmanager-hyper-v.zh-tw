@@ -1,0 +1,33 @@
+---
+permalink: reference_backup_jobs_that_involve_more_than_15_csvs_from_the_same_filer_fail_with_rename_snapshot_error.html 
+sidebar: sidebar 
+keywords: backup, job, 15, csv, storage, system, fail 
+summary: 從同一個儲存系統進行的備份工作可能會失敗、而這些工作涉及15個以上的CSV。 
+---
+= 從同一個儲存系統進行的備份工作可能會失敗、而這些工作涉及15個以上的CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+針對涉及相同儲存系統15個以上叢集共用磁碟區（CSV）的Hyper-V備份工作、下列錯誤會導致失敗：SnapManager
+
++
+[listing]
+----
+Failed to rename the Snapshot copy of the LUN to the new Snapshot copy name.
+Error code: The attempt to get the named attribute for the LUN on the storage system failed.
+Error code: 13057.
+Error description: An error occurred in the reception and processing of the API reply from the appliance.
+----
+* *原因*
++
+這是Data ONTAP 由於不保留系統資源而造成的限制。僅當所有LUN都屬於同一個儲存系統時、才適用15個LUN的限制。如果建立備份資料集、使單一儲存系統不涉及超過15個CSV、則不會發生此問題。
+
+* *修正行動*
++
+如果您想要從同一個儲存系統製作包含15個以上LUN的備份、請建立多個資料集以避免此故障。
+
+

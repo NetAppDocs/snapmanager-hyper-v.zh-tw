@@ -1,0 +1,33 @@
+---
+permalink: concept_what_you_can_do_with_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, enable, back, up, restore, multiple, virtual, machine, automatic, backup, task, schedule, scheduling, dataset, retention, replication 
+summary: 適用於Hyper-V的支援可讓您在多個主機上備份及還原多個虛擬機器。SnapManager您可以建立資料集並將原則套用至這些資料集、以自動化備份工作、例如排程、保留和複寫。 
+---
+= 如何運用SnapManager 適用於Hyper-V的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+適用於Hyper-V的支援可讓您在多個主機上備份及還原多個虛擬機器。SnapManager您可以建立資料集並將原則套用至這些資料集、以自動化備份工作、例如排程、保留和複寫。
+
+您可以使用SnapManager 適用於Hyper-V的下列功能執行下列工作：
+
+* 將虛擬機器分組為具有相同保護需求的資料集、並將原則套用至這些資料集
+* 備份及還原執行ONTAP VMware軟體之儲存系統上的專屬和叢集式虛擬機器
+* 備份及還原叢集共用磁碟區（CSV）上託管的虛擬機器
+* 使用排程原則來自動化資料集備份
+* 執行資料集的隨需備份
+* 使用保留原則、只要您需要、就能保留資料集備份
+* 備份成功完成後、請更新SnapMirror目的地位置
+* 指定在備份前後執行的自訂指令碼
+* 從備份還原虛擬機器
+* 監控所有排程和執行中工作的狀態
+* 從管理主控台遠端管理主機
+* 針對資料集備份、還原及組態作業提供整合式報告
+* 結合執行損毀一致且應用程式一致的備份
+* 使用PowerShell Cmdlet執行災難恢復作業
+* 執行叢集作業系統（OS）循環升級
+

@@ -1,0 +1,16 @@
+---
+permalink: concept_what_snapmanager_for_hyper_v_is.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, solution, data, protection, virtual, machine, vm, storage, system, ontap 
+summary: 適用於Hyper-V的解決方案可為位於執行VMware的儲存系統上的Microsoft Hyper-V虛擬機器（VM）提供資料保護與恢復解決方案。SnapManager ONTAP 
+---
+= Hyper-V的功能SnapManager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+適用於Hyper-V的解決方案可為位於執行VMware的儲存系統上的Microsoft Hyper-V虛擬機器（VM）提供資料保護與恢復解決方案。SnapManager ONTAP
+
+您可以根據備份管理員所設定的資料集保護原則、執行應用程式一致且損毀一致的資料集備份。您也可以從這些備份還原VM。報告功能可讓您監控備份狀態、並取得有關備份與還原工作的詳細資訊。

@@ -1,0 +1,23 @@
+---
+permalink: task_updating_the_dataset_and_snapinfo_across_all_nodes.html 
+sidebar: sidebar 
+keywords: perform, cluster, os, rolling, upgrade, dataset, snapinfo, node, updating, update 
+summary: 執行叢集作業系統循環升級之後、您必須在所有節點上更新資料集和SnapInfo。 
+---
+= 在所有節點上更新資料集和SnapInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+執行叢集作業系統循環升級之後、您必須在所有節點上更新資料集和SnapInfo。
+
+
+NOTE: 叢集循環升級可從Windows Server 2016升級至Windows Server 2019；混合模式作業系統不支援共用磁碟備份。
+
+. 編輯Windows 2012 R2節點上的所有資料集。
+. 確認所有可用的資料集都可在Windows 2016節點上看到。
+. 在Windows 2012 R2節點上設定SnapInfo路徑。
+. 確認Windows 2016節點上顯示正確的SnapInfo路徑。
+

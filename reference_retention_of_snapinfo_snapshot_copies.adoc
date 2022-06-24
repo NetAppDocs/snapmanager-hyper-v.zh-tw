@@ -1,0 +1,31 @@
+---
+permalink: reference_retention_of_snapinfo_snapshot_copies.html 
+sidebar: sidebar 
+keywords: delete, snapinfo, snapshot, copies, copy 
+summary: 已刪除SnapInfo Snapshot複本。 
+---
+= 已刪除SnapInfo Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+適用於Hyper-V的不維護或刪除SnapInfo Snapshot複本。SnapManager
+
+* *原因*
++
+建立資料集備份之後、SnapManager 適用於Hyper-V的功能可建立SnapInfo LUN的Snapshot複本。如果刪除備份、SnapInfo Snapshot複本將不會刪除。根據預設、SnapManager 適用於Hyper-V的支援功能會保留30個SnapInfo LUN Snapshot複本、每次最新複本超過30個複本臨界值時、會以最新的複本取代最舊的複本。
+
+* *修正行動*
++
+您可以使用下列其中一個登錄機碼、為每個Hyper-V主機設定要保留的SnapInfo Snapshot複本數目：
+
++
+對於獨立式Hyper-V主機：機碼：HKL\software\netapp\SnapManager for Hyper-V \server\<主機名稱>雙字節值：snapinfo_snaps_count（要保留的SnapInfo Snapshot複本數）
+
++
+對於叢集式Hyper-V主機（要在叢集中的每個節點上設定）：機碼：HKLM \Cluster\software\NetApp\SnapManager for Hyper-V \server\<clustername>；雙字節值：snapinfo_snaps_count（SnapInfo Snapshot複本數目待保留）
+
+

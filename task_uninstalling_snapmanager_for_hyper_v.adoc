@@ -1,0 +1,26 @@
+---
+permalink: task_uninstalling_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, windows, server, control, panel, uninstall, application, operating, system, remote, host, protection 
+summary: 您可以SnapManager 使用作業系統的控制台解除安裝應用程式、從Windows伺服器解除安裝適用於Hyper-V的功能。 
+---
+= 解除安裝SnapManager 適用於Hyper-V的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以SnapManager 使用作業系統的控制台解除安裝應用程式、從Windows伺服器解除安裝適用於Hyper-V的功能。您可以SnapManager 使用「保護」視窗的「動作」窗格中的「遠端主機安裝精靈」、在獨立節點和叢集節點或主機上遠端解除安裝適用於Hyper-V的功能。
+
+解除安裝SnapManager 適用於Hyper-V的功能會刪除所有資料集和原則。解除安裝完成後、您將無法恢復該資訊。如果您想要儲存資料集和主機組態資訊、可以在解除安裝之前先匯出。
+
+. 在安裝SnapManager 了適用於Hyper-V的Windows伺服器上、瀏覽至「控制台」、然後選取*「控制台」*>*「程式集」**「程式和功能」*。
+. 捲動已安裝程式的清單、尋找SnapManager 適用於Hyper-V的功能
+. 按一下程式名稱、然後按一下「*解除安裝*」。
+. 當系統提示您確認解除安裝時、請按一下*是*。
+
+
+*相關資訊*
+
+xref:task_importing_or_exporting_host_and_dataset_configuration_information.adoc[匯入或匯出主機與資料集組態資訊]

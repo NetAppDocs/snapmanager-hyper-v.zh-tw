@@ -1,0 +1,43 @@
+---
+permalink: concept_configuring_snapmanager_for_hyper_v_for_failover.html 
+sidebar: sidebar 
+keywords: enable, snapmanager, hyper-v, implementation, disaster, recovery, primary, secondary, host, powershell, failover, configure, configuring 
+summary: 若要完全啟用SnapManager 適用於Hyper-V實作的功能、以進行災難恢復、您必須確保主要和次要主機具有相同的組態、並知道您只能使用PowerShell執行災難恢復。 
+---
+= 設定SnapManager 適用於Hyper-V的功能以進行容錯移轉
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要完全啟用SnapManager 適用於Hyper-V實作的功能、以進行災難恢復、您必須確保主要和次要主機具有相同的組態、並知道您只能使用PowerShell執行災難恢復。
+
+下列類型的設定支援災難恢復：
+
+* 獨立的主要主機和獨立的次要Hyper-V主機
+* 叢集式主要和次要Hyper-V主機
+* 在主要和次要Hyper-V主機上叢集共用磁碟區（CSV）
+
+
+例如、主主機上的叢集虛擬機器（VM）必須還原為叢集VM、專用（獨立）VM必須還原為專用VM、而CSV VM則必須還原為CSV VM。
+
+次要主機上的LUN連接方式應與主要主機上的LUN連接方式相同。也就是LUN類型（專用、共享或CSV）以及磁碟機代號、掛載點或CSV重新分析點、在主要和次要主機上應該相同。如果將SAN還原作業移至替代路徑位置、則可針對次要位置上的LUN還原作業指定不同的磁碟機代號。
+
+
+NOTE: 支援磁碟機代號、CSV和磁碟區掛載點。
+
+下列範例顯示基本的災難恢復設定：
+
+* 站台A（主要）包含儲存系統、獨立Hyper-V主機系統或Hyper-V主機叢集。
++
+在這些主機上執行的VM位於Data ONTAP 不支援儲存設備上。
+
+* 站台B（次要）包含儲存系統和Hyper-V主機或叢集（與主要主機或叢集相同）。
+* 適用於Windows的支援功能和適用於Hyper-V的支援功能均安裝在站台A和站台B上SnapDrive SnapManager
+* SnapMirror關係從站台A初始化為站台B
+* 在現場A、將Hyper-V主機或叢集新增至SnapManager 支援Hyper-V的支援、並使用SnapManager 支援Hyper-V的功能進行VM備份
++
+檢查備份後更新SnapMirror的原則。每次備份之後、次要站台都會以VM和SnapInfo複本的新Snapshot複本進行更新。
+
+

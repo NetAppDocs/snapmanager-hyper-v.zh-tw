@@ -1,0 +1,25 @@
+---
+permalink: reference_backup_and_restore_notifications_not_sent_in_ipv6_only_environments.html 
+sidebar: sidebar 
+keywords: backup, restore, notification, ipv6-only, environment 
+summary: 未在純IPv6環境中傳送的備份與還原通知。 
+---
+= 未在純IPv6環境中傳送的備份與還原通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+當您執行純IPv6主機時、不會收到任何備份或還原作業通知。
+
+* *原因*
++
+您的SMTP伺服器不支援IPv6、或未啟用IPv6。
+
+* *修正行動*
++
+在您的SMTP伺服器上啟用IPv6。
+
+

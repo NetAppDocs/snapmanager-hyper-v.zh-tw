@@ -1,0 +1,18 @@
+---
+permalink: concept_ontap_vss_hardware_provider_requirement.html 
+sidebar: sidebar 
+keywords: ontap, vss, hardware, provider, install, snapmanager, function, snapdrive, san, storage, requirement 
+summary: 您必須ONTAP 安裝好才能SnapManager 使功能正常運作的功能不正常的VSS硬體供應商。VSS硬體供應商將執行此功能的整套服務與儲存系統整合到VSS架構中。ONTAP SnapDrive ONTAP這是在SAN儲存設備上執行的VM所需的。 
+---
+= VSS硬體供應商需求ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必須ONTAP 安裝好才能SnapManager 使功能正常運作的功能不正常的VSS硬體供應商。VSS硬體供應商將執行此功能的整套服務與儲存系統整合到VSS架構中。ONTAP SnapDrive ONTAP這是在SAN儲存設備上執行的VM所需的。
+
+不需要個別安裝包含在內的《》（《不含》）《不含》的《不含》（《不含）《不含》（《不ONTAP SnapDrive
+
+對於在SMB 3.0共用區上執行的Hyper-V VM、Data ONTAP Windows Hypervisor會叫用執行於支援支援對象支援對象的遠端VSS硬體供應商。

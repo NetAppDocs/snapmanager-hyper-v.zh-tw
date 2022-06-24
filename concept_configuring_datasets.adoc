@@ -1,0 +1,14 @@
+---
+permalink: concept_configuring_datasets.html 
+sidebar: sidebar 
+keywords: create, modify, view, delete, dataset, protection, configure, configuring 
+summary: 您可以根據保護需求來建立、修改、檢視及刪除資料集。 
+---
+= 設定資料集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以根據保護需求來建立、修改、檢視及刪除資料集。

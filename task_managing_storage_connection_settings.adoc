@@ -1,0 +1,23 @@
+---
+permalink: task_managing_storage_connection_settings.html 
+sidebar: sidebar 
+keywords: host, storage, connection, snapdrive, windows, snapmanager, hyper-v, storage, communication, protection, dataset, management 
+summary: 新增主機之後、您應該在SnapDrive 「Protection」（保護）>>「Dataset Management」（資料集管理）中輸入SnapManager 所有使用管理儲存連線的儲存連線（適用於Windows、適用於Hyper-V）。 
+---
+= 管理儲存連線設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+新增主機之後、您應該在SnapDrive 「*保護*>*資料集管理*」中輸入SnapManager 所有使用管理儲存連線的儲存連線（適用於Windows、適用於Hyper-V）（適用於Windows）、以及使用「管理儲存連線設定」（適用於Hyper-V）。
+
+在SnapManager 管理儲存連線設定之前、您必須至少將一部主機新增至適用於Hyper-V的支援區。
+
+. 從* Protection（保護）>* Dataset Management（資料集管理）*中、選取Manage Storage Connection Settings（管理儲存連線設定）。
+. 新增儲存連線。
++
+所有的儲存連線都可在SnapDrive Windows TPS的「參考」中檢視。
+
+

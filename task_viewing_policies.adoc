@@ -1,0 +1,22 @@
+---
+permalink: task_viewing_policies.html 
+sidebar: sidebar 
+keywords: view, policy, detail, associate, specific, dataset, policies 
+summary: 您可以檢視與特定資料集相關的原則詳細資料。 
+---
+= 檢視原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以檢視與特定資料集相關的原則詳細資料。
+
+. 在導覽窗格中、按一下* Protection（保護）*>* Dataset *。
+. 選取包含您要檢視之原則的資料集。
+. 從「原則」窗格中、選取您要檢視其詳細資料的特定原則。
++
+有關原則的資訊會顯示在「詳細資料」窗格中。
+
+

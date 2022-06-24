@@ -1,0 +1,41 @@
+---
+permalink: task_import_the_vm_to_a_data_ontap_host.html 
+sidebar: sidebar 
+keywords: export, virtual, machine, vm, import, ontap, host 
+summary: 匯出虛擬機器（VM）之後、您可以將其匯入ONTAP 到一個支援系統。 
+---
+= 將VM匯入ONTAP 到某個不支援的主機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+匯出虛擬機器（VM）之後、您可以將其匯入ONTAP 到某個物件主機。
+
+VM必須已從非ONTAP主機匯出。
+
+. 在左窗格中、以滑鼠右鍵按一下ONTAP 您要匯入VM的物件主機名稱。
+. 選取*匯入虛擬機器*。
++
+image::../media/smhv_import_vm_in_servermanager.gif[在伺服器管理程式中匯入VM]
+
++
+「匯入虛擬機器」視窗即會開啟。
+
+. 按一下*瀏覽*。
+. 按一下先前匯出VM的主機名稱、然後按一下*選取資料夾*。
+. 在匯入設定下、選取*複製虛擬機器[建立新的唯一識別碼]*。
+. 按一下*匯入*。
+. 確認已成功匯入VM、並從非ONTAP主機刪除VM。
+. 將組態版本從5.0升級為8.0、特別適用於Hyper-V 2016。
++
+.. 在右窗格中、以滑鼠右鍵按一下您要升級的VM名稱。
+.. 選擇*升級組態版本*。
++
+VM的組態版本會升級至8.0。
+
+
+
+. 啟動VM。
+

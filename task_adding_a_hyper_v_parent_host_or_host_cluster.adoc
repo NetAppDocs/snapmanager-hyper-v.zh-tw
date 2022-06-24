@@ -1,0 +1,23 @@
+---
+permalink: task_adding_a_hyper_v_parent_host_or_host_cluster.html 
+sidebar: sidebar 
+keywords: add, hyper-v, parent, host, cluster, back, up, restore, virtua, machine 
+summary: 您可以新增Hyper-V父主機或主機叢集來備份及還原虛擬機器。 
+---
+= 新增Hyper-V父主機或主機叢集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以新增Hyper-V父主機或主機叢集來備份及還原虛擬機器。
+
+. 在導覽窗格中、按一下* Protection（保護）*。
+. 在「動作」窗格中、按一下「*新增主機*」。
+. 執行新增主機精靈。
+
+
+將主機新增至叢集時、新主機的相關資訊不會自動顯示在GUI中。手動將主機資訊新增至安裝目錄中的XML檔案。
+
+必須在每個叢集節點上安裝適用於Hyper-V的SnapManager如果SnapManager 您未安裝適用於Hyper-V的功能、系統會提示您執行遠端主機安裝精靈。

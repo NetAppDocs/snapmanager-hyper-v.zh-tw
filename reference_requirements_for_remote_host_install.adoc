@@ -1,0 +1,56 @@
+---
+permalink: reference_requirements_for_remote_host_install.html 
+sidebar: sidebar 
+keywords: remote, host, install, wizard, snapmanager, hyper-v, host, node, require, detail, requirement 
+summary: 在使用遠端主機安裝精靈在SnapManager 主機或節點上遠端安裝適用於Hyper-V的支援功能之前、您必須先收集一些必要的主機詳細資料。 
+---
+= 使用遠端主機安裝精靈的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在使用遠端主機安裝精靈在SnapManager 主機或節點上遠端安裝適用於Hyper-V的支援功能之前、您必須先收集一些必要的主機詳細資料。
+
+您可以從「保護」視窗的「動作」窗格存取「遠端主機安裝精靈」。它可讓您在SnapManager 獨立式節點和叢集節點或主機上、遠端安裝或解除安裝適用於Hyper-V的支援功能。
+
+如果您新增的主機SnapManager 不具備適用於Hyper-V的功能、新增主機精靈會提示您將其安裝在主機上。
+
+* *安裝或解除安裝*
++
+您必須選擇是否使用精靈、在SnapManager 主機或節點上遠端安裝或解除安裝適用於Hyper-V的功能。
+
+* *每個伺服器或每個儲存設備*
++
+您必須選擇是SnapManager 以每部伺服器或每個儲存設備為基礎來安裝適用於Hyper-V的功能。
+
+* *主機名稱/IP*
++
+您必須提供要安裝SnapManager 支援Hyper-V的主機名稱或IP位址您可以選取*瀏覽...*來瀏覽主機或節點。
+
+* *連接埠*
++
+您必須提供連接埠號碼、才能連線至主機或節點。
+
+* * SMHV授權金鑰*
++
+您必須提供SnapManager 適用於Hyper-V的功能表授權金鑰。
+
+* * SDW授權金鑰*
++
+您必須提供SnapDrive 適用於Windows的功能表授權金鑰。
+
+* *使用者名稱*
++
+您必須使用網域\使用者名稱格式來提供主機或節點管理員層級的使用者名稱。
+
+* *密碼*
++
+您必須輸入主機或節點密碼。
+
+* *確認密碼*
++
+您必須重新輸入主機或節點密碼以供確認。
+
+
