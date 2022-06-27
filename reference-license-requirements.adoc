@@ -1,0 +1,38 @@
+---
+permalink: reference-license-requirements.html 
+sidebar: sidebar 
+keywords: run, snapmanager, hyper-v, select, host-based, storage, system, license, installation, license 
+summary: 若要執行SnapManager 適用於Hyper-V的功能、您必須在安裝授權期間選取主機型或儲存系統授權。 
+---
+= 授權需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要執行SnapManager 適用於Hyper-V的功能、您必須在安裝授權期間選取主機型或儲存系統授權。
+
+
+
+== 套件授權SnapManager
+
+Windows主機系統需要套件授權。SnapManager您可以選擇主機型授權或儲存系統授權。
+
+
+
+== 每個伺服器授權
+
+這也稱為_主機型授權_。如果您選擇以主機為基礎的授權、則必須在SnapManager 安裝期間提供一套不完整的授權金鑰、之後您可以視需要加以變更。您可以在安裝後按SnapManager 一下「適用於Hyper-V的更新」視窗中的*授權設定*、以變更授權金鑰。每個父主機都需要SnapManager 一套不完整的授權。
+
+
+
+== 每個儲存系統授權
+
+這也稱為_儲存系統授權_。如果您選擇儲存系統授權、則必須在SnapManager 所有儲存系統中新增套件授權、才能執行SnapManager 適用於Hyper-V作業的功能。
+
+
+
+== 每個用戶端系統授權
+
+安裝管理主控台時、您應該使用此授權選項。

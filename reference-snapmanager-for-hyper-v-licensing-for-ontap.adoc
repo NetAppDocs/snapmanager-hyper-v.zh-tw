@@ -1,0 +1,26 @@
+---
+permalink: reference-snapmanager-for-hyper-v-licensing-for-ontap.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, license, licensing, version, ontap 
+summary: 適用於Hyper-V授權的版本取決於您使用的版本。SnapManager ONTAP 
+---
+= 適用於Hyper-V的for Hyper-V授權SnapManager ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+適用於Hyper-V授權的版本取決於您使用的版本。SnapManager ONTAP
+
+若要取得主機型授權和儲存型授權、您必須使用Data ONTAP 支援功能更新版本的支援功能。
+
+您必須使用Data ONTAP 更新版本MultiStore 的功能才能搭配SnapManager 使用適用於Hyper-V的功能
+
+如果您使用Data ONTAP 的是8.2之前的版本、則某些作業會受到一些限制。
+
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp文件：SnapDrive 適用於Windows（目前版本）"]

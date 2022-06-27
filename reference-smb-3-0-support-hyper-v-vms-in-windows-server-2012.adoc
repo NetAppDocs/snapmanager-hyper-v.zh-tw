@@ -1,0 +1,22 @@
+---
+permalink: reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html 
+sidebar: sidebar 
+keywords: microsoft, enhance, vss, infrastructure, support, application-consistent, backup, hyper-v, virtual, machine, vm, smb, target 
+summary: Microsoft增強了VSS基礎架構、使用在SMB目標上執行的全新遠端VSS硬體供應商、支援在SMB 3.0共用區上執行Hyper-V虛擬機器（VM）的應用程式一致備份。 
+---
+= 在Windows Server 2012中支援Hyper-V VM的SMB 3.0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Microsoft增強了VSS基礎架構、使用在SMB目標上執行的全新遠端VSS硬體供應商、支援在SMB 3.0共用區上執行Hyper-V虛擬機器（VM）的應用程式一致備份。
+
+Windows 2012 Hypervisor中有一家名為SMB檔案共用供應商的新供應商、可支援及協調在SMB 3.0共用區上執行的Hyper-V VM備份。
+
+當VSS申請人SnapManager （適用於Hyper-V的支援）將包含Hyper-V VM的SMB 3.0共用新增至VSS Snapshot集時、VSS會叫用新的SMB檔案共用複製提供者、將MSRPC命令傳送至SMB目標、以協調VSS備份。
+
+在SMB目標上執行的新檔案共用陰影複製代理程式（遠端VSS Provider）負責建立實際的硬體Snapshot複本。
+
+供應檔案共用陰影複製代理程式（遠端VSS硬體供應商）、以執行應用程式一致的SMB共用備份複本。Data ONTAP

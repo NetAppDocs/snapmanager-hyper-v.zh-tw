@@ -1,0 +1,31 @@
+---
+permalink: concept-cluster-shared-volume-2-0-architecture.html 
+sidebar: sidebar 
+keywords: windows, server, cluster, shared, volume, csv, backup 
+summary: Windows Server 2012及更新版本提供叢集共用Volume（CSV）2.0的新功能、包括新的檔案系統、CSV寫入器的變更、CSV陰影複製的變更、以及CSV備份的增強功能。 
+---
+= Windows Server 2012及更新版本中的CSV 2.0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Windows Server 2012及更新版本提供叢集共用Volume（CSV）2.0的新功能、包括新的檔案系統、CSV寫入器的變更、CSV陰影複製的變更、以及CSV備份的增強功能。
+
+Windows Server 2012及更新版本包含下列CSV 2.0變更：
+
+* CSV檔案系統（CSVFS）可作為新的分散式檔案系統、在叢集中的所有節點上使用。
+* CSV寫入器可為CSV磁碟區提供非要求節點的磁碟區和元件層級中繼資料、並可將遠端節點的Hyper-V寫入器納入備份工作階段、作為Proxy使用。
+* CSV陰影複製提供者是CSV磁碟區的預設軟體提供者、可協調所有叢集節點的VSS凍結和VSS thaw、以提供應用程式和當機一致性。
++
+CSV陰影複製提供者可確保CSV Snapshot磁碟區可在要求的節點上寫入。
+
+* CSV現在可在多部虛擬機器的所有CSV中、支援一個應用程式一致的Snapshot Volume。
++
+Snapshot磁碟區的CSV磁碟區會公開給所有虛擬機器擁有者節點、以執行自動恢復。
+
++
+CSV只會在建立Snapshot期間進入重新導向I/O模式、而不會在備份期間進入。
+
+

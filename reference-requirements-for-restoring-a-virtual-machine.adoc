@@ -1,0 +1,71 @@
+---
+permalink: reference-requirements-for-restoring-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: restore, virtual, machine, backup, copy, requirement 
+summary: 若要從備份複本還原虛擬機器、您必須先決定要如何還原備份複本。 
+---
+= 還原虛擬機器的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要從備份複本還原虛擬機器、您必須先決定要如何還原備份複本。
+
+
+
+== VM備份複本名稱
+
+您必須決定要還原的備份複本。
+
+所有備份複本都會在「恢復管理」視窗的「備份」窗格中依名稱列出。
+
+
+
+== VM備份複本類型
+
+從應用程式一致的備份還原VM、是與VSS協調進行。Hyper-V VSS寫入器會在還原作業完成後、先刪除VM、再將VM還原並登錄至Hyper-V Manager。
+
+從損毀一致的備份還原VM並不涉及VSS。VM會在還原作業之前關閉。當您從損毀一致的備份還原時、VM必須存在；從損毀一致的備份還原刪除的VM將會失敗。
+
+
+
+== VM備份複本狀態
+
+您必須判斷虛擬機器是否仍存在。
+
+如果虛擬機器不再存在、您仍可在虛擬機器所在的LUN仍存在時還原虛擬機器。LUN的磁碟機代號和Windows Volume GUI必須與備份時相同。
+
+如果您在Windows Server 2008 R2中刪除虛擬機器、可以從應用程式一致的備份還原虛擬機器、但在Windows Server 2012和Windows Server 2012 R2中、您可以從損毀與應用程式一致的備份中還原刪除的虛擬機器。
+
+如果虛擬機器在刪除之前已從所有資料集中移除、您仍可選取「未受保護的資源」並選取所屬的備份來還原。
+
+
+
+== VM備份複本組態狀態
+
+您必須判斷虛擬機器組態是否與備份時相同。
+
+如果目前的虛擬機器組態與備份時不同、SnapManager 則適用於Hyper-V的功能會通知您虛擬機器配置已變更、並詢問您是否要還原備份中的虛擬機器組態和資料。
+
+
+NOTE: 由於適用於Hyper-V的不備份虛擬機器的叢集組態、因此無法還原叢集組態。SnapManager如果虛擬機器和叢集組態遺失、您可以從SnapManager 適用於Hyper-V的物件還原虛擬機器、但必須手動將其設為高可用度。
+
+如果虛擬機器的設定與備份中虛擬機器的目前組態不同、您可能需要更新叢集組態、以反映任何新增或移除的虛擬硬碟（VHD）。
+
+
+
+== Snapshot複製狀態
+
+您可以在嘗試還原作業之前、先確認儲存系統上是否存在備份Snapshot複本。
+
+
+
+== VM重新啟動
+
+您可以選擇在虛擬機器還原後啟動。
+
+*相關資訊*
+
+http://technet.microsoft.com/library/ff182338(v=WS.10).aspx["Microsoft TechNet：Windows Server 2008 R2中的容錯移轉叢集"]

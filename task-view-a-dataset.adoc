@@ -1,0 +1,20 @@
+---
+permalink: task-view-a-dataset.html 
+sidebar: sidebar 
+keywords: view, virtual, machine, associate, dataset 
+summary: 您可以檢視與資料集相關聯的虛擬機器。 
+---
+= 檢視資料集
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以檢視與資料集相關聯的虛擬機器。
+
+.步驟
+. 在導覽窗格中、按一下功能表：Protection（資料集）。
+. 展開樹狀檢視、查看屬於資料集的虛擬機器。
+

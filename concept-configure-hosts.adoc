@@ -1,0 +1,14 @@
+---
+permalink: concept-configure-hosts.html 
+sidebar: sidebar 
+keywords: add, view, remove, hyper-v, parent, host, cluster, snapmanager, configuring, configure 
+summary: 您可以使用SnapManager 適用於Hyper-V的功能、來新增、檢視及移除Hyper-V父主機或叢集 
+---
+= 設定主機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用SnapManager 適用於Hyper-V的功能、來新增、檢視及移除Hyper-V父主機或叢集

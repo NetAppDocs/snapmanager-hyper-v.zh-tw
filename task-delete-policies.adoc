@@ -1,0 +1,25 @@
+---
+permalink: task-delete-policies.html 
+sidebar: sidebar 
+keywords: delete, policy, policies, deleting, dataset 
+summary: 您可以在不再需要原則時、從資料集刪除原則。 
+---
+= 刪除原則
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在不再需要原則時、從資料集刪除原則。
+
+.步驟
+. 在導覽窗格中、按一下功能表：Protection（資料集）。
+. 選取包含您要刪除之原則的資料集。
+. 從「原則」窗格中、選取您要刪除的特定原則。
+. 在「動作」窗格中、按一下「*移除*」、然後按一下「*確定*」刪除原則。
++
+刪除原則也會從資料集成員的所有主機中刪除排程工作。
+
+

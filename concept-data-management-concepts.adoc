@@ -1,0 +1,80 @@
+---
+permalink: concept-data-management-concepts.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dataset, policies, policy, enable, group, virtual, machine, apply, rule, retention, data, management, concept 
+summary: 適用於Hyper-V的支援使用資料集和原則、可讓您將虛擬機器分組、然後將規則套用至這些群組、以管理其行為。SnapManager 
+---
+= 資料管理概念
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+適用於Hyper-V的支援使用資料集和原則、可讓您將虛擬機器分組、然後將規則套用至這些群組、以管理其行為。SnapManager此資訊在您使用SnapManager 支援Hyper-V的功能來排程備份、以及指定備份的保留原則的情況下非常實用。
+
+* *資料集*
++
+資料集是一組虛擬機器（VM）、可讓您使用保留、排程及複寫原則來保護資料。您可以使用資料集將具有相同保護需求的虛擬機器分組。VM可以是多個資料集的一部分。
+
+* * Hyper-V父主機*
++
+Hyper-V父主機是啟用Hyper-V角色的實體伺服器。包含虛擬機器的主機會新增SnapManager 至適用於Hyper-V的VMware主機、以提供保護與還原。Hyper-V版的支援必須安裝並在每個Hyper-V父主機上執行。SnapManager
+
+* *未受保護的資源*
++
+未受保護的資源是不屬於任何資料集的虛擬機器。您可以將這些資源新增至資料集、以保護這些資源。
+
+* *虛擬機器*
++
+在Hyper-V父主機上執行的虛擬機器代表實體機器、並擁有自己的作業系統、應用程式和硬體。
+
++
+適用於Hyper-V的支援會追蹤虛擬機器的全域唯一識別碼（即Guid）、而非虛擬機器名稱。SnapManager如果您刪除以SnapManager 適用於Hyper-V的功能受到保護的虛擬機器、然後建立名稱相同的不同虛擬機器、新的虛擬機器就不會受到保護、因為它有不同的GUID。
+
+* *管理主控台*
++
+管理主控台是SnapManager 指以用戶端形式安裝及執行適用於Hyper-V的電腦。您可以使用管理主控台、在SnapManager 遠端Hyper-V父主機上遠端管理支援Hyper-V作業的功能。
+
+* *排程原則*
++
+排程原則會指派特定時間的備份工作、讓您能夠自動化排程程序。您可以新增多個排程原則、這些原則適用於資料集成員的所有虛擬機器。適用於Hyper-V的解決方法是使用Windows排程器來建立排程工作。SnapManager
+
+* *保留政策*
++
+保留政策是您在SnapManager 《適用於Hyper-V的資料集備份保留管理方法」中管理資料集備份保留的方法保留原則會根據備份複本的時間或數量、決定保留資料集備份的時間長度。
+
++
+您在保留原則中設定的限制、可確保資料備份不會影響未來的儲存容量。
+
++
+您可以在SnapManager 《針對Hyper-V的下列保留期間：
+
++
+** 一小時
+** 一天
+** 一週
+** 一個月
+** 無限
+
+
+
+
+
+NOTE: 您可以針對每個資料集指定一次保留期間。
+
+選擇刪除資料集備份的頻率之後、您可以選擇刪除超過指定時間段的備份、或是刪除超過最大總計的備份。
+
+如果您的系統似乎保留舊備份、請檢查您的保留政策。共享Snapshot複本的所有備份物件都必須符合備份刪除條件、保留原則才能觸發移除Snapshot複本。
+
+* *複寫原則*
++
+複寫原則可決定SnapMirror目的地是否在成功備份作業之後更新。適用於Hyper-V的僅支援Volume型SnapMirror。SnapManager在嘗試執行SnapMirror更新之前、您必須在兩個儲存系統上設定SnapMirror關係。來源和目的地都需要這項功能。
+
+
+
+*相關資訊*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368826["適用於7-Mode的《Data Protection Online Backup and Recovery Guide》（英文）Data ONTAP"]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp文件：SnapDrive 適用於Windows（目前版本）"]

@@ -1,0 +1,28 @@
+---
+permalink: task-delete-a-dataset.html 
+sidebar: sidebar 
+keywords: delete, dataset, protection, change, deleting 
+summary: 您可以在保護需求變更時刪除資料集。 
+---
+= 刪除資料集
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在保護需求變更時刪除資料集。
+
+刪除資料集並不會刪除屬於該資料集的虛擬機器。刪除資料集之後、如果所屬的虛擬機器不屬於其他資料集、則其將會變成無保護狀態。
+
+.步驟
+. 在導覽窗格中、按一下功能表：Protection（資料集）。
+. 選取您要刪除的資料集。
+. 在「動作」窗格中、按一下*刪除*、然後按一下*確定*以刪除資料集。
++
+刪除資料集也會從資料集成員的所有主機中刪除排程工作。當您刪除資料集時、即使重新建立同名的資料集、也無法再管理保留備份。SnapManager
+
+
+
+適用於Hyper-V的不再保護與刪除資料集相關的資源、除非這些資源屬於其他資料集。SnapManager

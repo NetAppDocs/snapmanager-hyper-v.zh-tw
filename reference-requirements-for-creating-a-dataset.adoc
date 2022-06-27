@@ -1,0 +1,52 @@
+---
+permalink: reference-requirements-for-creating-a-dataset.html 
+sidebar: sidebar 
+keywords: specific, requirement, create, dataset, protect, data, host, cluster, snapmanager, hyper-v 
+summary: 當您想要建立資料集以保護資料時、必須符合特定要求。 
+---
+= 建立資料集的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+當您想要建立資料集以保護資料時、必須符合特定要求。您必須先將主機或主機叢集新增SnapManager 至適用於Hyper-V的支援、然後將虛擬機器新增至主機或主機叢集。
+
+
+
+== 資料集名稱與說明
+
+命名資料集時、您應該在站台上使用命名慣例、以協助系統管理員找到及識別資料集、限制為下列字元：
+
+* a到z
+* 從A到Z
+* 0至9
+* _（底線）
+* -（連字號）
+
+
+
+
+== 資料集資源
+
+在SnapManager 將虛擬機器等資源新增至資料集之前、您必須先將主機或主機叢集新增至適用於Hyper-V的功能。
+
+您可以將主機、專用虛擬機器或共享虛擬機器新增至資料集。如果新增主機、則會新增屬於主機的所有虛擬機器。您也可以將屬於不同主機的虛擬機器新增至資料集。虛擬機器可以屬於多個資料集。
+
+
+NOTE: 屬於同一個主機叢集的專用和共用虛擬機器、不應存在於同一個資料集中。將這些類型的資源新增至單一資料集可能會導致資料集備份失敗。
+
+
+
+== 虛擬機器和ONTAP LUN
+
+所有與虛擬機器相關的檔案、包括組態檔、Snapshot複本和VHD、都必須位於ONTAP VMware LUN上。
+
+
+
+== 資料集資源使用量
+
+在任何指定時間、主機上只能執行一項應用程式一致的備份作業。如果相同的虛擬機器屬於不同的資料集、則不應同時排程應用程式一致的資料集備份。如果發生這種情況、其中一個備份作業就會失敗。
+
+建立資料集時、您應該選取位於特定ONTAP 的VMware LUN上的所有虛擬機器。如此一來、您就能在單一Snapshot複本中取得所有備份、並減少儲存系統的空間使用量。

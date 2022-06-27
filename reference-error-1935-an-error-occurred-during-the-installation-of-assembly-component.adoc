@@ -1,0 +1,25 @@
+---
+permalink: reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html 
+sidebar: sidebar 
+keywords: error, 1935, occur, installation, assembly, component 
+summary: 錯誤1935 
+---
+= 錯誤1935。安裝組合件零組件時發生錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *訊息*
++
+「錯誤1935。安裝組件元件時發生錯誤：\｛2A030FEB-29B5-314B-97B5-ED38673CC885｝。HRESULT：80070BC9
+
+* *說明*
++
+當安裝或解除安裝Microsoft即時修復程式後、Hyper-V系統未重新啟動、導致無法執行Hyper-V安裝程式時、就會出現此訊息SnapManager 。
+
+* *修正行動*
++
+重新啟動電腦、SnapManager 然後再次執行適用於Hyper-V安裝程式的功能。
+
+

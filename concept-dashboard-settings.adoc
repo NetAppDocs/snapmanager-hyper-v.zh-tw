@@ -1,0 +1,45 @@
+---
+permalink: concept-dashboard-settings.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dashboard, overview, resource, protect, job, resource, history, setting 
+summary: 適用於Hyper-V的支援功能儀表板會顯示目前受到保護的資源總覽、SnapManager 以及未受保護的資源總覽。您可以在VM Protection Status（VM保護狀態）圓形圖或工作歷史記錄長條圖中選取不同的區段、以檢視工作、資源和歷史記錄狀態的一般資訊。 
+---
+= 儀表板設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+適用於Hyper-V的支援功能儀表板會顯示目前受到保護的資源總覽、SnapManager 以及未受保護的資源總覽。您可以在VM Protection Status（VM保護狀態）圓形圖或工作歷史記錄長條圖中選取不同的區段、以檢視工作、資源和歷史記錄狀態的一般資訊。
+
+image::smhv_dashboard.gif[Smhv儀表板]
+
+* * VM保護狀態*
++
+當您在VM Protection Status（VM保護狀態）圓形圖中選取區段時、可以在Details（詳細資料）窗格中檢視有關虛擬機器保護狀態的資訊。有效值的說明如下：
+
++
+** *確定*
++
+顯示所有虛擬機器的最新成功備份。
+
+** *失敗*
++
+顯示每個虛擬機器最近發生的故障備份。
+
+** *無保護*
++
+顯示不屬於任何資料集的虛擬機器、因此不受保護。
+
+
+
+* *工作歷史*
++
+在「工作歷程記錄」長條圖中選取區段時、您可以在「詳細資料」窗格中、檢視指定期間內已完成、失敗及執行工作的歷程記錄。您可以變更工作詳細資料在「工作歷程」長條圖中顯示的時間長度。預設值為七天。
+
+* *設定重新整理*
++
+您可以使用*組態重新整理*按鈕來變更儀表板重新整理顯示資訊的頻率。預設值為10分鐘。
+
+

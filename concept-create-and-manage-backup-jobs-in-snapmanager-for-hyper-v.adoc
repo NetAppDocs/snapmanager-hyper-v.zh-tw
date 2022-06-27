@@ -1,0 +1,54 @@
+---
+permalink: concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: create, monitor, on-demand, backup, manage, schedule, snapmanager, hyper-v, creating, managing, application, crash 
+summary: 您可以在SnapManager 適用於Hyper-V的功能表中、建立及監控隨需備份或管理排程備份 
+---
+= 在SnapManager 支援Hyper-V的支援環境中建立及管理備份工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在SnapManager 適用於Hyper-V的功能表中、建立及監控隨需備份或管理排程備份您也可以使用SnapManager 適用於Hyper-V的解決方法來執行兩種備份工作：應用程式一致且損毀一致。
+
+
+
+== 關於SnapManager 適用於Hyper-V備份的
+
+您可以建立隨需備份工作、並在需要時執行、也可以使用資料集附加的原則來建立排程的備份工作。隨需備份工作可包括保留與複寫原則、以及備份前後執行的指令碼。您可以建立、修改、檢視及刪除排程備份工作的原則。
+
+
+
+== Hyper-V的備份工作SnapManager 類型可以執行
+
+您可以使用SnapManager 適用於Hyper-V的支援功能執行兩種備份工作：應用程式一致且損毀一致。
+
+
+
+== 應用程式一致的備份工作
+
+應用程式一致的備份工作需要徹底、可靠且資源密集。它們是與Microsoft Volume陰影複製服務（VSS）協調執行、以確保在建立Snapshot複本之前、VM上執行的每個應用程式都會靜止不動。此備份方法可確保應用程式資料一致性。您可以使用它來還原VM及其上執行的應用程式。然而、應用程式一致的備份工作相當耗時、而且可能相當複雜。
+
+
+
+== 損毀一致的備份工作
+
+損毀一致的備份工作是資料集所涉及之VM所使用之所有LUN的快速Snapshot複本。產生的備份複本類似於當機或突然關機的VM資料擷取。當機一致的備份工作提供了一種快速的資料擷取方法、但VM必須存在、才能從損毀一致的備份中還原。當機一致的備份工作並非用來取代應用程式一致的備份工作。
+
+
+
+== 適用於Hyper-V備份需求與限制SnapManager
+
+您應該瞭解SnapManager 到適用於Hyper-V備份的功能需求與限制：
+
+* 如果您在MetroCluster 某個支援組態上執行切換或切換作業、則不支援備份與還原作業。如果備份與還原作業以及切換或切換作業同時執行、則Windows Server 2012 R2系統中VM的「.vhd」檔案格式可能會變更為「.avhdx」。VM不受此變更影響。
+* 「分佈式應用程式一致的備份」選項可讓在合作夥伴叢集節點上執行的多個VM在從備份節點建立的單一硬體Snapshot複本中保持一致。此選項支援在CSV 2.0 Windows磁碟區上執行的所有VM、橫跨Windows容錯移轉叢集中的多個節點。
+* 在7-Mode中操作時、應用程式一致的備份工作會使用VSS硬體供應商來製作兩個Snapshot複本。Snapshot複本稱為「快照名稱」和「快照名稱備份」。這兩個Snapshot複本可在VSS備份期間進行自動還原。
+* 在叢集式環境中、應用程式一致的備份只需要一個Snapshot複本、即可進行自動還原程序。SIS複本可用於執行自動還原、自動還原完成後、第一個Snapshot複本（「快照名稱」）即會刪除。
+* VM中的每個Windows磁碟區必須至少有300 MB的可用磁碟空間。這包括對應至VHD、iSCSI LUN的Windows磁碟區、以及連接至VM的傳遞磁碟。
+* 當機一致的備份工作一律只會建立一個Snapshot複本。它不提供VSS整合。
+* 多個損毀一致的備份工作可以並行執行。當機一致的備份工作可與應用程式一致的備份工作同時執行。
+* 「允許儲存的狀態備份」不適用於損毀一致的備份工作。
+

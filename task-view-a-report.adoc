@@ -1,0 +1,43 @@
+---
+permalink: task-view-a-report.html 
+sidebar: sidebar 
+keywords: view, report, dataset, virtual, machine, resource, manage, snapmanager, hyper-v 
+summary: 您可以檢視SnapManager 有關在《針對Hyper-V的》中管理的資料集或虛擬機器資源的報告 
+---
+= 檢視資料集報告
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以檢視SnapManager 有關在《針對Hyper-V的》中管理的資料集或虛擬機器資源的報告
+
+.步驟
+. 在導覽窗格中、按一下功能表：Reports[資料集]。
+. 選取包含您要檢視之報告的資料集或虛擬機器。
+. 在「報告」窗格中、按一下「備份」索引標籤或「恢復」索引標籤。
+. 選取您要檢視的報告、然後按一下*檢視報告*。
++
+|===
+| 如果您想要檢視... | 然後... 
+
+
+ a| 
+*資料集報告*
+ a| 
+您可以檢視備份報告。
+
+
+
+ a| 
+*虛擬機器報告*
+ a| 
+您可以檢視備份或還原報告。
+
+|===
++
+報告會出現在另一個視窗中。
+
+

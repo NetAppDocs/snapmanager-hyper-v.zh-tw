@@ -1,0 +1,31 @@
+---
+permalink: reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html 
+sidebar: sidebar 
+keywords: backup, fail, remove, virtual, machine, hyper-v, manager 
+summary: 從Hyper-V Manager移除虛擬機器後、備份失敗。 
+---
+= 從Hyper-V Manager移除虛擬機器後、備份失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+從Hyper-V Manager移除Hyper-V虛擬機器（VM）之後、如果不更新與VM相關的資料集、備份作業將會失敗。
+
+* *原因*
++
+當您從Hyper-V Manager移除Hyper-V VM並嘗試備份而不修改資料集時、就會發生此問題。此外、如果您重新建立VM、則必須修改資料集。針對Hyper-V、根據VM ID（Guid）建立資料集。SnapManager刪除、移除或重新建立VM時、備份會失敗、進而建立新的GUID。雖然這並不會觸發整個備份程序的失敗、但如果刪除VM、然後以相同名稱重新建立、SnapManager 則不會自動受到適用於Hyper-V的功能保護
+
+* *修正行動*
++
+從VM的資料集清單中移除VM、然後將任何重新建立的VM新增至資料集。
+
+
+
+*相關資訊*
+
+xref:concept-configure-datasets.adoc[設定資料集]
+
+xref:task-modify-a-dataset.adoc[修改資料集]

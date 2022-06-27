@@ -1,0 +1,22 @@
+---
+permalink: concept-restore-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, restore, virtual, machine, vm, cluster, restoring, backup, copy 
+summary: 您可以使用SnapManager 支援Hyper-V的支援功能、從備份複本還原虛擬機器（VM）。您也可以還原屬於叢集一部分的VM。適用於Hyper-V的解決方法是決定叢集中要還原VM的適當節點。SnapManager 
+---
+= 從備份複本還原虛擬機器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用SnapManager 支援Hyper-V的支援功能、從備份複本還原虛擬機器（VM）。您也可以還原屬於叢集一部分的VM。適用於Hyper-V的解決方法是決定叢集中要還原VM的適當節點。SnapManager
+
+若要還原VM、SnapManager 適用於Hyper-V的解決方法使用SnapDrive 適用於Windows的解決方法、以還原檔案層級的還原功能。您可以將VM的相關檔案（包括組態檔、Snapshot複本和任何VHD）散佈在多ONTAP 個支援重的LUN上。LUN可以包含屬於多個VM的檔案。
+
+如果LUN僅包含與您要還原的VM相關聯的檔案、SnapManager 則使用LCSR（LUN實體複製分割還原）、即可針對Hyper-V還原LUN。如果LUN包含與您要還原的虛擬機器無關的其他檔案、SnapManager 則使用檔案複製還原作業來還原虛擬機器。
+
+*相關資訊*
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp文件：SnapDrive 適用於Windows（目前版本）"]

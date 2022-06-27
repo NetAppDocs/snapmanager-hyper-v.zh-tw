@@ -1,0 +1,25 @@
+---
+permalink: reference-msi-custom-property-used-in-silent-installation.html 
+sidebar: sidebar 
+keywords: msi, custom, property, silent, installation 
+summary: 用於無聲安裝的MSI自訂屬性。 
+---
+= 用於無聲安裝的MSI自訂屬性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+執行Windows Server 2008或Windows Installer 4.5版的系統無法辨識SnapManager 出適用於Hyper-V安裝的內建功能。
+
+* *修正行動*
++
+安裝時使用「SIRESTARTMANDERCONTROL=停 用」命令切換參數。
+
+
+
+*相關資訊*
+
+http://msdn.microsoft.com/library/["Microsoft開發人員網路（英文）程式庫"]

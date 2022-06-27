@@ -1,0 +1,38 @@
+---
+permalink: reference-hotfix-requirements-for-windows-server-environments.html 
+sidebar: sidebar 
+keywords: manual, install, hotfixes, microsoft, windows, server, operate, operating, system, environment 
+summary: 您必須手動將修補程式安裝到Microsoft Windows Server作業系統環境。 
+---
+= Windows Server環境的修補程式需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必須手動將修補程式安裝到Microsoft Windows Server作業系統環境。
+
+
+NOTE: 如需Windows Server 2016和Windows Server 2019需求、請參閱 https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-on-windows-server["Windows Server上的Hyper-V"^]
+
+Windows Server 2012需要下列修補程式：
+
+* http://support.microsoft.com/kb/2770917["2770917"]
+* http://support.microsoft.com/kb/2779768["2779768"]
+
+
+對於Windows Server 2008 R2、需要下列修補程式：
+
+* http://support.microsoft.com/kb/974909["974909"]
+* http://support.microsoft.com/kb/975354["KB375354"]
+* http://support.microsoft.com/kb/2637197["2637197"]
+
+
+對於Windows Server 2008 R2 SP1、需要下列修補程式：
+
+* http://support.microsoft.com/kb/2263829["KB2263829"]
+* http://support.microsoft.com/kb/2637197["2637197"]
+
+
+這些是最小的修補程式層級。

@@ -1,0 +1,90 @@
+---
+permalink: reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html 
+sidebar: sidebar 
+keywords: configuration, information, available, parent, host, cluster, snapmanager, hyper-v 
+summary: 在將父主機或主機叢集新增SnapManager 至適用於Hyper-V的支援之前、您必須擁有所有必要的組態資訊 
+---
+= 新增Hyper-V父主機或主機叢集的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在將父主機或主機叢集新增SnapManager 至適用於Hyper-V的支援之前、您必須擁有所有必要的組態資訊
+
+
+
+== 適用於Hyper-V安裝SnapManager
+
+Hyper-V版的支援必須安裝在您要新增的Hyper-V主機上。SnapManager
+
+如果SnapManager 您未安裝適用於Hyper-V的功能、系統會提示您執行遠端主機安裝精靈。Hyper-V版本的相同功能必須安裝在每個叢集節點上。SnapManager
+
+
+
+== 組態設定
+
+您要新增的Hyper-V父主機必須設定SnapManager 成適用於Hyper-V的
+
+如果SnapInfo設定、報告目錄設定和通知設定未設定SnapManager 為適用於Hyper-V的功能、您可以在新增主機之後、使用組態精靈進行設定。
+
+一開始、「*管理儲存連線*」索引標籤為空白。您可以從*管理儲存連線*索引標籤新增儲存連線、但SnapDrive 從Windows（SDW）傳輸傳輸傳輸協定設定（TPS）可看到新增的連線。
+
+您必須設定備份儲存庫和報告目錄設定、才能使用SnapManager 支援Hyper-V的功能來新增和管理虛擬機器通知設定為選用項目。
+
+
+
+== 虛擬機器和ONTAP LUN
+
+所有與虛擬機器相關的檔案、包括組態檔、Snapshot複製檔案位置和VHD、都必須位於ONTAP VMware LUN上。
+
+這是執行成功備份所必需的。
+
+
+NOTE: 如果您在建立虛擬機器後、將虛擬機器的Snapshot檔案位置變更ONTAP 為不同的版本LUN、則在使用SnapManager 適用於Hyper-V的NetApp進行備份之前、應使用Hyper-V Manager建立至少一個虛擬機器的Snapshot複本如果您變更Snapshot複本檔案位置、但在進行備份之前未建立虛擬機器Snapshot複本、則備份作業可能會失敗。
+
+
+
+== 專用和叢集式虛擬機器
+
+您的虛擬機器可以是專屬的、也可以是叢集的一部分。
+
+如果您新增單一主機、SnapManager 適用於Hyper-V的VMware可管理該主機上的專屬虛擬機器。如果您新增主機叢集、SnapManager 適用於Hyper-V的功能可管理主機叢集上的共享虛擬機器。位於SAN和NAS上且屬於同一個主機叢集的虛擬機器、不應存在於同一個資料集中。將這些類型的資源新增至單一資料集可能會導致資料集備份失敗。
+
+對於應用程式一致的備份、當虛擬機器在叢集的不同節點上執行時、叢集式虛擬機器的資料集備份需要較長的時間才能完成。當虛擬機器在不同節點上執行時、叢集中的每個節點都需要個別的備份作業。如果所有虛擬機器都在同一個節點上執行、則只需執行一次備份作業、即可加快備份速度。
+
+
+
+== 虛擬機器數量
+
+如果您的Hyper-V主機或主機叢集擁有超過1、000部虛擬機器、您必須在Hyper-V Cache Manager的「napMgrServiceHost.exe.config」檔案中、增加「Scavenging之前快取中的元素」屬性的最大值。此值應大於或等於在獨立主機或叢集上執行的Hyper-V主機數量。此值應在叢集的每個節點上變更、SnapManager 變更此值後、必須重新啟動適用於Hyper-V的功能。您必須使用文字編輯器手動編輯「napMgrServiceHost.exe.config」檔案。
+
+[listing]
+----
+<cacheManagers>
+…
+      <add name="HyperV Cache Manager"
+                        type="Microsoft.Practices.EnterpriseLibrary.Caching.CacheManager,
+                           Microsoft.Practices.EnterpriseLibrary.Caching"
+                        expirationPollFrequencyInSeconds="60"
+                        maximumElementsInCacheBeforeScavenging="1200"
+                        numberToRemoveWhenScavenging="10"
+                        backingStoreName="inMemory" />
+…
+</cacheManagers>
+----
+
+
+== 適用於Hyper-V服務帳戶需求SnapManager
+
+使用SnapManager 支援Hyper-V的支援功能來管理Hyper-V主機叢集時、SnapManager 適用於Hyper-V和SnapDrive Windows的支援功能帳戶必須是具有伺服器本機系統管理員權限的網域使用者帳戶。
+
+適用於Hyper-V應用程式一致的備份作業、可在執行虛擬機器的叢集節點上執行。SnapManager如果虛擬機器所使用的叢集共用磁碟區（CSV）並非由同一個節點擁有、則SnapManager 當針對Hyper-V服務使用本機系統帳戶（即使帳戶具有系統管理員權限）時、虛擬機器備份可能會失敗。在這種情況SnapManager 下、針對Hyper-V的支援無法偵測到虛擬機器檔案位於CSV上、導致備份失敗。
+
+
+NOTE: 對於遠端Volume陰影複製服務（VSS）作業、若虛擬機器儲存在叢集Data ONTAP 式VMware 3.0持續可用度（CA）共享區上、則可正常運作、 您必須授予SnapDrive 對Windows服務帳戶的共享區的完整控制權、以及SnapManager 對Hyper-V Web服務帳戶的最低讀取層級存取權限。
+
+*相關資訊*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet：Hyper-V"]

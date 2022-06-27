@@ -1,0 +1,14 @@
+---
+permalink: concept-uninstall-snapmanager-for-hyper-v-on-windows.html 
+sidebar: sidebar 
+keywords: uninstall, snapmanager, hyper-v, windows, host, software, uninstallation, program, interactive 
+summary: 當您不再需要此軟體時、可以從SnapManager Windows主機上解除安裝適用於Hyper-V的支援功能。您必須以互動方式執行解除安裝程式。 
+---
+= 在SnapManager Windows上解除安裝適用於Hyper-V的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+當您不再需要此軟體時、可以從SnapManager Windows主機上解除安裝適用於Hyper-V的支援功能。您必須以互動方式執行解除安裝程式。

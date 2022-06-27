@@ -1,0 +1,56 @@
+---
+permalink: task-change-the-snapinfo-directory-path.html 
+sidebar: sidebar 
+keywords: control, snapinfo, directory, path, setting, configuration, wizard, action, changing, change 
+summary: 您可以使用組態精靈或SnapInfo設定動作來控制SnapInfo目錄路徑設定。 
+---
+= 變更SnapInfo目錄路徑
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用組態精靈或* SnapInfo設定*動作來控制SnapInfo目錄路徑設定。
+
+SnapInfo目錄設定是在SnapManager 支援Hyper-V的主機層級上指定適用於Hyper-V的支援NAS（SMB）主機和SAN主機。SnapManager對於SAN主機、SnapInfo設定會套用至磁碟區層級；對於NAS主機、SnapInfo設定會套用至SMB共用層級。
+
+如果您已將儲存系統的IP位址新增SnapDrive 至Windows TPS的版本、SnapDrive 則當您執行SnapManager 適用於Hyper-V的組態精靈時、會自動填入來自Windows的儲存設定如果SnapDrive 您尚未設定適用於Windows TPS的功能、則必須在SnapManager 適用於Hyper-V的「管理儲存連線」索引標籤中、指定儲存系統的IP位址
+
+.步驟
+. 在導覽窗格中、按一下功能表：Protection [host]（保護[主機]）。
+. 選取您要變更SnapInfo目錄路徑的主機。
+. 從「*動作*」窗格中、選取* SnapInfo設定*。
++
+此時將打開* SnapInfo Settings*（SnapInfo設置*）對話框。
+
+. 從顯示的選項中選取儲存類型：
++
+|===
+| 選項 | 說明 
+
+
+ a| 
+SAN
+ a| 
+這是預設的儲存類型。
+
+
+
+ a| 
+NAS
+ a| 
+此選項適用於SMB共用區。
+
+|===
+. 按一下*瀏覽*。
++
+「瀏覽資料夾」視窗隨即開啟。
+
+. 選取SnapInfo儲存系統（SAN）或Volume（NAS）、然後按一下「* OK（確定）*」。
++
+顯示的主機為NAS共享區、對應於已在主機層級使用「管理儲存連線」選項登錄的儲存系統。如果您沒有看到您要尋找的共享區、請確定「管理儲存連線」已正確設定。
+
+. 在* SnapInfo Settings*視窗中、按一下*確定*。
+

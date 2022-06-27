@@ -1,0 +1,54 @@
+---
+permalink: reference-hyper-v-parent-host-requirements.html 
+sidebar: sidebar 
+keywords: hyper-v, parent, host, physical, server, enable, contain, virtual, machine, snapmanager, requirement 
+summary: Hyper-V父主機是啟用Hyper-V角色的實體伺服器。 
+---
+= Hyper-V父主機需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hyper-V父主機是啟用Hyper-V角色的實體伺服器。包含虛擬機器的主機伺服器會新增SnapManager 至適用於Hyper-V的支援與恢復功能。若要安裝並執行SnapManager 所有的支援Hyper-V軟體元件的功能、您必須確保Hyper-V父主機符合最低作業系統和Hyper-V需求。
+
+* *支援的作業系統*
++
+適用於Hyper-V的支援可在下列作業系統上執行：SnapManager
+
++
+** Windows Server 2008 R2 SP1
+** Windows Server 2012 R2
+** Windows Server 2012
+** Windows Server 2016
+** Windows Server 2019
+
+
+* *支援的管理主控台作業系統*
++
+管理主控台必須執行下列作業系統：
+
++
+** Windows Server 2008 R2 SP1
+** Windows Server 2012 R2
+** Windows Server 2012
+** Windows Server 2016
+** Windows Server 2019
+
+
+* * Hyper-V需求*
++
+如需詳細資訊、請參閱Microsoft TechNet程式庫中的Hyper-V入門資訊。
+
+* *國際化支援*
++
+適用於Hyper-V的支援已在德文和日文作業系統上通過測試。SnapManager
+
+
+
+*相關資訊*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet：Hyper-V"]
+
+http://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]

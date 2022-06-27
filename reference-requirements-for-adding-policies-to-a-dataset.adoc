@@ -1,0 +1,113 @@
+---
+permalink: reference-requirements-for-adding-policies-to-a-dataset.html 
+sidebar: sidebar 
+keywords: specific, requirement, apply, policies, policy, backup, restore, function, multiple, retention, replication, dataset 
+summary: 當您想要將原則套用至資料集以進行備份或還原功能時、必須符合特定要求。您可以將多個保留、排程及複寫原則新增至同一個資料集。 
+---
+= 將原則新增至資料集的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+當您想要將原則套用至資料集以進行備份或還原功能時、必須符合特定要求。您可以將多個保留、排程及複寫原則新增至同一個資料集。
+
+
+
+== 原則名稱與說明
+
+原則名稱和說明、限制為下列字元：
+
+* a到z
+* 從A到Z
+* 0至9
+* _（底線）
+* -（連字號）
+
+
+
+
+== 備份保留限制
+
+您必須決定要保留每小時、每日、每週或每月備份複本的最短時間長度、才能刪除。
+
+
+NOTE: 保留類型為「無限」的備份不會刪除。
+
+您可以根據時間或指定的數字來保留備份。例如、您可以保留10個最新的備份、也可以刪除15天之前的備份。
+
+如果您的系統似乎保留舊備份、您應該檢查保留原則。共享Snapshot複本的所有備份物件、都必須符合保留原則的備份刪除條件、才能觸發移除Snapshot複本。
+
+
+
+== 排定的備份工作名稱
+
+您必須為排程的備份工作指派名稱。
+
+
+
+== 排程備份的權限
+
+您必須擁有適當的認證資料、才能排程資料集備份。
+
+
+
+== 同時排程備份的可能資料集數量
+
+如果相同的虛擬機器屬於不同的資料集、則不應同時排程包含相同VM的多個資料集的備份。發生這種情況時、其中一個備份作業會失敗。在任何指定時間、主機上只能執行一項備份作業。
+
+
+
+== 排程備份的類型
+
+您可以執行應用程式一致或損毀一致的備份。
+
+
+
+== 備份選項
+
+您必須選擇是否要在備份完成後更新SnapMirror目的地位置。
+
+只有在您已設定SnapMirror、且資料集中包含虛擬機器的LUN屬於來源SnapMirror Volume時、更新才會成功。
+
+如果一或多個虛擬機器無法在線上備份、則支援Hyper-V的預設行為SnapManager 是使備份失敗。如果虛擬機器處於儲存狀態或關機狀態、您就無法執行線上備份。在某些情況下、虛擬機器會處於儲存狀態或關機以進行維護、但即使無法進行線上備份、仍需繼續備份。為達成此目的、您可以使用允許儲存狀態備份的原則、將處於「已儲存」狀態的虛擬機器或關機移至不同的資料集。
+
+您也可以選取「允許儲存的狀態VM備份」核取方塊、讓SnapManager Hyper-V能夠在儲存狀態下備份虛擬機器。如果您選取此選項、SnapManager 則當Hyper-V VSS寫入器將虛擬機器備份至儲存狀態、或執行虛擬機器的離線備份時、適用於Hyper-V的功能不會失敗備份。執行儲存狀態或離線備份可能會導致停機。
+
+「已發佈的應用程式一致備份」功能可讓在合作夥伴叢集節點上執行的多個VM、在從備份節點建立的單一硬體Snapshot複本中保持一致。在CSV 2.0 Windows磁碟區上執行的所有VM、都能在Windows容錯移轉叢集中的多個節點上支援此功能。若要使用此功能、請選取「應用程式一致」備份類型、然後選取「*啟用分散式備份*」核取方塊。
+
+
+
+== SnapMirror備份中的二線儲存設備
+
+這些選項可讓您接受SnapMirror關係中定義的次要儲存設備適用的選項。您可以在此選擇*備份後更新SnapMirror *。在Vault標籤選項窗格下、您可以選擇*備SnapVault 份後更新支援*。如果您選擇*在SnapVault 備份後更新*、則必須從下拉式功能表中選擇一個資料保險箱標籤、或輸入自訂標籤。
+
+
+
+== 備份指令碼
+
+您必須決定是否要在備份之前或之後執行選用的備份指令碼。
+
+除非您指定特定的伺服器、否則這些指令碼會在所有資料集成員主機上執行。
+
+備份指令碼會在資料集中的每個節點上執行。您可以設定資料集原則、以指定要在其上執行指令碼的主機名稱。原則會在叢集中執行要備份之VM的每個節點上處理。
+
+image::smhv_policywizard_specified_host.gif[smhv policyWizard指定的主機]
+
+您可以在備份後置指令碼的引數中使用下列環境變數：
+
+* *$VMSnapshot *：指定此備份在儲存系統上建立的Snapshot複本名稱。當您在ONTAP 執行7-Mode的支援環境中執行應用程式一致的備份時、這是第二個（備份）Snapshot複本的名稱。名字與第二個名稱相同、但沒有備份尾碼。
+* *$SnapInfoName*：指定SnapInfo目錄名稱中使用的時間戳記。
+* *$SnapInfoSnapSnapshot *：指定在儲存系統上建立的SnapInfo Snapshot複本名稱。針對Hyper-V、在資料集備份作業結束時、會製作SnapInfo LUN的Snapshot複本。SnapManager
++
+
+NOTE: 僅專屬虛擬機器支援*$SnapInfoSnapSnapshot *變數。
+
+
+
+*相關資訊*
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet：Hyper-V"]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-buvault/home.html["《使用《不適用》指南的《》（英文）9 Volume Backup》ONTAP SnapVault"]

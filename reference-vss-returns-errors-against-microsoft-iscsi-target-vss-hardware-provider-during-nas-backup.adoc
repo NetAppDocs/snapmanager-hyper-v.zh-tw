@@ -1,0 +1,31 @@
+---
+permalink: reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html 
+sidebar: sidebar 
+keywords: vss, return, error, micorsoft, iscsi, target, hardware, provider, nas, backup 
+summary: VSS會在NAS備份期間針對Microsoft iSCSI Target VSS Hardware Provider傳回錯誤。 
+---
+= VSS會在NAS備份期間針對Microsoft iSCSI Target VSS Hardware Provider傳回錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+執行NAS備份時、可能會發生下列錯誤：
+
++
+「VSS申請人-備份元件失敗。無法將Volume [範例]新增至快照集。陰影複製提供者在嘗試處理指定的作業時發生非預期的錯誤
+
++
+「Volume陰影複製服務錯誤：使用CLSID[範例]建立陰影複製提供者COM類別時發生錯誤。存取遭拒
+
+* *原因*
++
+這些錯誤會在NAS應用程式一致的備份期間發生。NAS備份不會失敗、但VSS會記錄與Microsoft iSCSI Target VSS Hardware Provider相關的一些錯誤。
+
+* *修正行動*
++
+備份未失敗、您可以放心忽略這些錯誤。
+
+

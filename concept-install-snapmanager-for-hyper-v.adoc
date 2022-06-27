@@ -1,0 +1,14 @@
+---
+permalink: concept-install-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: install, snapmanager, hyper-v, practice, configure, environment, snapdrive 
+summary: 在安裝SnapManager 適用於Hyper-V的功能之前、最好先決定環境的設定方式、包括在SnapDrive 安裝SnapManager 適用於Hyper-V的功能之前、先在所有Hyper-V主機上安裝適用於Windows的功能 
+---
+= 安裝SnapManager 適用於Hyper-V的
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在安裝SnapManager 適用於Hyper-V的功能之前、最好先決定環境的設定方式、包括在SnapDrive 安裝SnapManager 適用於Hyper-V的功能之前、先在所有Hyper-V主機上安裝適用於Windows的功能

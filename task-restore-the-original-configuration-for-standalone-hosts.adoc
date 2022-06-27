@@ -1,0 +1,21 @@
+---
+permalink: task-restore-the-original-configuration-for-standalone-hosts.html 
+sidebar: sidebar 
+keywords: vm, backed, up, primary, storage, system, return, original, configuration, snapmirror, relationship, primary, secondary, restore, restoring 
+summary: 在主儲存系統上備份VM之後、您可以使用從主儲存系統建立至二線儲存系統的SnapMirror關係、返回原始組態。 
+---
+= 還原獨立主機的原始組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在主儲存系統上備份VM之後、您可以使用從主儲存系統建立至二線儲存系統的SnapMirror關係、返回原始組態。
+
+.步驟
+. 關閉在次要儲存系統上執行的VM。
+. 刪除在次要儲存系統上執行的VM。
+. 使用SnapDrive 支援功能中斷SnapInfo磁碟與包含VM的磁碟的連線。
+. 將SnapMirror關係從一線儲存系統重新同步至二線儲存系統。
+

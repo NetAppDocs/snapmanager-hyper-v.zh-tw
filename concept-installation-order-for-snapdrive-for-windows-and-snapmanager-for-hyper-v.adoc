@@ -1,0 +1,18 @@
+---
+permalink: concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: install, snapdrive, windows, hyper-v, cluster, snapdrive 
+summary: 在安裝適用於Hyper-V的功能之前、您必須先在SnapDrive 所有主機上安裝適用於Windows的功能SnapManager如果主機是叢集的成員、叢集中的所有節點都需要安裝SnapDrive 適用於Windows的版本。 
+---
+= 適用於Windows的安裝順序SnapDrive 和SnapManager 適用於Hyper-V的更新順序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在安裝適用於Hyper-V的功能之前、您必須先在SnapDrive 所有主機上安裝適用於Windows的功能SnapManager如果主機是叢集的成員、叢集中的所有節點都需要安裝SnapDrive 適用於Windows的版本。
+
+當支援Hyper-V的功能啟動時SnapManager 、它會與SnapDrive Windows的支援部門溝通、以取得主機上執行的所有虛擬機器清單。如果SnapDrive 主機上未安裝適用於Windows的支援功能、則此API會失敗、SnapManager 而且無法使用虛擬機器資訊更新適用於Hyper-V的內部快取。
+
+您可能會收到下列訊息：「錯誤：SnapManager Hyper-V的支援未在主機或儲存系統中授權、備份已中止：」。

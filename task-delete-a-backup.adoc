@@ -1,0 +1,31 @@
+---
+permalink: task-delete-a-backup.html 
+sidebar: sidebar 
+keywords: delete, backup, associate, dataset, virtual, machine, deleting 
+summary: 您可以刪除與資料集或虛擬機器相關的一或多個備份。 
+---
+= 刪除備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以刪除與資料集或虛擬機器相關的一或多個備份。
+
+.步驟
+. 在導覽窗格中、按一下*恢復*。
+. 在包含您要刪除之備份的資料集中選取虛擬機器。
++
+如果刪除與資料集相關的備份、則與屬於該資料集的任何虛擬機器相關聯的備份也會一併刪除。如果刪除與虛擬機器相關的備份、則只會刪除該備份。
+
+. 在備份窗格中、選取您要刪除的備份。
+. 按一下*刪除*。
++
+此時將顯示*刪除備份*對話框。您可以選擇刪除所選VM或整個資料集的備份。
+
+. 選取適當的選項、然後按一下*確認刪除*。
++
+您可以在狀態視窗中檢視備份刪除作業的狀態。
+
+

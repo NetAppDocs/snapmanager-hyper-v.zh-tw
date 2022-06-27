@@ -1,0 +1,40 @@
+---
+permalink: task-set-up-a-snapinfo-lun.html 
+sidebar: sidebar 
+keywords: add, snapinfo, lun, snapmanager, hyper-v, store, dataset, backup, metadata, reside, ontap, setting, up 
+summary: 您必須在SnapManager 支援Hyper-V的功能區中新增SnapInfo LUN、才能儲存資料集備份中繼資料。SnapInfo路徑必須位在ONTAP 整個LUN上、因為SnapManager 在定期備份之後、適用於Hyper-V的功能會備份SnapInfo複本。 
+---
+= 設定SnapInfo LUN
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必須在SnapManager 支援Hyper-V的功能區中新增SnapInfo LUN、才能儲存資料集備份中繼資料。SnapInfo路徑必須位在ONTAP 整個LUN上、因為SnapManager 在定期備份之後、適用於Hyper-V的功能會備份SnapInfo複本。
+
+如果您執行的是Windows Server 2012叢集、SnapInfo路徑可位於叢集共用Volume（CSV）上。如果您管理專屬虛擬機器、SnapInfo位置必須是專屬ONTAP 的VMware LUN。如果您管理共享的虛擬機器、SnapInfo位置必須位於共享ONTAP 的VMware LUN。
+
+.步驟
+. 使用SnapDrive 適用於Windows的功能、建立新的共享磁碟。
++
+.. 如果有選項可供選擇Microsoft叢集服務群組、請選取選項*建立新的叢集群組*
+.. 將群組命名為「shimhv_snapinfo'並完成程序。
+
+
+. 開啟Windows容錯移轉叢集（WFC）、然後確認新群組已上線。
+. 在SnapManager 叢集中的每個節點上安裝適用於Hyper-V的功能。
+. 執行*組態*精靈、並將SnapInfo組態設定套用至叢集中的所有節點。
++
+.. 選取其中一個主機。
+.. 在*導覽*窗格中、按一下功能表：Protection（主機）。
+.. 從「動作」窗格中、執行*組態*精靈。
+.. 將SnapInfo設定套用至新建立的LUN。
+
+
+
+
+執行組態精靈時、SnapInfo組態設定會複寫到叢集中的所有節點。*相關資訊*
+
+xref:reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.adoc[錯誤：SnapDrive SSDDiscoveryFileSystemListInfo回應為null]

@@ -1,0 +1,193 @@
+---
+permalink: task-reconfigure-storage-systems-after-a-disaster-recovery-failback.html 
+sidebar: sidebar 
+keywords: fall, secondary, storage, system, snapmanager, hyper-v, complete, disaster, recovery, original, primary, storage, failback, reconfigure, reconfiguring 
+summary: 當容錯移轉至二線儲存系統後、SnapManager 由於無法還原至原始的一線儲存系統、所以針對Hyper-V的支援功能可完成災難恢復。 
+---
+= 在災難恢復故障恢復後重新配置儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+當容錯移轉至二線儲存系統後、SnapManager 由於無法還原至原始的一線儲存系統、所以針對Hyper-V的支援功能可完成災難恢復。容錯回復會在重新啟用或更換儲存系統後、將主要儲存功能還原至原始的主要儲存站台。
+
+.步驟
+. 視主要儲存系統的狀況而定、請採取下列其中一項行動：
++
+|===
+| 如果主要儲存系統是... | 然後... 
+
+
+ a| 
+可恢復的
+ a| 
+將資料從次要主機移回主要儲存系統。
+
+
+
+ a| 
+完全毀損
+ a| 
+配置新的儲存系統。
+
+|===
+. 管理SnapMirror關係：
++
+.. 初始化從二線儲存系統到一線儲存系統的SnapMirror關係、以恢復資料。
+.. 將現有的SnapMirror關係從二線儲存系統重新同步至一線儲存系統。
+.. 在SnapDrive 二線儲存系統上使用BIOS、針對二線儲存系統上的每個LUN或SMB共用區、啟動SnapMirror更新。
+
+
+. 視您的組態而定、請執行下列其中一項動作：
++
+|===
+| 如果主要儲存系統是... | 然後... 
+
+
+ a| 
+獨立主機（SAN）
+ a| 
+連接至同一類型主儲存系統上的所有掛載點和LUN。
+
+
+
+ a| 
+叢集式主機（SAN）
+ a| 
+從叢集群組處於線上狀態的節點、連線至叢集中的所有掛載點和LUN。
+
+
+
+ a| 
+以單一LUN託管來源支援Volume（SAN）上的虛擬機器、設定為8.1.x Data ONTAP FlexVol
+ a| 
+為了讓SnapMirror更新成功、您必須先在來源FlexVol 的SnapMirror Volume上建立第二個較小的LUN（10 MB至100 MB）、然後再開始備份工作。從叢集群組處於線上狀態的節點、連線至叢集中的所有掛載點和LUN。
+
+
+
+ a| 
+獨立或叢集式主機（NAS）
+ a| 
+卸載資料保護（DP）磁碟區、將DP磁碟區掛載為可重新寫入、確認磁碟區具有rwx權限、然後為不同的磁碟區建立CIFS共用。
+
+|===
+. 根據您的環境重新設定SnapInfo：
++
+|===
+| 如果您的組態是... | 然後... 
+
+
+ a| 
+SAN
+ a| 
+從上次Snapshot複本還原SnapInfo LUN。
+
+
+
+ a| 
+NAS
+ a| 
+掛載SnapInfo目錄。
+
+|===
++
+對於NAS、如果發生存取遭拒錯誤、或您無法瀏覽至公開的SMB共用位置、則可能需要重設共用區的ACL。
+
+. 在SnapManager 適用於Hyper-V MMC的支援中新增主要主機或叢集、並使用SnapInfo路徑加以設定。
+. 輸入下列Cmdlet：
++
+.. 使用Get-VMsFromBackup Cmdlet擷取備份中繼資料中的VM清單。
+.. 使用Get-Backup Cmdlet取得每個VM的備份複本。
+
+
+. 若要還原、請使用「還原備份」搭配VM Guid、並使用備份複本搭配下列參數：
++
+|===
+| 若要從...還原 | 輸入此命令... 
+
+
+ a| 
+備用主機
+ a| 
+「還原備份-伺服器」「econdary_host_system_or_cluster名稱-DisableVerifySnapshot -RestoreToAlternateHost」
+
+
+
+ a| 
+列出的備份複本
+ a| 
+「還原備份-伺服器-虛擬機器路徑- SnapShotFilePath @VHD」
+
+|===
++
+對於「@VHD」、虛擬機器可能有多個VHD；您必須同時輸入為每個VHD指定的來源和目的地路徑配對。
+
+. 如果次要主機系統是叢集、請完成下列步驟：
++
+.. 確保VM所在的LUN在擁有叢集群組的叢集節點上處於線上狀態。
+.. 使用容錯移轉PowerShell Cmdlet來提高VM的可用度。
+
+
++
+對於NAS、當虛擬機器從一個叢集節點公開為SMB共用時、所有設定為使用儲存系統叢集的主機都能存取VM。
+
+
+
+
+
+== 容錯回復範例
+
+以下範例顯示雙叢集設定、其中smhv-cluster -01為主要站台、hv-19叢集為次要站台：
+
+[listing]
+----
+PS C:\> Get-VMsFromBackup -Server smhv-cluster-01
+
+winxp-x64c-135                593ABA72-B323-4AF7-9AC6-9514F64C0178
+csv1-xp-3                     59B85C68-BAFA-4A49-8E85-A201045843F7
+vm-w2k8r2sp1                  5A248757-872B-4FE7-8282-91C8E9D45CF9
+um10_11_dr                    5AC1B2A8-6603-4F90-98F5-4F2F435AB0C2
+winxp-x64c-30                 5B47D3CF-5D96-495D-9BAB-FB394392CF31
+winxp-x64c-126                5B57EED1-B4F1-45A3-A649-24C6947CB79C
+winxp-x64c-118                5B5D417B-70DC-427C-94BB-97FF81C5B92B
+winxp-x64c-122                5BEE26B8-BE57-4879-A28E-9250A6A5EEFC
+csv4-w2k3-19                  5D0613E5-B193-4293-8AAD-F8B94A5D851F
+
+PS C:\> Get-Backup -Server smhv-cluster-01 -ResourceName
+um10_11_dr
+
+BackupName    : smhv-ccb-ds_04-10-2012_10.37.58
+RetentionType : hourly
+DatasetName   : smhv-ccb-ds
+BackupId      : smhv-ccb-ds_04-10-2012_10.37.58
+BackupTime    : 4/10/2012 10:37:58 AM
+BackupType    : Application consistent
+BackedupVMs   : {um10_11_dr}
+
+PS C:\> Restore-Backup -Server smhv-cluster-01 -ResourceName
+um10_11_dr -BackupName smhv-ccb-ds_04-10-2012_10.37.58
+-DisableVerifySnapshot -RestoreToAlternateHost
+----
+下列範例顯示SAN還原作業的替代路徑、其中N:\是目的地、I:\是來源LUN路徑：
+
+[listing]
+----
+PS C:\> Restore-Backup -Resourcename dr-san-ded1
+-RestoreToAlternateHost -DisableVerifySnapshot -BackupName san_dr_09-11-2013_10.57.31 -Verbose
+-VirtualMachinePath "N:\dr-san-ded1" -SnapshotFilePath "N:\dr-san-ded1" -VHDs @(@{"SourceFilePath" = "I:\dr-san-ded1\Virtual Hard Disks\dr-san-ded1.vhdx"; "DestinationFilePath" = "N:\dr-san-ded1\Virtual Hard Disks\dr-san-ded1"})
+----
+以下範例顯示NAS還原作業至替代路徑、其中\172.17.162.174\是來源SMB共用路徑、\\172.17.175.82\是目的地SMB共用路徑：
+
+[listing]
+----
+PS C:\> Restore-Backup -Resourcename vm_claba87_cifs1
+-RestoreToAlternateHost -DisableVerifySnapshot -BackupName ag-DR_09-09-2013_16.59.16 -Verbose
+-VirtualMachinePath "\\172.17.175.82\vol_new_dest_share\ag-vm1" -SnapshotFilePath "\\172.17.175.82\vol_new_dest_share\ag-vm1" -VHDs @(@{"SourceFilePath" = "\\172.17.162.174\vol_test_src_share\ag-vm1\Virtual Hard Disks\ag-vm1.vhdx"; "DestinationFilePath" = "\\172.17.175.82\vol_new_dest_share\ag-vm1\Virtual Hard Disks\ag-vm1.vhdx"})
+----
+*相關資訊*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368826["適用於7-Mode的《Data Protection Online Backup and Recovery Guide》（英文）Data ONTAP"]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-cifs/home.html["SMB/CIFS參考資料"]

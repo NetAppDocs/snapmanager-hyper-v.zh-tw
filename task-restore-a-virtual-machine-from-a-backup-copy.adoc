@@ -1,0 +1,46 @@
+---
+permalink: task-restore-a-virtual-machine-from-a-backup-copy.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, restore, single, virtual, machine, vm, recover, lost, damage, data, backup, copy, restoring 
+summary: 您可以使用SnapManager 支援Hyper-V的功能、一次還原單一虛擬機器（VM）、從備份複本中恢復遺失或損壞的資料。 
+---
+= 從備份複本還原虛擬機器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用SnapManager 支援Hyper-V的功能、一次還原單一虛擬機器（VM）、從備份複本中恢復遺失或損壞的資料。
+
+您必須提供下列資訊：
+
+* 備份名稱
+* 組態資訊
+* 指令碼資訊
+
+
+還原到備用主機時、原始VM所在實體電腦上的CPU類型應與您要還原VM的實體電腦相容。或者、您也可以使用Hyper-V Manager來指定允許機器還原至具有不同CPU類型的機器。
+
+儲存即時移轉之後、您無法從最新的備份還原。
+
+如果您啟動Hyper-V虛擬機器的還原作業、而且正在進行同一虛擬機器的其他備份或還原、則會失敗。
+
+.步驟
+. 在導覽窗格中、按一下*恢復*。
+. 選取您要還原的虛擬機器。
+. 在備份窗格中、選取您要還原的備份複本名稱、然後按一下*還原*。
++
+此時會出現還原精靈。
+
+. 完成精靈中的步驟以還原虛擬機器備份複本。
++
+關閉精靈不會取消還原作業。適用於Hyper-V的還原在開始還原作業之前、會驗證虛擬機器組態。SnapManager如果虛擬機器組態有任何變更、則會出現警告、讓您選擇繼續或取消作業。
+
+
+
+您可以在「*工作管理*」視窗中檢視還原作業的狀態、或是在「*報告管理*」視窗中檢視報告來檢查作業結果。
+
+*相關資訊*
+
+xref:reference-restore-from-a-backup-after-failback.adoc[容錯回復後從備份還原]

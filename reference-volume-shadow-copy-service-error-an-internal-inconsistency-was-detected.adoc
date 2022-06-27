@@ -1,0 +1,29 @@
+---
+permalink: reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html 
+sidebar: sidebar 
+keywords: volume, shadow, copy, service, error, internal, inconsistency, detect 
+summary: Volume陰影複製服務錯誤：偵測到內部不一致。 
+---
+= Volume陰影複製服務錯誤：偵測到內部不一致
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *訊息*
++
+「Volume陰影複製服務錯誤：在嘗試聯絡陰影複製服務寫入器時偵測到內部不一致。請檢查「事件服務」和「Volume陰影複製服務」是否正常運作
+
+* *說明*
++
+當您對使用Windows Server 2003的虛擬機器執行備份時、因為重試錯誤而重複失敗。
+
+* *修正行動*
++
+檢查虛擬機器內的Windows應用程式事件記錄、查看是否有任何VSS錯誤。
+
+
+
+*相關資訊*
+
+http://support.microsoft.com/kb/940184["Microsoft支援文件編號940184：在Windows Server 2003型電腦上執行「vssadmin list Writers」命令時出現錯誤訊息：「錯誤：0x8000FFFF」"]

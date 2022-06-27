@@ -1,0 +1,14 @@
+---
+permalink: task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, contain, migration, wizard, migrate, virtual, machine, vm, non-ontap, ontap, service, manager, operation, migrating 
+summary: 適用於Hyper-V的支援不包含移轉精靈、可協助您將虛擬機器（VM）從非ONTAP儲存設備移轉至VMware儲存設備、以便搭配使用以供Hyper-V使用SnapManager ONTAP SnapManager而是必須使用伺服器管理員手動匯出及匯入VM。 
+---
+= 移轉Hyper-V虛擬機器SnapManager 以利執行Hyper-V作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+適用於Hyper-V的支援不包含移轉精靈、可協助您將虛擬機器（VM）從非ONTAP儲存設備移轉至VMware儲存設備、以便搭配使用以供Hyper-V使用SnapManager ONTAP SnapManager而是必須使用伺服器管理員手動匯出及匯入VM。

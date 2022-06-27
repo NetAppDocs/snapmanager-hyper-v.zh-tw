@@ -1,0 +1,24 @@
+---
+permalink: task-modify-a-dataset.html 
+sidebar: sidebar 
+keywords: create, dataset, modify, description, resource, associate 
+summary: 建立資料集之後、您可以修改資料集說明及與資料集相關的資源。 
+---
+= 修改資料集
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+建立資料集之後、您可以修改資料集說明及與資料集相關的資源。
+
+「驗證資料集」核取方塊預設為選取狀態。適用於Hyper-V的功能可在建立或修改資料集期間、檢查所有VM中的任何組態錯誤。SnapManager如果您不想啟用資料集驗證、則必須確保未選取此核取方塊。
+
+.步驟
+. 在導覽窗格中、按一下功能表：Protection（資料集）。
+. 選取您要修改的資料集。
+. 在「動作」窗格中、按一下*「修改資料集」*。
+. 完成精靈中的步驟。
+

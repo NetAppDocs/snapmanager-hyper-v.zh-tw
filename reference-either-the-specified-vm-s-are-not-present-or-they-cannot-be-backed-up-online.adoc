@@ -1,0 +1,69 @@
+---
+permalink: reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html 
+sidebar: sidebar 
+keywords: vm, present, backed, up, online 
+summary: 指定的虛擬機器不存在、或無法線上備份 
+---
+= 指定的虛擬機器不存在、或無法線上備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *訊息*
++
+「指定的VM不存在或無法在線上備份」
+
+* *說明*
++
+發生此訊息的原因之一、是當VM上的傳遞磁碟大小低於300 MB時、應用程式一致的備份便會失敗。您的錯誤日誌類似於下列範例：
+
++
+[listing]
+----
+Log Name:      Application
+Source:        SnapMgrServiceHost
+Date:          11/12/2012 12:24:28 PM
+Event ID:      106
+Task Category: Backup Event
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      defiant16.wak-qa.com
+Description:
+SnapManager for Hyper-V backup failed to complete
+
+Backup Failed for the following VM(s) since it cannot be backedup online or No VM to be found for backup
+               VM Name: demovm-0
+----
++
+沒有其他應用程式或系統錯誤訊息可指出故障。
+
+* *修正行動*
++
+您可以調整傳遞磁碟的大小、使其大於300 MB、或是在啟用「允許儲存的狀態VM備份」選項的情況下執行備份。
+
++
+
+NOTE: 此修正行動適用於SAN和NAS環境。
+
+* *訊息*
++
+「指定的VM不存在或無法在線上備份」
+
+* *說明*
++
+出現此訊息的第二個原因是、Windows無法執行此系統的線上備份、因為Hyper-V VM的範圍快照選項已啟用。範圍內的快照主要用於Windows關鍵更新。
+
+* *修正行動*
++
+您必須在下列位置建立值為0的d字 節「copeSnapshots」參數、以停用「Scoped snapshots」選項：
+
++
+「本地機器\software\microsoft\windowsnt\CurrentVersion \SystemRestore」
+
++
+
+NOTE: 此修正行動適用於SAN和NAS環境。
+
+

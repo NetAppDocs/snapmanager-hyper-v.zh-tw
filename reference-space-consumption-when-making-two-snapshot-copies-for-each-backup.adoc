@@ -1,0 +1,38 @@
+---
+permalink: reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html 
+sidebar: sidebar 
+keywords: space, consumption, snapshot, copies, copy, backup 
+summary: 為每個備份製作兩個Snapshot複本時所耗用的空間。 
+---
+= 為每個備份製作兩個Snapshot複本時所耗用的空間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+對於每個包含Hyper-V物件的備份、都會建立兩個Snapshot複本、這可能會導致對空間使用的顧慮。
+
++
+
+NOTE: 這僅適用於應用程式一致的備份。
+
+* *原因*
++
+Microsoft Hyper-V VSS寫入器會在VM內建立VM與應用程式一致的備份複本、並將應用程式駐留在VHD上。為了建立軟體一致和VM一致的備份複本、VSS採用原生的自動恢復程序、將VM設定為與軟體Snapshot複本一致的狀態。Hyper-V VSS寫入器會聯絡備份中的每個VM、並建立軟體一致的Snapshot複本。
+
++
+建立Snapshot複本之後、父分割區會針對容納這些VM的整個磁碟（LUN）建立VSS Snapshot複本。建立父分割Snapshot複本之後、VSS需要掛載先前建立的父分割區、將每個VM復原至軟體一致的狀態、並移除在建立軟體Snapshot複本之後對VM所做的任何變更。這些VHD的修改必須持續進行。由於這些Snapshot複本預設為唯讀、因此必須建立新的Snapshot複本、才能保留VHD的更新複本。因此、會建立磁碟區的第二個Snapshot複本。此Snapshot複本標有後置詞*備份*、是還原作業所用的備份複本。
+
+* *修正行動*
++
+這兩個Snapshot複本被視為配對。當備份的保留期間結束時、兩個Snapshot複本都會刪除。您不應該手動刪除第一個Snapshot複本、因為這是還原作業所需的。
+
++
+Microsoft VSS僅支援在擁有叢集共用Volume（CSV）的主機上備份VM、因此CSV所有權會在節點之間移動、以便在叢集中的每個主機上建立VM備份。
+
++
+備份CSV時SnapManager 、適用於Hyper-V的功能可在叢集中每個主機上建立兩個Snapshot複本、這些複本是從該CSV執行VM。這表示、如果您在單一CSV上備份15個VM、而這些VM會平均分割成三個Hyper-V伺服器、則每個備份總共有六個Snapshot複本。
+
+

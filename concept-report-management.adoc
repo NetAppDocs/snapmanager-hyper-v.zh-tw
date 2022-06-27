@@ -1,0 +1,37 @@
+---
+permalink: concept-report-management.html 
+sidebar: sidebar 
+keywords: view, delete, backup, restore, configuration, report, snapmanager, hyper-v, information, virtual, machine, vm, managing, manage 
+summary: 您可以在SnapManager 適用於Hyper-V的支援中檢視及刪除備份、還原及組態報告這些報告包含有關資料集、虛擬機器和主機的重要資訊。您也可以匯出多種不同格式的報告。 
+---
+= 管理報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在SnapManager 適用於Hyper-V的支援中檢視及刪除備份、還原及組態報告這些報告包含有關資料集、虛擬機器和主機的重要資訊。您也可以匯出多種不同格式的報告。
+
+* *備份報告*
++
+備份報告會顯示屬於特定資料集之所有主機的所有備份資訊。您可以檢視資料集或虛擬機器的備份報告。針對虛擬機器顯示的報告會使用虛擬機器名稱、而非其GUID。
+
++
+當顯示備份報告時、您可以將其匯出成多種不同的格式。
+
+* *還原報告*
++
+還原報告會以每個VM為基礎、顯示還原作業的所有相關資訊。
+
++
+顯示還原報告時、您可以將其匯出成多種不同的格式。
+
+* *組態報告*
++
+組態報告會顯示所選主機的通知設定、報告路徑和SnapInfo路徑。
+
++
+顯示組態報告時、您可以將其匯出成多種不同的格式。
+
+

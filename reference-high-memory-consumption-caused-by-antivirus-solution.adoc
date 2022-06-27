@@ -1,0 +1,25 @@
+---
+permalink: reference-high-memory-consumption-caused-by-antivirus-solution.html 
+sidebar: sidebar 
+keywords: high, memeory, consumption, cause, antivirus, solution 
+summary: 防毒解決方案造成大量記憶體使用量。 
+---
+= 防毒解決方案造成大量記憶體使用量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *問題*
++
+檔案層級的防毒解決方案可能會導致大量記憶體使用量、這似乎是記憶體洩漏。
+
+* *原因*
++
+在某些情況SnapManager 下、由於錯誤設定的防毒解決方案會掃描VM組態檔、因此適用於Hyper-V的支援功能可能會耗用大量且持續增加的記憶體容量。當防毒解決方案掃描VM組態檔時、會顯示_InstanceModifyationEvent事件、說明變更內容。當適用於Hyper-V的支援收到此通知時、會觸發列舉儲存設備和VM、並使用適用於Windows的支援功能。SnapManager SnapDrive在某些情況下、這些事件可能會發生、導致SnapDrive Windows無法處理的速度太高、SnapManager 導致Hyper-V佇列其中的故障。
+
+* *修正行動*
++
+排除SnapManager 防毒解決方案掃描Hyper-V VM檔案的功能。
+
+

@@ -1,0 +1,22 @@
+---
+permalink: task-delete-a-report.html 
+sidebar: sidebar 
+keywords: delete, report, deleting 
+summary: 您可以在不再需要時刪除一或多個報告。 
+---
+= 刪除報告
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在不再需要時刪除一或多個報告。
+
+.步驟
+. 在導覽窗格中、按一下功能表：「Reports[資料集]」或功能表：「Reports[host]」。
+. 選取包含您要刪除之報告的資料集、虛擬機器或主機。
+. 從「報告」窗格中、選取您要刪除的報告。
+. 在「動作」窗格中、按一下「*刪除報告*」、然後按一下「*確定*」刪除。
+

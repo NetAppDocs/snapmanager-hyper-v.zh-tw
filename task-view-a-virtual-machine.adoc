@@ -1,0 +1,25 @@
+---
+permalink: task-view-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: virtual, machine, tab, vhd, detail, pane, vm, information, monitor, status, view 
+summary: 從虛擬機器的「詳細資料」窗格的「虛擬機器」索引標籤和「VHD」索引標籤中、您可以檢視該機器的相關資訊、並監控其狀態。 
+---
+= 檢視虛擬機器
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+從虛擬機器的「詳細資料」窗格的「虛擬機器」索引標籤和「VHD」索引標籤中、您可以檢視該機器的相關資訊、並監控其狀態。
+
+.步驟
+. 在導覽窗格中、按一下功能表：Protection（保護）[hosts > Protection（保護）> Dataset（資料集）]。
+. 選取虛擬機器所屬的資料集或主機。
+. 選取適當的虛擬機器。
+
+
+虛擬機器索引標籤會顯示所選虛擬機器的名稱、GUID和狀態。
+
+VHD索引標籤顯示系統磁碟、掛載點、VHD完整路徑、LUN路徑、儲存系統名稱、 與所選虛擬機器相關聯的序號和Volume名稱。

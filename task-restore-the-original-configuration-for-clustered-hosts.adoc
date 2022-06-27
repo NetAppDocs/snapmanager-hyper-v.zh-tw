@@ -1,0 +1,22 @@
+---
+permalink: task-restore-the-original-configuration-for-clustered-hosts.html 
+sidebar: sidebar 
+keywords: vm, backed, up, primary, storage, system, return, origin, configuration, snapmirror, relationship, secondary, primary, restoring 
+summary: 在主儲存系統上備份VM之後、您可以使用SnapMirror關係、將主要儲存系統與次要儲存系統建立起來、以恢復原始組態。 
+---
+= 還原叢集主機的原始組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在主儲存系統上備份VM之後、您可以使用SnapMirror關係、將主要儲存系統與次要儲存系統建立起來、以恢復原始組態。
+
+.步驟
+. 讓所有VM的虛擬機器資源和虛擬機器組態資源離線。
+. 從叢集刪除這些資源。
+. 從Hyper-V Manager刪除所有VM。
+. 使用SnapDrive 中斷所有磁碟的連線。
+. 將SnapMirror關係從一線儲存系統重新同步至二線儲存系統。
+

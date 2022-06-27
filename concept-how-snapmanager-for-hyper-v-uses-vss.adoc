@@ -1,0 +1,23 @@
+---
+permalink: concept-how-snapmanager-for-hyper-v-uses-vss.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, integration, microsoft, hyper-v, volume, shadow, copy, service, vss, quiesce, virtual, machine, vm, snapshot 
+summary: 適用於Hyper-V的支援與Microsoft Hyper-V Volume陰影複製服務（VSS）寫入器整合、以便在建立應用程式一致的VM Snapshot複本之前、先停止虛擬機器（VM）SnapManager 。 
+---
+= 適用於Hyper-V的解決方法如何使用VSS SnapManager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+適用於Hyper-V的支援與Microsoft Hyper-V Volume陰影複製服務（VSS）寫入器整合、以便在建立應用程式一致的VM Snapshot複本之前、先停止虛擬機器（VM）SnapManager 。
+
+適用於Hyper-V的支援是VSS申請者、可協調備份作業以建立一致的Snapshot複本、使用VSS Hardware Provider for the Hyper-V VM執行SAN、並使用遠端VSS供應商執行於SMB 3.0共用區的Hyper-V VM。SnapManager Data ONTAP
+
+適用於Hyper-V的支援功能可讓您在VM的虛擬硬碟（VHD）上執行Microsoft Exchange、Microsoft SQL或任何其他支援VSS的應用程式時、針對VM進行應用程式一致的備份。SnapManager適用於Hyper-V的支援可與VM內的應用程式寫入器協調、確保在備份時應用程式資料一致。SnapManager
+
+您也可以從應用程式一致的備份還原VM。VM中的應用程式會還原至備份時的相同狀態。適用於Hyper-V的還原功能可將VM還原至其原始位置。SnapManager
+
+
+NOTE: VSS整合僅適用於應用程式一致的備份。損毀一致的備份不使用VSS。
