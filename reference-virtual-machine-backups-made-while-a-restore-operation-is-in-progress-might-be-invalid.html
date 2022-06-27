@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head class="at-element-marker">
+  <title>還原作業進行期間所進行的虛擬機器備份可能無效</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="還原作業進行期間所進行的虛擬機器備份可能無效" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html" />
+	<meta property="og:description" content="還原作業進行期間所進行的虛擬機器備份可能無效。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="還原作業進行期間所進行的虛擬機器備份可能無效。">
+  <meta name="keywords" content=" virtual, machine, backup, restore, operation, progress, invalid"><!-- Icons -->
+  <link rel="icon" href="/zh-tw/snapmanager-hyper-v/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapmanager-hyper-v/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/zh-tw/snapmanager-hyper-v/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapmanager-hyper-v/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapmanager-hyper-v/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapmanager-hyper-v/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/zh-tw/snapmanager-hyper-v/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/zh-tw/snapmanager-hyper-v/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/zh-tw/snapmanager-hyper-v/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/zh-tw/snapmanager-hyper-v/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/zh-tw/snapmanager-hyper-v/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snapmanager-hyper-v/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snapmanager-hyper-v/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snapmanager-hyper-v/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/zh-tw/snapmanager-hyper-v/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-tw/snapmanager-hyper-v/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/zh-tw/snapmanager-hyper-v/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/snapmanager-hyper-v/js/na-search.js'></script><script src='/zh-tw/snapmanager-hyper-v/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-tw/snapmanager-hyper-v/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snapmanager-hyper-v/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/zh-tw/snapmanager-hyper-v/js/na-utility.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/clouddocs.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/toc.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/custom-dropdown.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/FileSaver.min.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/jszip-utils.min.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/jszip.min.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snapmanager-hyper-v/issues/new?body=Page%3A%20[還原作業進行期間所進行的虛擬機器備份可能無效](https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snapmanager-hyper-v/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/snapmanager-hyper-v/blob/main/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snapmanager-hyper-v/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/snapmanager-hyper-v/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此頁面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">產品與解決方案</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">支援與訓練</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">社群</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">部落格</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">客戶成功案例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">聯絡人</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">聯絡人</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-tw/snapmanager-hyper-v/search.html"
+          data-type="widget" 
+          data-placeholder="搜尋文件" 
+          data-no-results-found="找不到符合 {query} 的相關結果。" 
+          data-did-you-mean="搜尋 {suggestion}。" 
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
+          data-results-found="找到 {hitCount} 筆結果"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">繁體中文</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>可用的 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/zh-tw/snapmanager-hyper-v/pdfs/fullsite-sidebar/適用於Hyper_V文件SnapManager.pdf" >
+          <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>此文件網站（PDF 格式）</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/Hyper_V的功能SnapManager.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Hyper-V的功能SnapManager
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/安裝SnapManager_Hyper_V的需求清單.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            安裝SnapManager Hyper-V的需求清單
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/安裝SnapManager_適用於Hyper_V的.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            安裝SnapManager 適用於Hyper-V的
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/在SnapManager_Windows上解除安裝適用於Hyper_V的功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            在SnapManager Windows上解除安裝適用於Hyper-V的功能
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定SnapManager_適用於Hyper_V的功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            設定SnapManager 適用於Hyper-V的功能
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定主機.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            設定主機
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/事件通知設定.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            事件通知設定
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定SnapInfo目錄設定.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            設定SnapInfo目錄設定
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定資料集.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            設定資料集
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定原則.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            設定原則
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/管理報告.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            管理報告
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/VSS元件.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            VSS元件
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/在SnapManager_支援Hyper_V的支援環境中建立及管理備份工作.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            在SnapManager 支援Hyper-V的支援環境中建立及管理備份工作
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/從備份複本還原虛擬機器.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            從備份複本還原虛擬機器
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/執行叢集作業系統循環升級.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            執行叢集作業系統循環升級
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/執行災難恢復.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            執行災難恢復
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/Hyper_V_SnapManager_的疑難排解.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Hyper-V SnapManager 的疑難排解
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/zh-tw/snapmanager-hyper-v/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>個別 PDF 文件的集合<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/index.html">
+        適用於Hyper-V文件SnapManager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/release-notes.html">
+        版本資訊
+      </a></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-what-snapmanager-for-hyper-v-is.html">
+        <div class="na-navbar-padding"> Hyper-V的功能SnapManager</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-what-you-can-do-with-snapmanager-for-hyper-v.html">
+        如何運用SnapManager 適用於Hyper-V的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-snapmanager-for-hyper-v-limitations.html">
+        Hyper-V限制的列舉SnapManager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-data-management-concepts.html">
+        資料管理概念
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html">
+        <div class="na-navbar-padding"> 安裝SnapManager Hyper-V的需求清單</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-snapmanager-for-hyper-v-licensing-for-ontap.html">
+        適用於Hyper-V的for Hyper-V授權SnapManager ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-hyper-v-parent-host-requirements.html">
+        Hyper-V父主機需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-hotfix-requirements-for-windows-server-environments.html">
+        Windows Server環境的修補程式需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-license-requirements.html">
+        授權需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-remote-host-install.html">
+        使用遠端主機安裝精靈的需求
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-install-snapmanager-for-hyper-v.html">
+        <div class="na-navbar-padding"> 安裝SnapManager 適用於Hyper-V的</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-download-snapmanager-for-hyper-v.html">
+        下載SnapManager 適用於Hyper-V的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html">
+        適用於Windows的安裝順序SnapDrive 和SnapManager 適用於Hyper-V的更新順序
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-install-snapmanager-for-hyper-v.html">
+        安裝SnapManager 適用於Hyper-V的
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-remotely-install-or-uninstall-snapmanager-for-hyper-v-on-nodes.html">
+        在SnapManager 節點或主機上遠端安裝或解除安裝適用於Hyper-V的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-command-line-switch-descriptions.html">
+        用於無聲安裝的命令列參數清單與說明
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-uninstall-snapmanager-for-hyper-v-on-windows.html">
+        <div class="na-navbar-padding"> 在SnapManager Windows上解除安裝適用於Hyper-V的功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-uninstall-snapmanager-for-hyper-v.html">
+        解除安裝SnapManager 適用於Hyper-V的功能
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-configure-snapmanager-for-hyper-v.html">
+        <div class="na-navbar-padding"> 設定SnapManager 適用於Hyper-V的功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-dashboard-settings.html">
+        儀表板設定
+      </a></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-configure-hosts.html">
+        <div class="na-navbar-padding"> 設定主機</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html">
+        新增Hyper-V父主機或主機叢集的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-add-a-hyper-v-parent-host-or-host-cluster.html">
+        新增Hyper-V父主機或主機叢集
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-manage-storage-connection-settings.html">
+        管理儲存連線設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-view-a-hyper-v-parent-host-or-host-cluster.html">
+        檢視Hyper-V父主機或主機叢集
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-view-a-virtual-machine.html">
+        檢視虛擬機器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html">
+        適用於SnapManager Hyper-V作業的Hyper-V虛擬機器的Migrat
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-import-or-export-host-and-dataset-configuration-information.html">
+        匯入或匯出主機與資料集組態資訊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-remove-a-hyper-v-parent-host.html">
+        移除Hyper-V父主機或父主機叢集
+      </a></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-event-notification-settings.html">
+        <div class="na-navbar-padding"> 事件通知設定</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-configure-multiple-recipients-for-email-notifications-in-smhv.html">
+        設定電子郵件通知
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-report-path-settings.html">
+        報告路徑設定
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-configure-snapinfo-directory-settings.html">
+        <div class="na-navbar-padding"> 設定SnapInfo目錄設定</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-set-up-a-snapinfo-lun.html">
+        設定SnapInfo LUN
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-change-the-snapinfo-directory-path.html">
+        變更SnapInfo目錄路徑
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-configure-datasets.html">
+        <div class="na-navbar-padding"> 設定資料集</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-creating-a-dataset.html">
+        建立資料集的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-create-a-dataset.html">
+        建立資料集
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-modify-a-dataset.html">
+        修改資料集
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-view-a-dataset.html">
+        檢視資料集
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-delete-a-dataset.html">
+        刪除資料集
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-configure-policies.html">
+        <div class="na-navbar-padding"> 設定原則</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-adding-policies-to-a-dataset.html">
+        將原則新增至資料集的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-add-policies.html">
+        新增原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-modify-policies.html">
+        修改原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-view-policies.html">
+        檢視原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-delete-policies.html">
+        刪除原則
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html">
+        設定SMB上Hyper-V的SVM或CIFS伺服器
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-report-management.html">
+        <div class="na-navbar-padding"> 管理報告</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-view-a-report.html">
+        檢視資料集報告
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-view-a-host-report.html">
+        檢視主機報告
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-delete-a-report.html">
+        刪除報告
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-overview-of-vss-components.html">
+        <div class="na-navbar-padding"> VSS元件</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-cluster-shared-volume-2-0-architecture.html">
+        Windows Server 2012及更新版本中的CSV 2.0
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html">
+        在Windows Server 2012中支援Hyper-V VM的SMB 3.0
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-how-snapmanager-for-hyper-v-uses-vss.html">
+        適用於Hyper-V的解決方法如何使用VSS SnapManager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-ontap-vss-hardware-provider-requirement.html">
+        VSS硬體供應商需求ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-view-installed-vss-providers.html">
+        檢視已安裝的VSS供應商
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-verify-that-the-vss-hardware-provider-was-used-successfully.html">
+        驗證VSS硬體供應商是否已成功使用
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html">
+        <div class="na-navbar-padding"> 在SnapManager 支援Hyper-V的支援環境中建立及管理備份工作</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-manually-backing-up-a-dataset.html">
+        手動備份資料集的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-how-snapmanager-for-hyper-v-handles-saved-state-backups.html">
+        如何使用適用於Hyper-V的功能來處理儲存狀態備份SnapManager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-manually-backing-up-a-dataset.html">
+        手動備份資料集
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-monitor-backup-jobs.html">
+        監控備份工作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-delete-a-backup.html">
+        刪除備份
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-restore-a-virtual-machine.html">
+        <div class="na-navbar-padding"> 從備份複本還原虛擬機器</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-restoring-a-virtual-machine.html">
+        還原虛擬機器的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-restore-a-virtual-machine-from-a-backup-copy.html">
+        從備份複本還原虛擬機器
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-perform-a-cluster-os-rolling-upgrade.html">
+        <div class="na-navbar-padding"> 執行叢集作業系統循環升級</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-map-luns-after-the-windows-server-2016-node-addition.html">
+        在混合式作業系統模式中對應LUN
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-update-the-dataset-and-snapinfo-across-all-nodes.html">
+        在所有節點上更新資料集和SnapInfo
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-perform-disaster-recovery.html">
+        <div class="na-navbar-padding"> 執行災難恢復</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/concept-configure-snapmanager-for-hyper-v-for-failover.html">
+        設定SnapManager 適用於Hyper-V的功能以進行容錯移轉
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-recover-and-restore-from-a-disaster-recovery-failover.html">
+        從災難恢復容錯移轉中恢復及恢復
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-reconfigure-storage-systems-after-a-disaster-recovery-failback.html">
+        在災難恢復故障恢復後重新配置儲存系統
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-restore-the-original-configuration-for-standalone-hosts.html">
+        還原獨立主機的原始組態
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/task-restore-the-original-configuration-for-clustered-hosts.html">
+        還原叢集主機的原始組態
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snapmanager-hyper-v/concept-snapmanager-for-hyper-v-troubleshoot.html">
+        <div class="na-navbar-padding"> Hyper-V SnapManager 的疑難排解</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html">
+        下列虛擬機器的備份失敗、因為無法在線上進行backedup或找不到要備份的虛擬機器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-unexpected-error-querying-for-the-ivsswritercallback-interface-hr-0x80070005.html">
+        查詢IVssWriterCallback介面時發生非預期的錯誤。HR = 8007000、存取遭拒。
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-backup-reports-use-management-console-time-zone-information-in-report-name.html">
+        備份報告會在報告名稱中使用管理主控台時區資訊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-backup-and-restore-notifications-not-sent-in-ipv6-only-environments.html">
+        未在純IPv6環境中傳送的備份與還原通知
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-failover-clustering-event-id-5121.html">
+        容錯移轉叢集事件ID 5121
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html">
+        還原作業進行期間所進行的虛擬機器備份可能無效
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-virtual-machine-adding-itself-to-a-dataset.html">
+        虛擬機器自行管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-connection-time-is-longer-with-ipv6-only-host.html">
+        使用純IPv6主機的連線時間較長
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html">
+        Volume陰影複製服務錯誤：偵測到內部不一致
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-web-service-client-channel-was-unable-to-connect-to-the-configurationmanagementservice-instance-on-machine-smhv51-81clus.html">
+        Web服務用戶端通道無法連線至機器smhv51_81 cluss上的Configuration Management Service執行個體
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-msi-custom-property-used-in-silent-installation.html">
+        用於無聲安裝的MSI自訂屬性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-snapmanager-for-hyper-v-is-not-licensed-on-the-host-or-in-the-storage-system.html">
+        針對Hyper-V的支援未在主機或儲存系統中獲得授權SnapManager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-secondary-machine-unable-to-delete-backups-after-failover.html">
+        容錯移轉後刪除備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-storage-performance-degrades-after-failed-backup.html">
+        備份失敗後、儲存效能會降低
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-retention-of-snapinfo-snapshot-copies.html">
+        已刪除SnapInfo Snapshot複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-high-memory-consumption-caused-by-antivirus-solution.html">
+        防毒解決方案造成大量記憶體使用量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html">
+        為每個備份製作兩個Snapshot複本時所耗用的空間
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.html">
+        進行備份時、SSDDiscoveryFileSystemListInfo回應為null SnapDrive
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html">
+        錯誤：VSS要求者-備份元件失敗
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed-an-expected-disk-did-not-arrive-in-the-system.html">
+        VSS申請人-備份元件失敗。預期的磁碟未送達系統
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-dataset-backup-might-fail-with-a-partial-writer-error.html">
+        VSS申請人-備份元件失敗、並出現部分寫入錯誤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html">
+        VSS會在NAS備份期間針對Microsoft iSCSI Target VSS Hardware Provider傳回錯誤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-vss-requestor-backup-components-failed-failed-to-call-keep-snapshot-set.html">
+        VSS申請人-備份元件失敗。無法呼叫保留快照集。
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-mbr-luns-unsupported-in-snapmanager-for-hyper-v.html">
+        支援Hyper-V的MBRLUN SnapManager 不受支援
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html">
+        從Hyper-V Manager移除虛擬機器後、備份失敗
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-some-types-of-failures-do-not-generate-error-message.html">
+        某些類型的備份失敗不會導致部分備份失敗
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-restore-failure-after-storage-system-volume-renaming.html">
+        儲存系統磁碟區重新命名後還原失敗
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-restore-from-a-backup-after-failback.html">
+        容錯回復後從備份還原
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html">
+        將資料集更新至新節點時、Web服務用戶端通道無法連線
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html">
+        資料集不會自動複寫至Windows容錯移轉叢集中的新節點
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html">
+        錯誤1935。安裝組合件零組件時發生錯誤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html">
+        從同一個儲存系統進行的備份工作可能會失敗、而這些工作涉及15個以上的CSV
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html">
+        指定的虛擬機器不存在、或無法線上備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html">
+        某些平台無法安裝必要的修補程式KB2263829
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/reference-backup-fail-with-the-error-shadow-copy-creation-is-already-in-progress.html">
+        備份失敗、出現「陰影複製建立已在進行中」錯誤
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapmanager-hyper-v/legal-notices.html">
+        法律聲明
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-tw/snapmanager-hyper-v/">SnapManager&nbsp;for&nbsp;Hyper-V</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 本繁體中文版使用機器翻譯，譯文僅供參考，若與英文版本牴觸，應以英文版本為準。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">還原作業進行期間所進行的虛擬機器備份可能無效</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-06-27 15:35:23 +0000">06/27/2022</time>
+    
+  
+
+
+</p>
+
+<div class="ulist">
+<ul>
+<li>
+<p><strong>問題</strong></p>
+<div class="paragraph">
+<p>在還原作業進行期間建立的應用程式一致備份可能無效。從不完整的備份中還原虛擬機器、會導致資料遺失、並刪除虛擬機器。</p>
+</div>
+</li>
+<li>
+<p><strong>原因</strong></p>
+<div class="paragraph">
+<p>備份複本中缺少適用於Hyper-V的支援資訊。SnapManager備份作業成功、但備份複本無效、因為未包含虛擬機器組態資訊。執行還原作業之前、適用於Hyper-V還原作業的支援功能會先從Hyper-V主機刪除虛擬機器組態資訊。SnapManager這是Microsoft Hyper-V寫入器的設計行為。</p>
+</div>
+</li>
+<li>
+<p><strong>修正行動</strong></p>
+<div class="paragraph">
+<p>請確定備份排程與還原作業不一致、或是您要執行的隨需備份不會與相同資料上的還原作業重疊。</p>
+</div>
+</li>
+</ul>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">條款與條件</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy Policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie Policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 設定</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">對我們的網站有任何意見或要求？</span>
+              <a target="_self" href="javascript:netapp_mailto()">請與我們聯絡</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/zh-tw/announcements/">公告</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapmanager-hyper-v/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-tw/snapmanager-hyper-v/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-tw/snapmanager-hyper-v/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-tw/snapmanager-hyper-v/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-tw/snapmanager-hyper-v/js/www-ntap.js'></script>
+    <script src='/zh-tw/snapmanager-hyper-v/js/tabbed-blocks.js'></script>
+    <script src='/zh-tw/snapmanager-hyper-v/js/sidebar.js'></script>
+  </body></html>

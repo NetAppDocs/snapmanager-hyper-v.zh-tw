@@ -13,555 +13,569 @@
   
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_cluster_shared_volume_2_0_architecture.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-cluster-shared-volume-2-0-architecture.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_configuring_datasets.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_configuring_hosts.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-configure-datasets.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_configuring_multiple_recipients_for_email_notifications_in_smhv.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_configuring_policies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-configure-hosts.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_configuring_snapinfo_directory_settings.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_configuring_snapmanager_for_hyper_v.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-configure-multiple-recipients-for-email-notifications-in-smhv.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_configuring_snapmanager_for_hyper_v_for_failover.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_configuring_svms_or_cifs_servers_for_hyper_v_over_smb.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-configure-policies.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_creating_and_managing_backup_jobs_in_snapmanager_for_hyper_v.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_dashboard_settings.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-configure-snapinfo-directory-settings.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_data_management_concepts.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_event_notification_settings.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-configure-snapmanager-for-hyper-v-for-failover.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_how_snapmanager_for_hyper_v_handles_saved_state_backups.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_how_snapmanager_for_hyper_v_uses_vss.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-configure-snapmanager-for-hyper-v.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_installation_order_for_snapdrive_for_windows_and_snapmanager_for_hyper_v.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_installing_snapmanager_for_hyper_v.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_ontap_vss_hardware_provider_requirement.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_overview_of_vss_components.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_performing_a_cluster_os_rolling_upgrade.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_performing_disaster_recovery.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-dashboard-settings.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_report_management.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_report_path_settings.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-data-management-concepts.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_restoring_a_virtual_machine.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_snapmanager_for_hyper_v_limitations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-event-notification-settings.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_snapmanager_for_hyper_v_troubleshooting.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_uninstalling_snapmanager_for_hyper_v_on_windows.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-how-snapmanager-for-hyper-v-handles-saved-state-backups.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_what_snapmanager_for_hyper_v_is.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept_what_you_can_do_with_snapmanager_for_hyper_v.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-how-snapmanager-for-hyper-v-uses-vss.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-install-snapmanager-for-hyper-v.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-ontap-vss-hardware-provider-requirement.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-overview-of-vss-components.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-perform-a-cluster-os-rolling-upgrade.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-perform-disaster-recovery.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-report-management.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-report-path-settings.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-restore-a-virtual-machine.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-snapmanager-for-hyper-v-limitations.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-snapmanager-for-hyper-v-troubleshoot.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-uninstall-snapmanager-for-hyper-v-on-windows.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-what-snapmanager-for-hyper-v-is.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/concept-what-you-can-do-with-snapmanager-for-hyper-v.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_backup_and_restore_notifications_not_sent_in_ipv6_only_environments.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/legal-notices.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_backup_fail_with_the_error_shadow_copy_creation_is_already_in_progress.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_backup_failed_for_the_following_vm_s_since_it_cannot_be_backedup_online_or_no_vm_to_be_found_for_backup.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-backup-and-restore-notifications-not-sent-in-ipv6-only-environments.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_backup_fails_after_removing_virtual_machine_from_hyper_v_manager.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_backup_jobs_that_involve_more_than_15_csvs_from_the_same_filer_fail_with_rename_snapshot_error.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-backup-fail-with-the-error-shadow-copy-creation-is-already-in-progress.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_backup_reports_use_management_console_time_zone_information_in_report_name.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_command_line_switch_descriptions.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_connection_time_is_longer_with_ipv6_only_host.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_dataset_backup_might_fail_with_a_partial_writer_error.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_datasets_are_not_automatically_replicated_to_new_nodes_in_a_windows_failover_cluster.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_either_the_specified_vm_s_are_not_present_or_they_cannot_be_backed_up_online.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_error_1935_an_error_occurred_during_the_installation_of_assembly_component.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_error_snapdrive_sddiscoveryfilesystemlistinfo_response_is_null.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-backup-reports-use-management-console-time-zone-information-in-report-name.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_error_vss_requestor_backup_components_failed.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_error_vss_requestor_backup_components_failed_an_expected_disk_did_not_arrive_in_the_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-command-line-switch-descriptions.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_failover_clustering_event_id_5121.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_high_memory_consumption_caused_by_antivirus_solution.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-connection-time-is-longer-with-ipv6-only-host.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_hotfix_requirements_for_windows_server_environments.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_hyper_v_parent_host_requirements.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-dataset-backup-might-fail-with-a-partial-writer-error.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_legal_notices.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_license_requirements.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_list_of_requirements_for_installing_snapmanager_for_hyper_v.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_mbr_luns_unsupported_in_snapmanager_for_hyper_v.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_msi_custom_property_used_in_silent_installation.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_required_hotfix_kb2263829_cannot_be_installed_on_some_platforms.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_requirements_for_adding_a_hyper_v_parent_host_or_host_cluster.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_requirements_for_adding_policies_to_a_dataset.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_requirements_for_creating_a_dataset.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_requirements_for_manually_backing_up_a_dataset.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed-an-expected-disk-did-not-arrive-in-the-system.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_requirements_for_remote_host_install.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_requirements_for_restoring_a_virtual_machine.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_restore_failure_after_storage_system_volume_renaming.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_restoring_from_a_backup_after_failback.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-failover-clustering-event-id-5121.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_retention_of_snapinfo_snapshot_copies.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_secondary_machine_unable_to_delete_backups_after_failover.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-high-memory-consumption-caused-by-antivirus-solution.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_smb_3_0_support_hyper_v_vms_in_windows_server_2012.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_snapmanager_for_hyper_v_is_not_licensed_on_the_host_or_in_the_storage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-hotfix-requirements-for-windows-server-environments.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_snapmanager_for_hyper_v_licensing_for_ontap.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_some_types_of_failures_do_not_generate_error_message.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-hyper-v-parent-host-requirements.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_space_consumption_when_making_two_snapshot_copies_for_each_backup.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_storage_performance_degrades_after_failed_backup.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-legal-notices.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_unexpected_error_querying_for_the_ivsswritercallback_interface_hr_0x80070005.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_virtual_machine_adding_itself_to_a_dataset.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-license-requirements.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_virtual_machine_backups_made_while_a_restore_operation_is_in_progress_might_be_invalid.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_volume_shadow_copy_service_error_an_internal_inconsistency_was_detected.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_vss_requestor_backup_components_failed_failed_to_call_keep_snapshot_set.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_vss_returns_errors_against_microsoft_iscsi_target_vss_hardware_provider_during_nas_backup.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-mbr-luns-unsupported-in-snapmanager-for-hyper-v.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_web_service_client_channel_unable_to_connect_while_updating_the_dataset_to_the_new_node.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference_web_service_client_channel_was_unable_to_connect_to_the_configurationmanagementservice_instance_on_machine_smhv51_81clus.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-msi-custom-property-used-in-silent-installation.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-requirements-for-adding-policies-to-a-dataset.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-requirements-for-creating-a-dataset.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-requirements-for-manually-backing-up-a-dataset.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-requirements-for-remote-host-install.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-requirements-for-restoring-a-virtual-machine.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-restore-failure-after-storage-system-volume-renaming.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-restore-from-a-backup-after-failback.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-retention-of-snapinfo-snapshot-copies.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-secondary-machine-unable-to-delete-backups-after-failover.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-snapmanager-for-hyper-v-is-not-licensed-on-the-host-or-in-the-storage-system.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-snapmanager-for-hyper-v-licensing-for-ontap.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-some-types-of-failures-do-not-generate-error-message.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-storage-performance-degrades-after-failed-backup.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-unexpected-error-querying-for-the-ivsswritercallback-interface-hr-0x80070005.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-virtual-machine-adding-itself-to-a-dataset.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-vss-requestor-backup-components-failed-failed-to-call-keep-snapshot-set.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-web-service-client-channel-was-unable-to-connect-to-the-configurationmanagementservice-instance-on-machine-smhv51-81clus.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/release-notes.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
@@ -575,280 +589,280 @@
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v//search.html</loc>
       
-      <lastmod>2022-06-24T17:44:51+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:40+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_adding_a_hyper_v_parent_host_or_host_cluster.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-add-a-hyper-v-parent-host-or-host-cluster.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_adding_policies.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_changing_the_snapinfo_directory_path.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-add-policies.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_creating_a_dataset.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_delete_the_previously_exported_vm_from_the_non_data_ontap_host.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-change-the-snapinfo-directory-path.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_deleting_a_backup.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_deleting_a_dataset.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-create-a-dataset.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_deleting_a_report.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_deleting_policies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-delete-a-backup.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_downloading_snapmanager_for_hyper_v.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_exporting_the_vm_from_a_non_ontap_host.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-delete-a-dataset.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_import_the_vm_to_a_data_ontap_host.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_importing_or_exporting_host_and_dataset_configuration_information.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-delete-a-report.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_installing_snapmanager_for_hyper_v.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_managing_storage_connection_settings.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-delete-policies.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_manually_backing_up_a_dataset.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_mapping_luns_after_the_windows_server_2016_node_addition.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-delete-the-previously-exported-vm-from-the-non-data-ontap-host.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_migrating_a_hyper_v_virtual_machine_to_support_snapmanager_for_hyper_v_operations.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_modifying_a_dataset.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-download-snapmanager-for-hyper-v.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_modifying_policies.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_monitoring_backup_jobs.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-export-the-vm-from-a-non-ontap-host.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_reconfiguring_storage_systems_after_a_disaster_recovery_failback.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_recovering_and_restoring_from_a_disaster_recovery_failover.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-import-or-export-host-and-dataset-configuration-information.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_remotely_installing_or_uninstalling_snapmanager_for_hyper_v_on_nodes.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_removing_a_hyper_v_parent_host.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-import-the-vm-to-a-data-ontap-host.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_restoring_a_virtual_machine_from_a_backup_copy.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_restoring_the_original_configuration_for_clustered_hosts.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-install-snapmanager-for-hyper-v.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_restoring_the_original_configuration_for_standalone_hosts.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_setting_up_a_snapinfo_lun.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-manage-storage-connection-settings.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_uninstalling_snapmanager_for_hyper_v.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_updating_the_dataset_and_snapinfo_across_all_nodes.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-manually-backing-up-a-dataset.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_verifying_that_the_vss_hardware_provider_was_used_successfully.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_viewing_a_dataset.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-map-luns-after-the-windows-server-2016-node-addition.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_viewing_a_host_report.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_viewing_a_hyper_v_parent_host_or_host_cluster.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_viewing_a_report.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_viewing_a_virtual_machine.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-modify-a-dataset.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_viewing_installed_vss_providers.html</loc>
-      
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task_viewing_policies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-modify-policies.html</loc>
       
-      <lastmod>2022-06-24T17:44:32+00:00</lastmod>
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-monitor-backup-jobs.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-reconfigure-storage-systems-after-a-disaster-recovery-failback.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-recover-and-restore-from-a-disaster-recovery-failover.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-remotely-install-or-uninstall-snapmanager-for-hyper-v-on-nodes.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-remove-a-hyper-v-parent-host.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-restore-a-virtual-machine-from-a-backup-copy.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-restore-the-original-configuration-for-clustered-hosts.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-restore-the-original-configuration-for-standalone-hosts.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-set-up-a-snapinfo-lun.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-uninstall-snapmanager-for-hyper-v.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-update-the-dataset-and-snapinfo-across-all-nodes.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-verify-that-the-vss-hardware-provider-was-used-successfully.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-a-dataset.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-a-host-report.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-a-hyper-v-parent-host-or-host-cluster.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-a-report.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-a-virtual-machine.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-installed-vss-providers.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-policies.html</loc>
+      
+      <lastmod>2022-06-27T15:35:23+00:00</lastmod>
       
     </url>
   
