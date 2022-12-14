@@ -14,6 +14,7 @@ summary: 您可以使用組態精靈或SnapInfo設定動作來控制SnapInfo目�
 [role="lead"]
 您可以使用組態精靈或* SnapInfo設定*動作來控制SnapInfo目錄路徑設定。
 
+.關於這項工作
 SnapInfo目錄設定是在SnapManager 支援Hyper-V的主機層級上指定適用於Hyper-V的支援NAS（SMB）主機和SAN主機。SnapManager對於SAN主機、SnapInfo設定會套用至磁碟區層級；對於NAS主機、SnapInfo設定會套用至SMB共用層級。
 
 如果您已將儲存系統的IP位址新增SnapDrive 至Windows TPS的版本、SnapDrive 則當您執行SnapManager 適用於Hyper-V的組態精靈時、會自動填入來自Windows的儲存設定如果SnapDrive 您尚未設定適用於Windows TPS的功能、則必須在SnapManager 適用於Hyper-V的「管理儲存連線」索引標籤中、指定儲存系統的IP位址

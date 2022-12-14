@@ -14,6 +14,7 @@ summary: 新增主機之後、您應該在SnapDrive 「Protection」（保護）
 [role="lead"]
 新增主機之後、您應該在SnapDrive 功能表：Protection（資料集管理）中輸入SnapManager 所有使用管理儲存連線的儲存連線（適用於Windows、適用於Hyper-V）。
 
+.您需要的產品
 在SnapManager 管理儲存連線設定之前、您必須至少將一部主機新增至適用於Hyper-V的支援區。
 
 .步驟

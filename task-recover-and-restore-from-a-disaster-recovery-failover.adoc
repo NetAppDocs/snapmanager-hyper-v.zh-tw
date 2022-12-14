@@ -13,6 +13,7 @@ summary: 若要從災難中恢復、SnapManager Hyper-V的支援必須先容錯�
 [role="lead"]
 若要從災難中恢復、SnapManager Hyper-V的支援必須先容錯移轉至次要儲存系統。容錯移轉涉及PowerShell中的一系列手動步驟。
 
+.關於這項工作
 大多數備份都可以還原至NAS和SAN的替代主機、但是Windows Server 2008 R2損毀一致的備份無法還原至替代主機。
 
 .步驟

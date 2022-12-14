@@ -13,6 +13,7 @@ summary: 執行叢集作業系統循環升級時、您可以使用下列程序�
 [role="lead"]
 執行叢集作業系統循環升級時、您可以使用下列程序、從Windows 2012 R2節點取消對應LUN、並在將LUN新增至叢集後將其重新對應至Windows Server 2016節點。
 
+.您需要的產品
 Windows Server 2016節點必須新增至叢集。
 
 
