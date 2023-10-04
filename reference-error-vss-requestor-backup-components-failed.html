@@ -1,0 +1,2566 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head class="at-element-marker">
+  <title>錯誤：VSS要求者-備份元件失敗</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="錯誤：VSS要求者-備份元件失敗" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+	<meta property="og:description" content="錯誤：VSS要求者-備份元件失敗。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="錯誤：VSS要求者-備份元件失敗。">
+  <meta name="keywords" content=" error, vss, requestor, backup, component, fail"><!-- Icons -->
+  <link rel="icon" href="/zh-tw/snapmanager-hyper-v/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapmanager-hyper-v/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/zh-tw/snapmanager-hyper-v/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-tw/snapmanager-hyper-v/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+        $(".page-nav__link").first().addClass('page-nav__link--active');
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/snapmanager-hyper-v/js/na-search.js'></script><script src='/zh-tw/snapmanager-hyper-v/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/custom-dropdown.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/FileSaver.min.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/jszip-utils.min.js'></script>
+  <script src='/zh-tw/snapmanager-hyper-v/js/jszip.min.js'></script><script src='/zh-tw/snapmanager-hyper-v/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor=""><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/zh-tw/snapmanager-hyper-v/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/tw">
+                <image id="ie-header-logo" src="/zh-tw/snapmanager-hyper-v/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">文件</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/zh-tw/snapmanager-hyper-v/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">繁體中文</span>
+                    <img src="/zh-tw/snapmanager-hyper-v/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-tw/snapmanager-hyper-v/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/zh-tw/snapmanager-hyper-v/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">所有 NetApp</span>
+                    <img src="/zh-tw/snapmanager-hyper-v/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-tw/snapmanager-hyper-v/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">支援</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">知識庫</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">訓練</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/zh-tw/snapmanager-hyper-v/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/zh-tw/snapmanager-hyper-v/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">所有文件</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/zh-tw/snapmanager-hyper-v/">-->
+      SnapManager for Hyper-V
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/zh-tw/snapmanager-hyper-v/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/zh-tw/snapmanager-hyper-v/search.html" 
+        data-type="widget"
+        data-placeholder="搜尋說明文件"
+        data-no-results-found="找不到 {query} 的結果"
+        data-did-you-mean="搜尋 {suggestion}。"
+        data-no-results-found-did-you-mean="找不到 {query} 的結果。您的意思是 {suggestion} 嗎？"
+        data-results-found="找到 {hitCount} 個結果"
+        data-error-message="發生錯誤。請再試一次。"
+        data-error-reset="重設搜尋"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="適用於Hyper-V文件SnapManager"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/index.html">
+        適用於Hyper-V文件SnapManager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="版本資訊"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/release-notes.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/release-notes.html">
+        版本資訊
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hyper-V的功能SnapManager"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-what-snapmanager-for-hyper-v-is.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-what-snapmanager-for-hyper-v-is.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Hyper-V的功能SnapManager</div>-->
+         Hyper-V的功能SnapManager
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="如何運用SnapManager 適用於Hyper-V的功能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-what-you-can-do-with-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-what-you-can-do-with-snapmanager-for-hyper-v.html">
+        如何運用SnapManager 適用於Hyper-V的功能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hyper-V限制的列舉SnapManager"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-snapmanager-for-hyper-v-limitations.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-snapmanager-for-hyper-v-limitations.html">
+        Hyper-V限制的列舉SnapManager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="資料管理概念"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-data-management-concepts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-data-management-concepts.html">
+        資料管理概念
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安裝SnapManager Hyper-V的需求清單"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 安裝SnapManager Hyper-V的需求清單</div>-->
+         安裝SnapManager Hyper-V的需求清單
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="適用於Hyper-V的for Hyper-V授權SnapManager ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-snapmanager-for-hyper-v-licensing-for-ontap.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-snapmanager-for-hyper-v-licensing-for-ontap.html">
+        適用於Hyper-V的for Hyper-V授權SnapManager ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hyper-V父主機需求"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-hyper-v-parent-host-requirements.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-hyper-v-parent-host-requirements.html">
+        Hyper-V父主機需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows Server環境的修補程式需求"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-hotfix-requirements-for-windows-server-environments.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-hotfix-requirements-for-windows-server-environments.html">
+        Windows Server環境的修補程式需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="授權需求"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-license-requirements.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-license-requirements.html">
+        授權需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用遠端主機安裝精靈的需求"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-requirements-for-remote-host-install.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-remote-host-install.html">
+        使用遠端主機安裝精靈的需求
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安裝SnapManager 適用於Hyper-V的"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-install-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-install-snapmanager-for-hyper-v.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 安裝SnapManager 適用於Hyper-V的</div>-->
+         安裝SnapManager 適用於Hyper-V的
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="下載SnapManager 適用於Hyper-V的功能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-download-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-download-snapmanager-for-hyper-v.html">
+        下載SnapManager 適用於Hyper-V的功能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="適用於Windows的安裝順序SnapDrive 和SnapManager 適用於Hyper-V的更新順序"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html">
+        適用於Windows的安裝順序SnapDrive 和SnapManager 適用於Hyper-V的更新順序
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安裝SnapManager 適用於Hyper-V的"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-install-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-install-snapmanager-for-hyper-v.html">
+        安裝SnapManager 適用於Hyper-V的
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在SnapManager 節點或主機上遠端安裝或解除安裝適用於Hyper-V的功能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-remotely-install-or-uninstall-snapmanager-for-hyper-v-on-nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-remotely-install-or-uninstall-snapmanager-for-hyper-v-on-nodes.html">
+        在SnapManager 節點或主機上遠端安裝或解除安裝適用於Hyper-V的功能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="用於無聲安裝的命令列參數清單與說明"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-command-line-switch-descriptions.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-command-line-switch-descriptions.html">
+        用於無聲安裝的命令列參數清單與說明
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在SnapManager Windows上解除安裝適用於Hyper-V的功能"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-uninstall-snapmanager-for-hyper-v-on-windows.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-uninstall-snapmanager-for-hyper-v-on-windows.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 在SnapManager Windows上解除安裝適用於Hyper-V的功能</div>-->
+         在SnapManager Windows上解除安裝適用於Hyper-V的功能
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="解除安裝SnapManager 適用於Hyper-V的功能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-uninstall-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-uninstall-snapmanager-for-hyper-v.html">
+        解除安裝SnapManager 適用於Hyper-V的功能
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定SnapManager 適用於Hyper-V的功能"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-configure-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-configure-snapmanager-for-hyper-v.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 設定SnapManager 適用於Hyper-V的功能</div>-->
+         設定SnapManager 適用於Hyper-V的功能
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="儀表板設定"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-dashboard-settings.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-dashboard-settings.html">
+        儀表板設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定主機"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-configure-hosts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-configure-hosts.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 設定主機</div>-->
+         設定主機
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新增Hyper-V父主機或主機叢集的需求"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html">
+        新增Hyper-V父主機或主機叢集的需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新增Hyper-V父主機或主機叢集"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-add-a-hyper-v-parent-host-or-host-cluster.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-add-a-hyper-v-parent-host-or-host-cluster.html">
+        新增Hyper-V父主機或主機叢集
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理儲存連線設定"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-manage-storage-connection-settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-manage-storage-connection-settings.html">
+        管理儲存連線設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視Hyper-V父主機或主機叢集"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-view-a-hyper-v-parent-host-or-host-cluster.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-view-a-hyper-v-parent-host-or-host-cluster.html">
+        檢視Hyper-V父主機或主機叢集
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視虛擬機器"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-view-a-virtual-machine.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-view-a-virtual-machine.html">
+        檢視虛擬機器
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="適用於SnapManager Hyper-V作業的Hyper-V虛擬機器的Migrat"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html">
+        適用於SnapManager Hyper-V作業的Hyper-V虛擬機器的Migrat
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="匯入或匯出主機與資料集組態資訊"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-import-or-export-host-and-dataset-configuration-information.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-import-or-export-host-and-dataset-configuration-information.html">
+        匯入或匯出主機與資料集組態資訊
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="移除Hyper-V父主機或父主機叢集"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-remove-a-hyper-v-parent-host.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-remove-a-hyper-v-parent-host.html">
+        移除Hyper-V父主機或父主機叢集
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="事件通知設定"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-event-notification-settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/concept-event-notification-settings.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 事件通知設定</div>-->
+         事件通知設定
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定電子郵件通知"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-configure-multiple-recipients-for-email-notifications-in-smhv.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/zh-tw/snapmanager-hyper-v/concept-configure-multiple-recipients-for-email-notifications-in-smhv.html">
+        設定電子郵件通知
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="報告路徑設定"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-report-path-settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/concept-report-path-settings.html">
+        報告路徑設定
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定SnapInfo目錄設定"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-configure-snapinfo-directory-settings.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-configure-snapinfo-directory-settings.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 設定SnapInfo目錄設定</div>-->
+         設定SnapInfo目錄設定
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定SnapInfo LUN"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-set-up-a-snapinfo-lun.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-set-up-a-snapinfo-lun.html">
+        設定SnapInfo LUN
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="變更SnapInfo目錄路徑"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-change-the-snapinfo-directory-path.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-change-the-snapinfo-directory-path.html">
+        變更SnapInfo目錄路徑
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定資料集"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-configure-datasets.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-configure-datasets.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 設定資料集</div>-->
+         設定資料集
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立資料集的需求"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-requirements-for-creating-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-creating-a-dataset.html">
+        建立資料集的需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立資料集"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-create-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-create-a-dataset.html">
+        建立資料集
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="修改資料集"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-modify-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-modify-a-dataset.html">
+        修改資料集
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視資料集"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-view-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-view-a-dataset.html">
+        檢視資料集
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="刪除資料集"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-delete-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-delete-a-dataset.html">
+        刪除資料集
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定原則"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-configure-policies.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-configure-policies.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 設定原則</div>-->
+         設定原則
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="將原則新增至資料集的需求"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-requirements-for-adding-policies-to-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-adding-policies-to-a-dataset.html">
+        將原則新增至資料集的需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新增原則"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-add-policies.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-add-policies.html">
+        新增原則
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="修改原則"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-modify-policies.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-modify-policies.html">
+        修改原則
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視原則"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-view-policies.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-view-policies.html">
+        檢視原則
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="刪除原則"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-delete-policies.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/snapmanager-hyper-v/task-delete-policies.html">
+        刪除原則
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定SMB上Hyper-V的SVM或CIFS伺服器"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html">
+        設定SMB上Hyper-V的SVM或CIFS伺服器
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理報告"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-report-management.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-report-management.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 管理報告</div>-->
+         管理報告
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視資料集報告"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-view-a-report.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-view-a-report.html">
+        檢視資料集報告
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視主機報告"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-view-a-host-report.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-view-a-host-report.html">
+        檢視主機報告
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="刪除報告"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-delete-a-report.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-delete-a-report.html">
+        刪除報告
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSS元件"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-overview-of-vss-components.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-overview-of-vss-components.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSS元件</div>-->
+         VSS元件
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows Server 2012及更新版本中的CSV 2.0"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-cluster-shared-volume-2-0-architecture.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-cluster-shared-volume-2-0-architecture.html">
+        Windows Server 2012及更新版本中的CSV 2.0
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在Windows Server 2012中支援Hyper-V VM的SMB 3.0"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html">
+        在Windows Server 2012中支援Hyper-V VM的SMB 3.0
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="適用於Hyper-V的解決方法如何使用VSS SnapManager"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-how-snapmanager-for-hyper-v-uses-vss.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-how-snapmanager-for-hyper-v-uses-vss.html">
+        適用於Hyper-V的解決方法如何使用VSS SnapManager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSS硬體供應商需求ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-ontap-vss-hardware-provider-requirement.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-ontap-vss-hardware-provider-requirement.html">
+        VSS硬體供應商需求ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視已安裝的VSS供應商"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-view-installed-vss-providers.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-view-installed-vss-providers.html">
+        檢視已安裝的VSS供應商
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="驗證VSS硬體供應商是否已成功使用"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-verify-that-the-vss-hardware-provider-was-used-successfully.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-verify-that-the-vss-hardware-provider-was-used-successfully.html">
+        驗證VSS硬體供應商是否已成功使用
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在SnapManager 支援Hyper-V的支援環境中建立及管理備份工作"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 在SnapManager 支援Hyper-V的支援環境中建立及管理備份工作</div>-->
+         在SnapManager 支援Hyper-V的支援環境中建立及管理備份工作
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="手動備份資料集的需求"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-requirements-for-manually-backing-up-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-manually-backing-up-a-dataset.html">
+        手動備份資料集的需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="如何使用適用於Hyper-V的功能來處理儲存狀態備份SnapManager"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-how-snapmanager-for-hyper-v-handles-saved-state-backups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-how-snapmanager-for-hyper-v-handles-saved-state-backups.html">
+        如何使用適用於Hyper-V的功能來處理儲存狀態備份SnapManager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="手動備份資料集"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-manually-backing-up-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-manually-backing-up-a-dataset.html">
+        手動備份資料集
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="監控備份工作"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-monitor-backup-jobs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-monitor-backup-jobs.html">
+        監控備份工作
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="刪除備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-delete-a-backup.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-delete-a-backup.html">
+        刪除備份
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從備份複本還原虛擬機器"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-restore-a-virtual-machine.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-restore-a-virtual-machine.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 從備份複本還原虛擬機器</div>-->
+         從備份複本還原虛擬機器
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="還原虛擬機器的需求"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-requirements-for-restoring-a-virtual-machine.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-requirements-for-restoring-a-virtual-machine.html">
+        還原虛擬機器的需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從備份複本還原虛擬機器"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-restore-a-virtual-machine-from-a-backup-copy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-restore-a-virtual-machine-from-a-backup-copy.html">
+        從備份複本還原虛擬機器
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="執行叢集作業系統循環升級"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-perform-a-cluster-os-rolling-upgrade.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-perform-a-cluster-os-rolling-upgrade.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 執行叢集作業系統循環升級</div>-->
+         執行叢集作業系統循環升級
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在混合式作業系統模式中對應LUN"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-map-luns-after-the-windows-server-2016-node-addition.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-map-luns-after-the-windows-server-2016-node-addition.html">
+        在混合式作業系統模式中對應LUN
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在所有節點上更新資料集和SnapInfo"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-update-the-dataset-and-snapinfo-across-all-nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-update-the-dataset-and-snapinfo-across-all-nodes.html">
+        在所有節點上更新資料集和SnapInfo
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="執行災難恢復"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-perform-disaster-recovery.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-perform-disaster-recovery.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 執行災難恢復</div>-->
+         執行災難恢復
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定SnapManager 適用於Hyper-V的功能以進行容錯移轉"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-configure-snapmanager-for-hyper-v-for-failover.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/concept-configure-snapmanager-for-hyper-v-for-failover.html">
+        設定SnapManager 適用於Hyper-V的功能以進行容錯移轉
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從災難恢復容錯移轉中恢復及恢復"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-recover-and-restore-from-a-disaster-recovery-failover.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-recover-and-restore-from-a-disaster-recovery-failover.html">
+        從災難恢復容錯移轉中恢復及恢復
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在災難恢復故障恢復後重新配置儲存系統"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-reconfigure-storage-systems-after-a-disaster-recovery-failback.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-reconfigure-storage-systems-after-a-disaster-recovery-failback.html">
+        在災難恢復故障恢復後重新配置儲存系統
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="還原獨立主機的原始組態"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-restore-the-original-configuration-for-standalone-hosts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-restore-the-original-configuration-for-standalone-hosts.html">
+        還原獨立主機的原始組態
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="還原叢集主機的原始組態"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/task-restore-the-original-configuration-for-clustered-hosts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/task-restore-the-original-configuration-for-clustered-hosts.html">
+        還原叢集主機的原始組態
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hyper-V SnapManager 的疑難排解"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/concept-snapmanager-for-hyper-v-troubleshoot.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/concept-snapmanager-for-hyper-v-troubleshoot.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/snapmanager-hyper-v/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/snapmanager-hyper-v/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Hyper-V SnapManager 的疑難排解</div>-->
+         Hyper-V SnapManager 的疑難排解
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="下列虛擬機器的備份失敗、因為無法在線上進行backedup或找不到要備份的虛擬機器"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html">
+        下列虛擬機器的備份失敗、因為無法在線上進行backedup或找不到要備份的虛擬機器
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="查詢IVssWriterCallback介面時發生非預期的錯誤。HR = 8007000、存取遭拒。"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-unexpected-error-querying-for-the-ivsswritercallback-interface-hr-0x80070005.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-unexpected-error-querying-for-the-ivsswritercallback-interface-hr-0x80070005.html">
+        查詢IVssWriterCallback介面時發生非預期的錯誤。HR = 8007000、存取遭拒。
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="備份報告會在報告名稱中使用管理主控台時區資訊"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-backup-reports-use-management-console-time-zone-information-in-report-name.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-backup-reports-use-management-console-time-zone-information-in-report-name.html">
+        備份報告會在報告名稱中使用管理主控台時區資訊
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="未在純IPv6環境中傳送的備份與還原通知"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-backup-and-restore-notifications-not-sent-in-ipv6-only-environments.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-backup-and-restore-notifications-not-sent-in-ipv6-only-environments.html">
+        未在純IPv6環境中傳送的備份與還原通知
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="容錯移轉叢集事件ID 5121"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-failover-clustering-event-id-5121.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-failover-clustering-event-id-5121.html">
+        容錯移轉叢集事件ID 5121
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="還原作業進行期間所進行的虛擬機器備份可能無效"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html">
+        還原作業進行期間所進行的虛擬機器備份可能無效
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="虛擬機器自行管理"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-virtual-machine-adding-itself-to-a-dataset.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-virtual-machine-adding-itself-to-a-dataset.html">
+        虛擬機器自行管理
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用純IPv6主機的連線時間較長"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-connection-time-is-longer-with-ipv6-only-host.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-connection-time-is-longer-with-ipv6-only-host.html">
+        使用純IPv6主機的連線時間較長
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Volume陰影複製服務錯誤：偵測到內部不一致"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html">
+        Volume陰影複製服務錯誤：偵測到內部不一致
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Web服務用戶端通道無法連線至機器smhv51_81 cluss上的Configuration Management Service執行個體"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-web-service-client-channel-was-unable-to-connect-to-the-configurationmanagementservice-instance-on-machine-smhv51-81clus.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-web-service-client-channel-was-unable-to-connect-to-the-configurationmanagementservice-instance-on-machine-smhv51-81clus.html">
+        Web服務用戶端通道無法連線至機器smhv51_81 cluss上的Configuration Management Service執行個體
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="用於無聲安裝的MSI自訂屬性"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-msi-custom-property-used-in-silent-installation.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-msi-custom-property-used-in-silent-installation.html">
+        用於無聲安裝的MSI自訂屬性
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="針對Hyper-V的支援未在主機或儲存系統中獲得授權SnapManager"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-snapmanager-for-hyper-v-is-not-licensed-on-the-host-or-in-the-storage-system.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-snapmanager-for-hyper-v-is-not-licensed-on-the-host-or-in-the-storage-system.html">
+        針對Hyper-V的支援未在主機或儲存系統中獲得授權SnapManager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="容錯移轉後刪除備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-secondary-machine-unable-to-delete-backups-after-failover.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-secondary-machine-unable-to-delete-backups-after-failover.html">
+        容錯移轉後刪除備份
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="備份失敗後、儲存效能會降低"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-storage-performance-degrades-after-failed-backup.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-storage-performance-degrades-after-failed-backup.html">
+        備份失敗後、儲存效能會降低
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="已刪除SnapInfo Snapshot複本"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-retention-of-snapinfo-snapshot-copies.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-retention-of-snapinfo-snapshot-copies.html">
+        已刪除SnapInfo Snapshot複本
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="防毒解決方案造成大量記憶體使用量"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-high-memory-consumption-caused-by-antivirus-solution.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-high-memory-consumption-caused-by-antivirus-solution.html">
+        防毒解決方案造成大量記憶體使用量
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="為每個備份製作兩個Snapshot複本時所耗用的空間"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html">
+        為每個備份製作兩個Snapshot複本時所耗用的空間
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="進行備份時、SSDDiscoveryFileSystemListInfo回應為null SnapDrive"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.html">
+        進行備份時、SSDDiscoveryFileSystemListInfo回應為null SnapDrive
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="錯誤：VSS要求者-備份元件失敗"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-error-vss-requestor-backup-components-failed.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html">
+        錯誤：VSS要求者-備份元件失敗
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSS申請人-備份元件失敗。預期的磁碟未送達系統"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-error-vss-requestor-backup-components-failed-an-expected-disk-did-not-arrive-in-the-system.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed-an-expected-disk-did-not-arrive-in-the-system.html">
+        VSS申請人-備份元件失敗。預期的磁碟未送達系統
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSS申請人-備份元件失敗、並出現部分寫入錯誤"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-dataset-backup-might-fail-with-a-partial-writer-error.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-dataset-backup-might-fail-with-a-partial-writer-error.html">
+        VSS申請人-備份元件失敗、並出現部分寫入錯誤
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSS會在NAS備份期間針對Microsoft iSCSI Target VSS Hardware Provider傳回錯誤"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html">
+        VSS會在NAS備份期間針對Microsoft iSCSI Target VSS Hardware Provider傳回錯誤
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSS申請人-備份元件失敗。無法呼叫保留快照集。"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-vss-requestor-backup-components-failed-failed-to-call-keep-snapshot-set.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-vss-requestor-backup-components-failed-failed-to-call-keep-snapshot-set.html">
+        VSS申請人-備份元件失敗。無法呼叫保留快照集。
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="支援Hyper-V的MBRLUN SnapManager 不受支援"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-mbr-luns-unsupported-in-snapmanager-for-hyper-v.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-mbr-luns-unsupported-in-snapmanager-for-hyper-v.html">
+        支援Hyper-V的MBRLUN SnapManager 不受支援
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從Hyper-V Manager移除虛擬機器後、備份失敗"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html">
+        從Hyper-V Manager移除虛擬機器後、備份失敗
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="某些類型的備份失敗不會導致部分備份失敗"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-some-types-of-failures-do-not-generate-error-message.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-some-types-of-failures-do-not-generate-error-message.html">
+        某些類型的備份失敗不會導致部分備份失敗
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="儲存系統磁碟區重新命名後還原失敗"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-restore-failure-after-storage-system-volume-renaming.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-restore-failure-after-storage-system-volume-renaming.html">
+        儲存系統磁碟區重新命名後還原失敗
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="容錯回復後從備份還原"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-restore-from-a-backup-after-failback.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-restore-from-a-backup-after-failback.html">
+        容錯回復後從備份還原
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="將資料集更新至新節點時、Web服務用戶端通道無法連線"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html">
+        將資料集更新至新節點時、Web服務用戶端通道無法連線
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="資料集不會自動複寫至Windows容錯移轉叢集中的新節點"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html">
+        資料集不會自動複寫至Windows容錯移轉叢集中的新節點
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="錯誤1935。安裝組合件零組件時發生錯誤"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html">
+        錯誤1935。安裝組合件零組件時發生錯誤
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從同一個儲存系統進行的備份工作可能會失敗、而這些工作涉及15個以上的CSV"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html">
+        從同一個儲存系統進行的備份工作可能會失敗、而這些工作涉及15個以上的CSV
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="指定的虛擬機器不存在、或無法線上備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html">
+        指定的虛擬機器不存在、或無法線上備份
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="某些平台無法安裝必要的修補程式KB2263829"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html">
+        某些平台無法安裝必要的修補程式KB2263829
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="備份失敗、出現「陰影複製建立已在進行中」錯誤"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/reference-backup-fail-with-the-error-shadow-copy-creation-is-already-in-progress.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/snapmanager-hyper-v/reference-backup-fail-with-the-error-shadow-copy-creation-is-already-in-progress.html">
+        備份失敗、出現「陰影複製建立已在進行中」錯誤
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法律聲明"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-error-vss-requestor-backup-components-failed.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/snapmanager-hyper-v/legal-notices.html">
+        法律聲明
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/zh-tw/snapmanager-hyper-v"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/zh-tw/snapmanager-hyper-v"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/zh-tw/snapmanager-hyper-v/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 本繁體中文版使用機器翻譯，譯文僅供參考，若與英文版本牴觸，應以英文版本為準。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">錯誤：VSS要求者-備份元件失敗</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2022-06-27 15:35:23 +0000">06/27/2022</time>
+        
+    
+    
+        <span>貢獻者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/zh-tw/snapmanager-hyper-v/images/discuss-sm.svg" alt="" class="github-icon" />建議變更</span>
+        <img src="/zh-tw/snapmanager-hyper-v/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/zh-tw/snapmanager-hyper-v/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/snapmanager-hyper-v.zh-tw/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/zh-tw/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html&page-title=錯誤：VSS要求者-備份元件失敗" class="page-nav-contribute-link" role="button">請求文件變更</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/snapmanager-hyper-v/blob/main/reference-error-vss-requestor-backup-components-failed.adoc" class="page-nav-contribute-link" role="button">編輯本頁</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >瞭解如何貢獻</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/zh-tw/snapmanager-hyper-v/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/zh-tw/snapmanager-hyper-v/pdfs/fullsite-sidebar/適用於Hyper_V文件SnapManager.pdf" >
+                    <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>此文件 PDF 的網站</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/Hyper_V的功能SnapManager.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Hyper-V的功能SnapManager
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/安裝SnapManager_Hyper_V的需求清單.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            安裝SnapManager Hyper-V的需求清單
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/安裝SnapManager_適用於Hyper_V的.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            安裝SnapManager 適用於Hyper-V的
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/在SnapManager_Windows上解除安裝適用於Hyper_V的功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            在SnapManager Windows上解除安裝適用於Hyper-V的功能
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定SnapManager_適用於Hyper_V的功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            設定SnapManager 適用於Hyper-V的功能
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定主機.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            設定主機
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/事件通知設定.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            事件通知設定
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定SnapInfo目錄設定.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            設定SnapInfo目錄設定
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定資料集.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            設定資料集
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/設定原則.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            設定原則
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/管理報告.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            管理報告
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/VSS元件.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSS元件
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/在SnapManager_支援Hyper_V的支援環境中建立及管理備份工作.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            在SnapManager 支援Hyper-V的支援環境中建立及管理備份工作
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/從備份複本還原虛擬機器.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            從備份複本還原虛擬機器
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/執行叢集作業系統循環升級.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            執行叢集作業系統循環升級
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/執行災難恢復.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            執行災難恢復
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/snapmanager-hyper-v/pdfs/sidebar/Hyper_V_SnapManager_的疑難排解.pdf" 
+            
+          >
+            <img src="/zh-tw/snapmanager-hyper-v/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Hyper-V SnapManager 的疑難排解
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/zh-tw/snapmanager-hyper-v/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>個別的 PDF 文件集合<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+<div class="ulist">
+<ul>
+<li>
+<p><strong>訊息</strong></p>
+<div class="paragraph">
+<p>下列錯誤訊息會顯示在SnapManager 《適用於Hyper-V的資訊》報告和Windows事件記錄中：「錯誤：VSS申請人-備份元件失敗。寫入器與備份或還原有關的Microsoft Hyper-V VSS寫入器發生可重新輸入的錯誤。寫入器傳回失敗代碼：800423f3。寫入器狀態為XXX。如需詳細資訊、請參閱Windows事件檢視器中的Hyper-V VMM事件記錄</p>
+</div>
+</li>
+<li>
+<p><strong>說明</strong></p>
+<div class="paragraph">
+<p>如果收到VSS重試錯誤、導致應用程式一致的備份失敗、SnapManager 則針對Hyper-V、在每次嘗試之間等待一分鐘、即可重試三次備份。</p>
+</div>
+</li>
+<li>
+<p><strong>修正行動</strong></p>
+<div class="paragraph">
+<p>您可以使用下列登錄機碼來設定重試次數（重試次數）和重試之間的等待時間（重試時間間隔）：</p>
+</div>
+<div class="paragraph">
+<p>「Key：HKLM \System\CurrentControlSet\Services\OnCommandHyperV\參 數字字節值（以秒為單位）：VSS_Retry（VSS_retry）睡眠（重試之間等待的時間）」雙字節值：VSS_retry（重試次數）</p>
+</div>
+<div class="paragraph">
+<p>這些設定位於Hyper-V主機層級、而且應該在Hyper-V主機上為每個虛擬機器設定金鑰和值。如果虛擬機器是叢集式的、則應在叢集中的每個節點上設定金鑰。</p>
+</div>
+<div class="paragraph">
+<p>變更或新增這些登錄機碼之後、您必須重新啟動SnapManager Hyper-V的功能。</p>
+</div>
+</li>
+</ul>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/zh-tw/snapmanager-hyper-v/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/zh-tw/snapmanager-hyper-v/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">在本頁</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">使用條款</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">隱私權政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie 政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 設定</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">傳送有關本網頁的意見反應</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-tw/snapmanager-hyper-v/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-tw/snapmanager-hyper-v/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-tw/snapmanager-hyper-v/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-tw/snapmanager-hyper-v/js/ie-tabbed-blocks.js'></script>
+    <script src='/zh-tw/snapmanager-hyper-v/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
